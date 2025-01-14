@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Artikel-Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Grüner Faktencheck</h1>
+        
+        {% for category, articles_list in articles.items() %}
+        <h2>{{ category }}</h2>
+        
+        {% for article in articles_list %}
+        <div class="article-teaser">
+            <h3>{{ article.title }}</h3>
+            <p><strong>Veröffentlicht am:</strong> {{ article.date }}</p>
+            <a href="{{ article.url }}" target="_blank">Artikel lesen</a>
+        </div>
+        {% endfor %}
+        
+        {% endfor %}
+        
+        <footer>
+            © {{ year }} Artikel-Dashboard
+        </footer>
+    </div>
+</body>
+</html>
