@@ -67,9 +67,24 @@ def index():
                 'title': 'NRW: Fünf Meldestellen gegen Hetze kosten 900.000 Euro pro Jahr',
                 'url': 'https://www.bild.de/politik/inland/nrw-fuenf-meldestellen-gegen-hetze-kosten-900000-euro-pro-jahr',
                 'date': '03.12.2024'
-            }
+            },
+            {
+                'title': '90 Prozent aller Anzeigen von Bundestagsabgeordneten, stammen von Habeck und Bärbock',
+                'url': 'https://www.focus.de/politik/deutsche-bundesminister-im-vergleich-mehr-als-90-prozent-der-anzeigen-gegen-buerger-stammen-von-habeck-und-baerbock_id_260500296.html',
+                'date': '24.11.2024'
+            },
+            {
+                'title': 'Cafe auf Rügen benennt sich wegen Habeck um - wollen nichts mit ihm zutun haben',
+                'url': 'https://www.bild.de/regional/mecklenburg-vorpommern/news-inland/ruegen-caf-benennt-sich-um-name-habeck-war-schlecht-fuers-geschaeft-85091870.bild.html?',
+                'date': '18.08.2023'
+            },
         ],
         "Außenpolitik und Diplomatie (Baerbock)": [
+            {
+                'title': 'Baerbocks treffen mit Syrischen Islamisten',
+                'url': 'https://www.bild.de/politik/ausland-und-internationales/annalena-baerbock-auf-fotos-in-syrien-von-islamisten-zensiert-677943390195b908c189a674',
+                'date': '05.01.2025'
+            },
             {
                 'title': 'Baerbocks EM-Kurzstreckenflug und weitere Ministrecken-Flüge',
                 'url': 'https://www.welt.de/politik/deutschland/article252604396/Auf-Baerbocks-EM-Kurzstreckenflug-folgtennochweitere-Ministrecken-Fluege.html',
@@ -79,6 +94,11 @@ def index():
                 'title': 'Nachtflug der Ampel-Regierung zum Fußball',
                 'url': 'https://www.merkur.de/politik/nachtflugampel-regierung-fussball-frankfurt-annalenabaerbock-grueneolafscholz-flugzeug93165061.html',
                 'date': '01.12.2024'
+            },
+            {
+                'title': 'Facebook schmeißt Corrective Faktenchecker raus',
+                'url': 'https://www.nius.de/medien/news/facebook-schmeisst-correctiv-und-alle-faktenchecker-raus/0ffc2f9c-b625-4906-9817-38ffe0dbc56e',
+                'date': '07.01.2025'
             },
         ]
     }
