@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from datetime import datetime
-import requests
+import requests, logging
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
@@ -13,7 +13,7 @@ def index():
         "Politik und Gesellschaft": [
             {
                 "title": "Klimaschutzprojekte in China: Milliardenbetrug in Ölbranche?",
-                "url": "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html",
+                "url": "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html", 
             },
             {
                 "title": "Vorwürfe gegen Berliner Grünen-Politiker",
@@ -40,6 +40,7 @@ def index():
             {
                 "title": "Die Habeck-Enthüllung und das Versagen der Medien",
                 "url": "https://www.nius.de/kommentar/news/keine-silbe-in-der-tagesschau-die-habeck-enthuellung-und-das-gewaltige-versagen-der-medien/b15a84e4-8f20-4072-9681-8067f1acda7f",
+
             },
             {
                 "title": "Deutschland beim Wirtschaftswachstum auf dem letzten Platz",
@@ -68,6 +69,14 @@ def index():
             {
                 'title': 'Cafe auf Rügen benennt sich wegen Habeck um - wollen nichts mit ihm zutun haben',
                 'url': 'https://www.bild.de/regional/mecklenburg-vorpommern/news-inland/ruegen-caf-benennt-sich-um-name-habeck-war-schlecht-fuers-geschaeft-85091870.bild.html?',
+            },
+            {
+                "title": 'Habeck bei Maischberger den Tränen nahe: „Es werden viele Menschen sterben“ - „Ich muss da nicht kämpfen in diesem Krieg und ich werde auch nicht sterben, aber wenn es passiert, werden viele Menschen sterben.“ ',
+                "url": "https://www.merkur.de/politik/maischberger-die-woche-ard-ukraine-putin-krieg-konflikt-nordstream2-habeck-merz-gabriel-zr-91369721.html",
+            },
+            {
+                "title": 'Ja, Robert Habeck hat sich kritisch zu Vaterlandsliebe geäußert',
+                "url": "https://correctiv.org/faktencheck/politik/2019/06/14/ja-robert-habeck-hat-sich-kritisch-zu-vaterlandsliebe-geaeussert/",
             },
         ],
         "Außenpolitik und Diplomatie (Baerbock)": [
@@ -106,10 +115,53 @@ def index():
         ]
     }
 
+    # Jedes datum wird versucht zu laden, deswegen wird jede seite geladen was natürlich für delay sorgt, muss optimiert werden, weiß aber noch nich wie @irgendwasmitfelix
+    for category, articles_list in articles.items():
+        for article in articles_list:
+            article["date"] = get_date_from_meta(article["url"])
+
     # Aktuelles Jahr für den Footer
     current_year = datetime.now().year
 
     return render_template('index.html', articles=articles, year=current_year)
+
+
+
+def get_date_from_meta(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        
+        # Prüfen auf alternative Meta-Tags
+        meta_tags = [
+            {"property": "og:updated_time"},
+            {"property": "article:published_time"},
+            {"name": "date"},
+            {"name": "publish-date"},
+            {"name": "dcterms.date"},
+        ]
+        
+        for tag in meta_tags:
+            meta = soup.find("meta", tag)
+            if meta and meta.get("content"):
+                return meta.get("content")
+            
+        time_tag = soup.find("time")
+        if time_tag and time_tag.get("datetime"):
+            return time_tag.get("datetime")  # Datum aus datetime-Attribut
+        elif time_tag:
+            return time_tag.text.strip()  # Datum aus Text des <time>-Tags
+        
+        
+        
+        logging.warning("Kein Datum gefunden in Meta-Tags.")
+        return "Kein Datum gefunden."
+    except requests.exceptions.RequestException as e:
+        logging.error("Fehler beim Abrufen der URL: {e}")
+        return "Kein Datum gefunden."
+    
+
 
 if __name__ == '__main__':
     app.run(debug=True)
