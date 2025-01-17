@@ -50,6 +50,10 @@ def index():
                 'title': 'Habeck feiert sich für freche, piratige Aktion',
                 'url': 'https://apollo-news.net/illegale-siegestor-projektion-habeck-feiert-sich-fuer-freche-piratige-aktion/',
             },
+             {
+                'title': 'Erneute Illegale Wahlwerbung von Habeck',
+                'url': 'https://www.bild.de/politik/inland/robert-habeck-naechste-illegale-wahlwerbung-678913601b0bef63f97bf517',
+            },
             {
                 'title': 'Habeck-Behörde droht Facebook wegen Abschaffung von Zensoren',
                 'url': 'https://jungefreiheit.de/politik/deutschland/2025/habeck-behoerde-droht-facebook-wegen-abschaffung-von-zensoren/',
