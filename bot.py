@@ -12,19 +12,17 @@ db_config = {
     'database': 'gruener_faktencheck'
 }
 
-db = mysql.connector.connect(**db_config)
-
 def setup_database():
-    cursor = db.cursor()
+    conn = mysql.connector.connect(**db_config)
     
-    cursor.execute("""
+    conn.execute("""
         CREATE TABLE IF NOT EXISTS categories (
             id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(255) NOT NULL
         )
     """)
     
-    cursor.execute("""
+    conn.execute("""
         CREATE TABLE IF NOT EXISTS articles (
             id INT AUTO_INCREMENT PRIMARY KEY,
             title VARCHAR(255) NOT NULL,
@@ -37,12 +35,12 @@ def setup_database():
     """)
     
     try:
-        cursor.execute("""
+        conn.execute("""
             ALTER TABLE articles 
             ADD COLUMN description TEXT 
             AFTER url
         """)
-        db.commit()
+        conn.commit()
         print("Added description column to articles table")
     except mysql.connector.Error as err:
         if err.errno == 1060:
@@ -50,7 +48,7 @@ def setup_database():
         else:
             print(f"Error adding description column: {err}")
     
-    cursor.close()
+    conn.close()
 
 setup_database()
 
@@ -73,9 +71,9 @@ class CategoryModal(discord.ui.Modal, title='Kategorie hinzufügen'):
 
     async def on_submit(self, interaction: discord.Interaction):
         try:
-            cursor = db.cursor()
-            cursor.execute("INSERT INTO categories (name) VALUES (%s)", (str(self.name),))
-            db.commit()
+            conn = get_db_connection()
+            conn.execute("INSERT INTO categories (name) VALUES (%s)", (str(self.name),))
+            conn.commit()
             
             success_embed = discord.Embed(
                 title="Neue Kategorie erstellt",
@@ -104,7 +102,7 @@ class CategoryModal(discord.ui.Modal, title='Kategorie hinzufügen'):
             error_embed.set_footer(text="Made with ♡ by Finduss")
             await interaction.response.send_message(embed=error_embed, ephemeral=True)
         finally:
-            cursor.close()
+            conn.close()
 
 # Update the command handlers to use the modals
 @tree.command(name="add_category", description="Füge eine neue Kategorie hinzu")
@@ -116,10 +114,8 @@ async def add_category(interaction: discord.Interaction):
 async def list_categories(interaction: discord.Interaction):
     try:
         conn = get_db_connection()
-        cursor = conn.cursor()
-        
-        cursor.execute("SELECT id, name FROM categories ORDER BY name")
-        categories = cursor.fetchall()
+        result = conn.execute("SELECT id, name FROM categories ORDER BY name")
+        categories = result.fetchall()
         
         if not categories:
             embed = discord.Embed(
@@ -176,7 +172,6 @@ async def list_categories(interaction: discord.Interaction):
         error_embed.set_footer(text="Made with ♡ by Finduss")
         await interaction.response.send_message(embed=error_embed, ephemeral=True)
     finally:
-        cursor.close()
         conn.close()
 
 # Modal für die Artikeleingabe
@@ -246,14 +241,14 @@ class ArticleModal(discord.ui.Modal, title='📝 Artikel hinzufügen'):
         
         if view.selected_category:
             category_id = int(view.selected_category)
-            cursor = db.cursor()
+            conn = get_db_connection()
             
             try:
-                cursor.execute(
+                conn.execute(
                     "INSERT INTO articles (title, url, description, category_id, published_date) VALUES (%s, %s, %s, %s, %s)",
                     (str(self.title), str(self.url), str(self.description), category_id, formatted_date)
                 )
-                db.commit()
+                conn.commit()
                 
                 success_embed = discord.Embed(
                     title="Artikel erfolgreich erstellt",
@@ -297,7 +292,7 @@ class ArticleModal(discord.ui.Modal, title='📝 Artikel hinzufügen'):
                 error_embed.set_footer(text="Made with ♡ by Finduss")
                 await interaction.followup.send(embed=error_embed, ephemeral=True)
             finally:
-                cursor.close()
+                conn.close()
         else:
             error_embed = discord.Embed(
                 title="❌ Keine Kategorie ausgewählt",
@@ -315,10 +310,10 @@ class ArticleModal(discord.ui.Modal, title='📝 Artikel hinzufügen'):
 # Fügt einen neuen Artikel hinzu
 @tree.command(name="add_article", description="Füge einen neuen Artikel hinzu")
 async def add_article(interaction: discord.Interaction):
-    cursor = db.cursor()
-    cursor.execute("SELECT id, name FROM categories")
-    categories = cursor.fetchall()
-    cursor.close()
+    conn = get_db_connection()
+    result = conn.execute("SELECT id, name FROM categories")
+    categories = result.fetchall()
+    conn.close()
     
     if not categories:
         await interaction.response.send_message(
