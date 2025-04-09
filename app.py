@@ -12,12 +12,12 @@ def index():
     articles = {
         "Politik und Gesellschaft": [
             {
-                "title": "Klimaschutzprojekte in China: Milliardenbetrug in Ölbranche?",
-                "url": "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html", 
+                "title": "Grüne Politikerin hat Sex mit minderjährigen Schüler",
+                "url": "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil", 
             },
             {
-                "title": "Vorwürfe gegen Berliner Grünen-Politiker",
-                "url": "https://www.rbb24.de/politik/beitrag/2024/12/gelbhaar-vorwuerfe-belaestigung-gruene-berlin-pankow.html",
+                "title": "Klimaschutzprojekte in China: Milliardenbetrug in Ölbranche?",
+                "url": "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html", 
             },
             {
                 "title": "Berliner Grüne wollen externe Meldestelle für Fälle sexueller Belästigung",
@@ -149,20 +149,20 @@ def get_date_from_meta(url):
         for tag in meta_tags:
             meta = soup.find("meta", tag)
             if meta and meta.get("content"):
-                return meta.get("content")
+                date = meta.get("content").split("T")[0]  # Nur das Datum extrahieren
+                return date
             
         time_tag = soup.find("time")
         if time_tag and time_tag.get("datetime"):
-            return time_tag.get("datetime")  # Datum aus datetime-Attribut
+            date = time_tag.get("datetime").split("T")[0]  # Nur das Datum extrahieren
+            return date
         elif time_tag:
-            return time_tag.text.strip()  # Datum aus Text des <time>-Tags
-        
-        
+            return time_tag.text.strip().split(" ")[0]  # Nur das Datum extrahieren
         
         logging.warning("Kein Datum gefunden in Meta-Tags.")
         return "Kein Datum gefunden."
     except requests.exceptions.RequestException as e:
-        logging.error("Fehler beim Abrufen der URL: {e}")
+        logging.error(f"Fehler beim Abrufen der URL: {e}")
         return "Kein Datum gefunden."
     
 
