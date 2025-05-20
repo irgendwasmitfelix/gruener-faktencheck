@@ -3,8 +3,21 @@ from datetime import datetime
 import requests, logging
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
+import json, os
 
 app = Flask(__name__)
+
+CACHE_FILE = "article_cache.json"
+
+def load_cache():
+    if os.path.exists(CACHE_FILE):
+        with open(CACHE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+def save_cache(cache):
+    with open(CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False)
 
 @app.route('/')
 def index():
@@ -120,9 +133,16 @@ def index():
     }
 
     # Jedes datum wird versucht zu laden, deswegen wird jede seite geladen was natürlich für delay sorgt, muss optimiert werden, weiß aber noch nich wie @irgendwasmitfelix
+    cache = load_cache()
     for category, articles_list in articles.items():
         for article in articles_list:
-            article["date"] = get_date_from_meta(article["url"])
+            url = article["url"]
+            if url in cache:
+                article["date"] = cache[url]
+            else:
+                article["date"] = get_date_from_meta(url)
+                cache[url] = article["date"]
+    save_cache(cache)
 
     # Aktuelles Jahr für den Footer
     current_year = datetime.now().year
