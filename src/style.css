@@ -25,15 +25,33 @@ h2 {
   margin-bottom: 1em;
   font-size: 1.3em;
 }
+/* Suchleiste */
+input[type="text"] {
+  display: block;
+  margin: 0 auto 2em auto;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.7em;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #217c3b;
+  background: #f4f8f4;
+  box-sizing: border-box;
+}
 .category-box {
   background: #eafbe7;
   border-radius: 8px;
   padding: 1em 1.5em;
   margin-bottom: 2em;
   box-shadow: 0 2px 8px rgba(33,124,59,0.05);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.category-box:hover {
+  box-shadow: 0 4px 24px rgba(33,124,59,0.12);
+  border: 1px solid #b6e2c7;
 }
 .article-teaser {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   padding: 0.5em 0;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -46,18 +64,20 @@ h2 {
   color: #333;
 }
 .article-teaser a {
-  display: inline-block;
-  background: #217c3b;
-  color: #fff;
-  padding: 0.3em 1em;
-  border-radius: 4px;
+  background: none;
+  color: #217c3b;
+  padding: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.98em;
   margin-top: 0.2em;
-  font-size: 0.95em;
-  transition: background 0.2s;
+  text-decoration: underline;
+  transition: color 0.2s;
 }
 .article-teaser a:hover {
-  background: #145c28;
-  text-decoration: none;
+  color: #145c28;
+  background: none;
+  text-decoration: underline;
 }
 footer {
   margin-top: 3em;
@@ -75,4 +95,15 @@ footer {
   .category-box {
     padding: 1em;
   }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  .container {
+    padding: 0.5em;
+      }
 }
