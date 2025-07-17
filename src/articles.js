@@ -13,6 +13,10 @@ export const articles = {
       url: "https://www.welt.de/politik/deutschland/article256320388/Gefaengnis-Besuch-bei-Maja-T-Katrin-Goering-Eckardt-beklagt-Katastrophe-mitten-in-Europa.html"
     },
     {
+      title: "Jette Nietzard verherrlicht Gewalt gegen Polizisten und Reiche: Sprecherin der Grünen Jugend trägt „ACAB“-Pullover und „Eat the rich“-Cap",
+      url: "https://www.nius.de/politik/news/nietzard-verherrlicht-gewalt/e3c16462-97c1-4cef-8160-6db8f7548d55"
+    },
+    {
       title: "Göring-Eckardt relativiert Hausdurchsuchung",
       url: "https://apollo-news.net/das-geht-jetzt-nicht-mehr-goering-eckardt-relativiert-hausdurchsuchung-wegen-schwachkopf-meme/"
     }
