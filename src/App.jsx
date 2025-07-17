@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { articles } from "./articles";
-
+document.body.classList.toggle("darkmode");
 function getDomain(url) {
   try {
     return new URL(url).hostname.replace("www.", "");

@@ -3,6 +3,7 @@ body {
   background: #f8f8f8;
   margin: 0;
   padding: 0;
+  transition: background 0.3s;
 }
 .container {
   max-width: 700px;
@@ -11,6 +12,7 @@ body {
   padding: 2em;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(33,124,59,0.08);
+  transition: background 0.3s, color 0.3s;
 }
 h1 {
   color: #217c3b;
@@ -44,11 +46,21 @@ input[type="text"] {
   padding: 1em 1.5em;
   margin-bottom: 2em;
   box-shadow: 0 2px 8px rgba(33,124,59,0.05);
-  transition: box-shadow 0.2s, border 0.2s;
+  transition: box-shadow 0.2s, border 0.2s, background 0.3s;
 }
 .category-box:hover {
   box-shadow: 0 4px 24px rgba(33,124,59,0.12);
   border: 1px solid #b6e2c7;
+}
+.category-box h2 {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  padding: 0.3em 0.5em;
+  border-radius: 6px;
+}
+.category-box h2:hover {
+  background: #d2f5c9;
 }
 .article-teaser {
   margin-bottom: 1.5em;
@@ -105,15 +117,38 @@ footer {
   }
   .container {
     padding: 0.5em;
-      }
-.category-box h2 {
-  cursor: pointer;
-  user-select: none;
-  transition: background 0.2s;
-  padding: 0.3em 0.5em;
-  border-radius: 6px;
+  }
 }
-.category-box h2:hover {
-  background: #d2f5c9;
+
+/* Darkmode */
+body.darkmode {
+  background: #181c1f;
 }
+body.darkmode .container {
+  background: #23272a;
+  color: #eafbe7;
+}
+body.darkmode h1,
+body.darkmode h2 {
+  color: #b6e2c7;
+}
+body.darkmode .category-box {
+  background: #23272a;
+  border: 1px solid #333;
+}
+body.darkmode .category-box h2:hover {
+  background: #2c3338;
+}
+body.darkmode .article-teaser h3 {
+  color: #eafbe7;
+}
+body.darkmode .article-teaser a {
+  color: #b6e2c7;
+}
+body.darkmode .article-teaser a:hover {
+  color: #7fdca4;
+}
+body.darkmode footer {
+  color: #b6e2c7;
+  border-top: 1px solid #333;
 }
