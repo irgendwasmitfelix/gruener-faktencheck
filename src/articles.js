@@ -6,12 +6,7 @@ export const articles = {
     },
     {
       title: "China-Klimabetrug: Ermittlungen im Umweltausschuss",
-      Veröffentlicht: "11.9.2024",
       url: "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html"
-    },
-    {
-      title: "Berliner Grüne wollen externe Meldestelle",
-      url: "https://www.tagesschau.de/inland/regional/berlin/rbb-nach-vorwuerfen-gegen-bundestagsabgeordneten-berliner-gruene-wollen-externe-meldestelle-fuer-faelle-sexueller-belaestigung-100.html"
     },
     {
       title: "Katrin Goering Eckardt besucht Maja T in Ungarn",
