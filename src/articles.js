@@ -90,7 +90,7 @@ export const articles = {
       url: "https://www.tichyseinblick.de/daili-es-sentials/afghanistan-programm-baerbock/"
     },
     {
-      title: "Archiv: Baerbock",
+      title: "Albtraum Asylheim",
       url: "https://archive.ph/hbENt"
     }
   ]

@@ -1,6 +1,14 @@
 import React from "react";
 import { articles } from "./articles";
 
+function getDomain(url) {
+  try {
+    return new URL(url).hostname.replace("www.", "");
+  } catch {
+    return url;
+  }
+}
+
 function App() {
   const year = new Date().getFullYear();
 
@@ -13,7 +21,6 @@ function App() {
           {list.map((article, idx) => (
             <div className="article-teaser" key={idx}>
               <h3>{article.title}</h3>
-              {/* Datum und Quelle falls vorhanden */}
               {(article.date || article.source) && (
                 <p style={{ fontSize: "0.95em", color: "#666", margin: "0 0 0.3em 0" }}>
                   {article.date && <span>{article.date}</span>}
@@ -22,7 +29,7 @@ function App() {
                 </p>
               )}
               <a href={article.url} target="_blank" rel="noopener noreferrer">
-                Artikel lesen
+                {getDomain(article.url)}
               </a>
             </div>
           ))}
