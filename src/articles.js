@@ -2,11 +2,8 @@ export const articles = {
   "Allgemein": [
     {
       title: "China-Klimabetrug: Ermittlungen im Umweltausschuss",
+      Veröffentlicht: "11.9.2024",
       url: "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html"
-    },
-    {
-      title: "Vorwürfe gegen Gelbhaar (Grüne Berlin-Pankow)",
-      url: "https://www.rbb24.de/politik/beitrag/2024/12/gelbhaar-vorwuerfe-belaestigung-gruene-berlin-pankow.html"
     },
     {
       title: "Berliner Grüne wollen externe Meldestelle",
