@@ -12,6 +12,15 @@ function getDomain(url) {
 function App() {
   const year = new Date().getFullYear();
   const [search, setSearch] = useState("");
+  const [openCategories, setOpenCategories] = useState({});
+
+  // Toggle-Funktion
+  const toggleCategory = (category) => {
+    setOpenCategories((prev) => ({
+      ...prev,
+      [category]: !prev[category],
+    }));
+  };
 
   // Filtert alle Artikel nach Suchbegriff (in Titel)
   const filteredArticles = Object.fromEntries(
@@ -26,7 +35,6 @@ function App() {
   return (
     <div className="container">
       <h1>Grüner Faktencheck</h1>
-      {/* Suchleiste direkt unter dem Titel */}
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "2em" }}>
         <input
           type="text"
@@ -46,22 +54,28 @@ function App() {
       {Object.entries(filteredArticles).map(([category, list]) =>
         list.length > 0 ? (
           <div className="category-box" key={category}>
-            <h2>{category}</h2>
-            {list.map((article, idx) => (
-              <div className="article-teaser" key={idx}>
-                <h3>{article.title}</h3>
-                {(article.date || article.source) && (
-                  <p style={{ fontSize: "0.95em", color: "#666", margin: "0 0 0.3em 0" }}>
-                    {article.date && <span>{article.date}</span>}
-                    {article.date && article.source && <span> &middot; </span>}
-                    {article.source && <span>{article.source}</span>}
-                  </p>
-                )}
-                <a href={article.url} target="_blank" rel="noopener noreferrer">
-                  {getDomain(article.url)}
-                </a>
-              </div>
-            ))}
+            <h2
+              style={{ cursor: "pointer", userSelect: "none" }}
+              onClick={() => toggleCategory(category)}
+            >
+              {category} {openCategories[category] ? "▲" : "▼"}
+            </h2>
+            {openCategories[category] &&
+              list.map((article, idx) => (
+                <div className="article-teaser" key={idx}>
+                  <h3>{article.title}</h3>
+                  {(article.date || article.source) && (
+                    <p style={{ fontSize: "0.95em", color: "#666", margin: "0 0 0.3em 0" }}>
+                      {article.date && <span>{article.date}</span>}
+                      {article.date && article.source && <span> &middot; </span>}
+                      {article.source && <span>{article.source}</span>}
+                    </p>
+                  )}
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">
+                    {getDomain(article.url)}
+                  </a>
+                </div>
+              ))}
           </div>
         ) : null
       )}

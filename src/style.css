@@ -106,4 +106,14 @@ footer {
   .container {
     padding: 0.5em;
       }
+.category-box h2 {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  padding: 0.3em 0.5em;
+  border-radius: 6px;
+}
+.category-box h2:hover {
+  background: #d2f5c9;
+}
 }
