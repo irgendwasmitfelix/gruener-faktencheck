@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { articles } from "./articles";
 
 function getDomain(url) {
@@ -11,30 +11,60 @@ function getDomain(url) {
 
 function App() {
   const year = new Date().getFullYear();
+  const [search, setSearch] = useState("");
+
+  // Filtert alle Artikel nach Suchbegriff (in Titel)
+  const filteredArticles = Object.fromEntries(
+    Object.entries(articles).map(([category, list]) => [
+      category,
+      list.filter(article =>
+        article.title.toLowerCase().includes(search.toLowerCase())
+      ),
+    ])
+  );
 
   return (
     <div className="container">
       <h1>Grüner Faktencheck</h1>
-      {Object.entries(articles).map(([category, list]) => (
-        <div className="category-box" key={category}>
-          <h2>{category}</h2>
-          {list.map((article, idx) => (
-            <div className="article-teaser" key={idx}>
-              <h3>{article.title}</h3>
-              {(article.date || article.source) && (
-                <p style={{ fontSize: "0.95em", color: "#666", margin: "0 0 0.3em 0" }}>
-                  {article.date && <span>{article.date}</span>}
-                  {article.date && article.source && <span> &middot; </span>}
-                  {article.source && <span>{article.source}</span>}
-                </p>
-              )}
-              <a href={article.url} target="_blank" rel="noopener noreferrer">
-                {getDomain(article.url)}
-              </a>
-            </div>
-          ))}
-        </div>
-      ))}
+      {/* Suchleiste direkt unter dem Titel */}
+      <div style={{ display: "flex", justifyContent: "center", marginBottom: "2em" }}>
+        <input
+          type="text"
+          placeholder="Suche Artikel..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          style={{
+            width: "100%",
+            maxWidth: "400px",
+            padding: "0.7em",
+            fontSize: "1em",
+            borderRadius: "6px",
+            border: "1px solid #217c3b",
+          }}
+        />
+      </div>
+      {Object.entries(filteredArticles).map(([category, list]) =>
+        list.length > 0 ? (
+          <div className="category-box" key={category}>
+            <h2>{category}</h2>
+            {list.map((article, idx) => (
+              <div className="article-teaser" key={idx}>
+                <h3>{article.title}</h3>
+                {(article.date || article.source) && (
+                  <p style={{ fontSize: "0.95em", color: "#666", margin: "0 0 0.3em 0" }}>
+                    {article.date && <span>{article.date}</span>}
+                    {article.date && article.source && <span> &middot; </span>}
+                    {article.source && <span>{article.source}</span>}
+                  </p>
+                )}
+                <a href={article.url} target="_blank" rel="noopener noreferrer">
+                  {getDomain(article.url)}
+                </a>
+              </div>
+            ))}
+          </div>
+        ) : null
+      )}
       <footer>
         <p>
           Erstellt von:{" "}
