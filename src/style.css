@@ -152,3 +152,10 @@ body.darkmode footer {
   color: #b6e2c7;
   border-top: 1px solid #333;
 }
+footer a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #b6e2c7 !important;
+}
