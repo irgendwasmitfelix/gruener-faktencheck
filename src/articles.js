@@ -1,6 +1,10 @@
 export const articles = {
   "Allgemein": [
     {
+      title: "Grünen Politikerin (33) hat sex mit einem 17 jährigen Schüler",
+      url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
+    },
+    {
       title: "China-Klimabetrug: Ermittlungen im Umweltausschuss",
       Veröffentlicht: "11.9.2024",
       url: "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html"
@@ -88,12 +92,6 @@ export const articles = {
     {
       title: "Archiv: Baerbock",
       url: "https://archive.ph/hbENt"
-    }
-  ],
-  "Neu/Unsortiert": [
-    {
-      title: "Sex-Falle Urteil",
-      url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
     }
   ]
   };
