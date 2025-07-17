@@ -14,8 +14,8 @@ export const articles = {
       url: "https://www.tagesschau.de/inland/regional/berlin/rbb-nach-vorwuerfen-gegen-bundestagsabgeordneten-berliner-gruene-wollen-externe-meldestelle-fuer-faelle-sexueller-belaestigung-100.html"
     },
     {
-      title: "Vorwürfe gegen Andreas Ewald",
-      url: "https://www.msn.com/de-de/nachrichten/politik/vorw%C3%BCrfe-gegen-andreas-ewald-wo-bleibt-der-staatsanwalt/ar-BB1rgQbW?apiversion=v2&noservercache=1&domshim=1&renderwebcomponents=1&wcseo=1&batchservertelemetry=1&noservertelemetry=1"
+      title: "Katrin Goering Eckardt besucht Maja T in Ungarn",
+      url: "https://www.welt.de/politik/deutschland/article256320388/Gefaengnis-Besuch-bei-Maja-T-Katrin-Goering-Eckardt-beklagt-Katastrophe-mitten-in-Europa.html"
     },
     {
       title: "Göring-Eckardt relativiert Hausdurchsuchung",
