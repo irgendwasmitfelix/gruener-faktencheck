@@ -21,7 +21,7 @@ export const articles = {
       url: "https://apollo-news.net/das-geht-jetzt-nicht-mehr-goering-eckardt-relativiert-hausdurchsuchung-wegen-schwachkopf-meme/"
     }
   ],
-  "Habeck": [
+  "Wirtschaft": [
     {
       title: "Habeck-Enthüllung und das Versagen der Medien",
       url: "https://www.nius.de/kommentar/news/keine-silbe-in-der-tagesschau-die-habeck-enthuellung-und-das-gewaltige-versagen-der-medien/b15a84e4-8f20-4072-9681-8067f1acda7f"
@@ -59,7 +59,7 @@ export const articles = {
       url: "https://www.bild.de/regional/mecklenburg-vorpommern/news-inland/ruegen-caf-benennt-sich-um-name-habeck-war-schlecht-fuers-geschaeft-85091870.bild.html?"
     }
   ],
-  "Baerbock": [
+  "Außenpolitik": [
     {
       title: "EM-Kurzstreckenflug und weitere Ministrekcen-Flüge",
       url: "https://www.welt.de/politik/deutschland/article252604396/Auf-Baerbocks-EM-Kurzstreckenflug-folgten-noch-weitere-Ministrecken-Fluege.html"
