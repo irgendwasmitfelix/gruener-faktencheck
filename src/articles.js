@@ -61,6 +61,10 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+    title: "„Wir leben in einem Rechtsstaat“: Banaszak gegen Abschiebung straffälliger Afghanen, will sie lieber durchfüttern?",
+    url: "https://apollo-news.net/wir-leben-in-einem-rechtsstaat-banaszak-gegen-abschiebung-straffaelliger-afghanen/"
+    },
+    {
       title: "EM-Kurzstreckenflug und weitere Ministrekcen-Flüge",
       url: "https://www.welt.de/politik/deutschland/article252604396/Auf-Baerbocks-EM-Kurzstreckenflug-folgten-noch-weitere-Ministrecken-Fluege.html"
     },
