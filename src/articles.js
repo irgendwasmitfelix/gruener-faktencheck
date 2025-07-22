@@ -60,6 +60,10 @@ export const articles = {
     }
   ],
   "Außenpolitik": [
+     {
+    title: "Visa-Affäre um Baerbock 'Ideologie einer Welt ohne Grenzen, in der gefälschte Pässe egal sind'",
+    url: "https://www.welt.de/politik/deutschland/video252705590/Visa-Affaere-um-Baerbock-Ideologie-einer-Welt-ohne-Grenzen-in-der-gefaelschte-Paesse-egal-sind.html"
+    },
     {
     title: "„Wir leben in einem Rechtsstaat“: Banaszak gegen Abschiebung straffälliger Afghanen, will sie lieber durchfüttern?",
     url: "https://apollo-news.net/wir-leben-in-einem-rechtsstaat-banaszak-gegen-abschiebung-straffaelliger-afghanen/"
