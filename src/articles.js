@@ -57,6 +57,10 @@ export const articles = {
     {
       title: "Rügen-Café benennt sich um: Habeck war schlecht fürs Geschäft",
       url: "https://www.bild.de/regional/mecklenburg-vorpommern/news-inland/ruegen-caf-benennt-sich-um-name-habeck-war-schlecht-fuers-geschaeft-85091870.bild.html?"
+    },
+     {
+      "title": "Bärbock und ihre Make Up Ausgaben",
+      "url": "https://www.bild.de/politik/inland/hohe-make-up-kosten-der-ampel-regierung-68766bf15198ab3afa8738ec"
     }
   ],
   "Außenpolitik": [
