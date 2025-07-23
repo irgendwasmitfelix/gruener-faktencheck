@@ -85,7 +85,11 @@ export const articles = {
   {
     "title": "Das Totalversagen der Ricarda Lang | NIUS.de",
     "url": "https://www.nius.de/politik/news/das-totalversagen-der-ricarda-lang/2c4665e7-a283-41d8-8545-1d1a58503379"
-  }
+  },
+    {
+    "title": "Putzgruppe – Wikipedia",
+    "url": "https://de.m.wikipedia.org/wiki/Putzgruppe?utm_source=chatgpt.comc"
+    }
   ],
   "Außenpolitik": [
      {
