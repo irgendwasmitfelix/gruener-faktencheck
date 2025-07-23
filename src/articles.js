@@ -73,7 +73,19 @@ export const articles = {
     {
   "title": "Religiöse Symbole Berliner Grünen-Politikerin zum Kopftuchverbot: „Schaffen Sie das Neutralitätsgesetz ab!“",
   "url": "https://archive.ph/B09IO"
-    }
+    },
+     {
+    "title": "Vor der Klatsche in Sachsen will Ricarda Lang „neue Formen der Demokratie ausprobieren“ | NIUS.de",
+    "url": "https://www.nius.de/analyse/news/vor-der-klatsche-in-sachsen-will-ricarda-lang-neue-formen-der-demokratie-ausprobieren/3371ed96-9323-440d-a1a6-2b1599a22caf"
+  },
+  {
+    "title": "Ricarda Lang setzt Islamisten Terror von Mannheim mit Sylt Video gleich   | NIUS.de",
+    "url": "https://www.nius.de/kommentar/news/ricarda-lang-setzt-islamisten-terror-von-mannheim-mit-sylt-video-gleich/92079db2-b11a-4596-8aac-615b9de34c46"
+  },
+  {
+    "title": "Das Totalversagen der Ricarda Lang | NIUS.de",
+    "url": "https://www.nius.de/politik/news/das-totalversagen-der-ricarda-lang/2c4665e7-a283-41d8-8545-1d1a58503379"
+  }
   ],
   "Außenpolitik": [
      {

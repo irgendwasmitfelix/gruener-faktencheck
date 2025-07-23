@@ -8,49 +8,51 @@
     .container { max-width: 600px; margin: auto; background: #fff; padding: 2em; border-radius: 12px; box-shadow: 0 4px 16px rgba(33,124,59,0.08);}
     h1 { color: #217c3b; text-align: center; }
     label { display: block; margin-top: 1em; }
-    input, select { width: 100%; padding: 0.5em; margin-top: 0.2em; }
+    textarea { width: 100%; padding: 0.5em; margin-top: 0.2em; height: 120px; }
     button { margin-top: 1em; padding: 0.5em 1em; background: #217c3b; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
-    textarea { width: 100%; height: 120px; margin-top: 1em; }
     .article-list { margin-top: 2em; }
     .article-item { background: #eafbe7; margin-bottom: 0.5em; padding: 0.5em; border-radius: 6px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Artikel-Generator (offline)</h1>
-    <label>Kategorie:
-      <select id="category">
-        <option value="Allgemein">Allgemein</option>
-        <option value="Wirtschaft">Wirtschaft</option>
-        <option value="Außenpolitik">Außenpolitik</option>
-      </select>
+    <h1>Artikel-Generator</h1>
+    <label>URLs (eine pro Zeile):
+      <textarea id="urls"></textarea>
     </label>
-    <label>Titel:
-      <input type="text" id="title" />
-    </label>
-    <label>URL:
-      <input type="text" id="url" />
-    </label>
-    <button onclick="addArticle()">Artikel hinzufügen</button>
+    <button onclick="addArticles()">Artikel automatisch hinzufügen</button>
     <div class="article-list" id="articleList"></div>
     <label>JSON für articles.js:</label>
     <textarea id="output" readonly></textarea>
   </div>
   <script>
-    const articles = {
-      "Allgemein": [],
-      "Wirtschaft": [],
-      "Außenpolitik": []
-    };
+    const articles = [];
 
-    function addArticle() {
-      const cat = document.getElementById('category').value;
-      const title = document.getElementById('title').value.trim();
-      const url = document.getElementById('url').value.trim();
-      if (!title || !url) return alert("Bitte Titel und URL eingeben!");
-      articles[cat].push({ title, url });
-      document.getElementById('title').value = '';
-      document.getElementById('url').value = '';
+    async function fetchTitle(url) {
+      try {
+        const proxy = "https://corsproxy.io/?";
+        const resp = await fetch(proxy + encodeURIComponent(url));
+        const html = await resp.text();
+        const match = html.match(/<title[^>]*>([^<]*)<\/title>/i);
+        if (match && match[1]) {
+          return match[1].replace(/[-\/]/g, " ").trim();
+        }
+      } catch (e) {}
+      try {
+        return new URL(url).hostname.replace("www.", "");
+      } catch {
+        return url;
+      }
+    }
+
+    async function addArticles() {
+      const urls = document.getElementById('urls').value.split('\n').map(u => u.trim()).filter(Boolean);
+      if (!urls.length) return alert("Bitte mindestens eine URL eingeben!");
+      for (const url of urls) {
+        const title = await fetchTitle(url);
+        articles.push({ title, url });
+      }
+      document.getElementById('urls').value = '';
       renderArticles();
       renderOutput();
     }
@@ -58,32 +60,18 @@
     function renderArticles() {
       const list = document.getElementById('articleList');
       list.innerHTML = '';
-      Object.entries(articles).forEach(([cat, arr]) => {
-        if (arr.length) {
-          const catDiv = document.createElement('div');
-          catDiv.innerHTML = `<strong>${cat}</strong>`;
-          arr.forEach(a => {
-            const item = document.createElement('div');
-            item.className = 'article-item';
-            item.textContent = a.title + " (" + a.url + ")";
-            catDiv.appendChild(item);
-          });
-          list.appendChild(catDiv);
-        }
+      articles.forEach(a => {
+        const item = document.createElement('div');
+        item.className = 'article-item';
+        item.textContent = a.title + " (" + a.url + ")";
+        list.appendChild(item);
       });
     }
 
     function renderOutput() {
-    // Zeigt nur den zuletzt hinzugefügten Artikel als JSON
-    const cat = document.getElementById('category').value;
-    const arr = articles[cat];
-    if (arr.length) {
       document.getElementById('output').value =
-        JSON.stringify(arr[arr.length - 1], null, 2);
-    } else {
-      document.getElementById('output').value = "";
+        JSON.stringify(articles, null, 2);
     }
-  }
   </script>
 </body>
 </html>
