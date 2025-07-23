@@ -19,6 +19,10 @@ export const articles = {
     {
       title: "Göring-Eckardt relativiert Hausdurchsuchung",
       url: "https://apollo-news.net/das-geht-jetzt-nicht-mehr-goering-eckardt-relativiert-hausdurchsuchung-wegen-schwachkopf-meme/"
+    },
+    {
+  "title": "Anton Hofreiter erstattet Anzeige, weil man ihn „hässliche Frau“ genannt hat",
+  "url": "https://www.nius.de/politik/news/dresdner-soll-1250-euro-strafe-zahlen-weil-er-anton-hofreiter-eine-haessliche-frau-genannt-hat/87cad6ac-7432-4d66-a6c8-c3914af39d6d"
     }
   ],
   "Wirtschaft": [
