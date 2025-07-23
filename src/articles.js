@@ -101,6 +101,10 @@ export const articles = {
   {
     "title": "Belästigungsvorwürfe: Was über den Fall Gelbhaar bekannt ist - frei erfunden?! | tagesschau.de",
     "url": "https://www.tagesschau.de/inland/innenpolitik/gruene-gelbhaar-100.html"
+  },
+  {
+    "title": "Jette Nietzard bezeichnet Massaker vom 7. Oktober als „Militäroperation“   WELT",
+    "url": "https://www.welt.de/politik/deutschland/article256215768/Jette-Nietzard-bezeichnet-Massaker-vom-7-Oktober-als-Militaeroperation.html"
   }
   ],
   "Außenpolitik": [
