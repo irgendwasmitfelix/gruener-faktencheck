@@ -33,15 +33,18 @@ function App() {
   );
 
   // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird
-  useEffect(() => {
-    if (search.trim() !== "") {
-      const open = {};
-      for (const [category, list] of Object.entries(filteredArticles)) {
-        if (list.length > 0) open[category] = true;
-      }
-      setOpenCategories(open);
+ useEffect(() => {
+  if (search.trim() !== "") {
+    const open = {};
+    for (const [category, list] of Object.entries(filteredArticles)) {
+      if (list.length > 0) open[category] = true;
     }
-  }, [search, filteredArticles]);
+    setOpenCategories(open);
+  } else {
+    // Alle Kategorien zuklappen, wenn Suche geleert wird
+    setOpenCategories({});
+  }
+}, [search, filteredArticles]);
 
   return (
     <div className="container">
