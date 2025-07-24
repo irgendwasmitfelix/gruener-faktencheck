@@ -43,7 +43,7 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
-      title: "Grünen Politikerin (33) hat sex mit einem 17 jährigen Schüler",
+      title: "Grünen Politikerin (33) hat Sex mit einem 17 jährigen Schüler",
       url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
     },
     {
