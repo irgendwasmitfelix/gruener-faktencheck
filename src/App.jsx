@@ -40,9 +40,6 @@ function App() {
       if (list.length > 0) open[category] = true;
     }
     setOpenCategories(open);
-  } else {
-    // Alle Kategorien zuklappen, wenn Suche geleert wird
-    setOpenCategories({});
   }
 }, [search, filteredArticles]);
 
