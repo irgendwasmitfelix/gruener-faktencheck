@@ -47,6 +47,11 @@ export const articles = {
       url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
     },
     {
+      title: "'Vielleicht mit Waffen' Jette Nietzard fantasiert vom Bürgerkrieg?!",
+      url: "https://www.derwesten.de/politik/afd-nietzard-widerstand-waffen-id301742659.html"
+    },
+    
+    {
       title: "China-Klimabetrug: Ermittlungen im Umweltausschuss",
       url: "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html"
     },
