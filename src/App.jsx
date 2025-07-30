@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { articles } from "./articles";
-
+document.body.classList.toggle("darkmode");
 function getDomain(url) {
   try {
     return new URL(url).hostname.replace("www.", "");
@@ -13,11 +13,6 @@ function App() {
   const year = new Date().getFullYear();
   const [search, setSearch] = useState("");
   const [openCategories, setOpenCategories] = useState({});
-
-  // Darkmode nur im Browser aktivieren
-  useEffect(() => {
-    document.body.classList.toggle("darkmode");
-  }, []);
 
   // Toggle-Funktion
   const toggleCategory = (category) => {
@@ -37,18 +32,16 @@ function App() {
     ])
   );
 
-  // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird, sonst zuklappen
-  useEffect(() => {
-    if (search.trim() !== "") {
-      const open = {};
-      for (const [category, list] of Object.entries(filteredArticles)) {
-        if (list.length > 0) open[category] = true;
-      }
-      setOpenCategories(open);
-    } else {
-      setOpenCategories({});
+  // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird
+ useEffect(() => {
+  if (search.trim() !== "") {
+    const open = {};
+    for (const [category, list] of Object.entries(filteredArticles)) {
+      if (list.length > 0) open[category] = true;
     }
-  }, [search, filteredArticles]);
+    setOpenCategories(open);
+  }
+}, [search, filteredArticles]);
 
   return (
     <div className="container">
@@ -112,6 +105,6 @@ function App() {
       </footer>
     </div>
   );
-}
+  }
 
 export default App;
