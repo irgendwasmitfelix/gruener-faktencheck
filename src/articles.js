@@ -42,6 +42,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+      {
+      title: "Grünen-Chef Banaszak löscht alte Anti-Deutschland-Tweets",
+      url: "https://apollo-news.net/gruenen-chef-banaszak-loescht-alte-anti-deutschland-tweets/"
+    },
     {
       title: "Grünen Politikerin (33) hat Sex mit einem 17 jährigen Schüler",
       url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
