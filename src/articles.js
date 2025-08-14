@@ -51,6 +51,10 @@ export const articles = {
       url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
     },
     {
+      title: "In Köln fällt die Brandmauer zur AfD",
+      url: "https://www.ksta.de/koeln/gruene-stimmen-in-koeln-mit-cdu-und-afd-brandmauer-eingerissen-1030252"
+    },
+    {
       title: "'Vielleicht mit Waffen' Jette Nietzard fantasiert vom Bürgerkrieg?!",
       url: "https://www.derwesten.de/politik/afd-nietzard-widerstand-waffen-id301742659.html"
     },
@@ -86,6 +90,10 @@ export const articles = {
      {
     "title": "Vor der Klatsche in Sachsen will Ricarda Lang „neue Formen der Demokratie ausprobieren“ | NIUS.de",
     "url": "https://www.nius.de/analyse/news/vor-der-klatsche-in-sachsen-will-ricarda-lang-neue-formen-der-demokratie-ausprobieren/3371ed96-9323-440d-a1a6-2b1599a22caf"
+  },
+  {
+    "title": "Linke und Grüne stimmen in Thüringen mit AfD ab",
+    "url": "https://www.thueringer-allgemeine.de/politik/article408231431/ablenkungsmanoever-thueringer-gruene-verteidigt-abstimmung-mit-afd.html"
   },
   {
     "title": "Ricarda Lang setzt Islamisten Terror von Mannheim mit Sylt Video gleich   | NIUS.de",
