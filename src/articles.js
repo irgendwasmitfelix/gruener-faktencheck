@@ -42,6 +42,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      title: "'Sehr weiße, elitäre Partei'- Grüne tritt aus und rechnet ab",
+      url: "https://www.welt.de/politik/deutschland/plus256270688/Gruene-tritt-aus-und-rechnet-ab-Schaffung-feindseliger-Netzwerke.html"
+    },
       {
       title: "Grünen-Chef Banaszak löscht alte Anti-Deutschland-Tweets",
       url: "https://apollo-news.net/gruenen-chef-banaszak-loescht-alte-anti-deutschland-tweets/"
