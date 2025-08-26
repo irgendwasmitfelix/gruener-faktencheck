@@ -1,12 +1,20 @@
 export const articles = {
   "Wirtschaft": [
     {
+      title: "Staatsanwaltschaft Dresden führt Ermittlungsverfahren gegen Robert Habeck",
+      url: "https://www.medienservice.sachsen.de/medien/news/1088002"
+    },
+    {
       title: "Habeck-Enthüllung und das Versagen der Medien",
       url: "https://www.nius.de/kommentar/news/keine-silbe-in-der-tagesschau-die-habeck-enthuellung-und-das-gewaltige-versagen-der-medien/b15a84e4-8f20-4072-9681-8067f1acda7f"
     },
     {
       title: "Wachstum: Deutschland Letzter",
       url: "https://jungefreiheit.de/wirtschaft/2023/wachstum-deutschland-letzter/"
+    },
+    {
+      title: "So erklärt Robert Habeck seinen Rücktritt im Video",
+      url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_100885092/robert-habeck-so-erklaert-er-seinen-rueckzug-aus-dem-bundestag.html"
     },
     {
       title: "Illegale Siegestor-Projektion",
@@ -53,6 +61,10 @@ export const articles = {
     {
       title: "Grünen Politikerin (33) hat Sex mit einem 17 jährigen Schüler",
       url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
+    },
+     {
+      title: "Wegen Grenz-Zurückweisungen - Grüne fordern EU auf, Deutschland zu bestrafen",
+      url: "https://jungefreiheit.de/politik/deutschland/2025/gruene-fordern-eu-auf-deutschland-zu-bestrafen/"
     },
     {
       title: "In Köln fällt die Brandmauer zur AfD",
