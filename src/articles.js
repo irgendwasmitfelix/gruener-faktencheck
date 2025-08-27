@@ -17,6 +17,10 @@ export const articles = {
       url: "https://jungefreiheit.de/wirtschaft/2023/wachstum-deutschland-letzter/"
     },
     {
+      title: "Habeck's Biografin rechnet mit Habeck ab - Focus Online Bericht",
+      url: "https://www.youtube.com/watch?v=eSAz0CJuksc"
+    },
+    {
       title: "So erklärt Robert Habeck seinen Rücktritt im Video",
       url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_100885092/robert-habeck-so-erklaert-er-seinen-rueckzug-aus-dem-bundestag.html"
     },
