@@ -71,6 +71,10 @@ export const articles = {
       url: "https://jungefreiheit.de/politik/deutschland/2025/gruene-fordern-eu-auf-deutschland-zu-bestrafen/"
     },
     {
+      title: "Katrin Göring-Eckardt habe „Dürre im Kopf“ – Mann soll 16.000 Euro Strafe wegen Beleidigung zahlen",
+      url: "https://apollo-news.net/goehring-eckardt-habe-durre-im-kopf-mann-soll-16-000-euro-strafe-zahlen/"
+    },
+    {
       title: "In Köln fällt die Brandmauer zur AfD",
       url: "https://www.ksta.de/koeln/gruene-stimmen-in-koeln-mit-cdu-und-afd-brandmauer-eingerissen-1030252"
     },
@@ -96,8 +100,8 @@ export const articles = {
       url: "https://apollo-news.net/das-geht-jetzt-nicht-mehr-goering-eckardt-relativiert-hausdurchsuchung-wegen-schwachkopf-meme/"
     },
     {
-  "title": "Anton Hofreiter erstattet Anzeige, weil man ihn „hässliche Frau“ genannt hat",
-  "url": "https://www.nius.de/politik/news/dresdner-soll-1250-euro-strafe-zahlen-weil-er-anton-hofreiter-eine-haessliche-frau-genannt-hat/87cad6ac-7432-4d66-a6c8-c3914af39d6d"
+      "title": "Anton Hofreiter erstattet Anzeige, weil man ihn „hässliche Frau“ genannt hat",
+      "url": "https://www.nius.de/politik/news/dresdner-soll-1250-euro-strafe-zahlen-weil-er-anton-hofreiter-eine-haessliche-frau-genannt-hat/87cad6ac-7432-4d66-a6c8-c3914af39d6d"
     },
     {
   "title": "Wegen Falschzitat: Hausdurchsuchung und 3.900 Euro Geldstrafe für Rentnerin",
