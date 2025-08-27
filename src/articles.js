@@ -9,6 +9,10 @@ export const articles = {
       url: "https://www.nius.de/kommentar/news/keine-silbe-in-der-tagesschau-die-habeck-enthuellung-und-das-gewaltige-versagen-der-medien/b15a84e4-8f20-4072-9681-8067f1acda7f"
     },
     {
+      title: "CSU-Generalsekretär Huber fordert Habeck-Untersuchungsausschuss",
+      url: "https://www.zeit.de/politik/deutschland/2025-08/robert-habeck-rueckzug-martin-huber-csu-untersuchungsausschuss"
+    },
+    {
       title: "Wachstum: Deutschland Letzter",
       url: "https://jungefreiheit.de/wirtschaft/2023/wachstum-deutschland-letzter/"
     },
