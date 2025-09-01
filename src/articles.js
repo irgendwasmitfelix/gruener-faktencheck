@@ -83,10 +83,13 @@ export const articles = {
       url: "https://www.ksta.de/koeln/gruene-stimmen-in-koeln-mit-cdu-und-afd-brandmauer-eingerissen-1030252"
     },
     {
+      title: "Grüne informieren Erstwähler – auf Arabisch",
+      url: "https://jungefreiheit.de/politik/deutschland/2025/gruene-informieren-erstwaehler-auf-arabisch/"
+    },
+    {
       title: "'Vielleicht mit Waffen' Jette Nietzard fantasiert vom Bürgerkrieg?!",
       url: "https://www.derwesten.de/politik/afd-nietzard-widerstand-waffen-id301742659.html"
     },
-    
     {
       title: "China-Klimabetrug: Ermittlungen im Umweltausschuss",
       url: "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html"
