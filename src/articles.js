@@ -59,6 +59,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Steuergeld an NGO Ein Steak für 178 Euro: Bundesrechnungshof kritisiert Spesenrechnungen im Aufnahmeprogramm für Afghanistan",
+      url: "https://apollo-news.net/ein-steak-fr-178-euro-bundesrechnungshof-kritisiert-spesenrechnungen-im-aufnahmeprogramm-fr-afghanistan/"
+    },
+    {
       title: "'Sehr weiße, elitäre Partei'- Grüne tritt aus und rechnet ab",
       url: "https://www.welt.de/politik/deutschland/plus256270688/Gruene-tritt-aus-und-rechnet-ab-Schaffung-feindseliger-Netzwerke.html"
     },
@@ -70,7 +74,7 @@ export const articles = {
       title: "Grünen Politikerin (33) hat Sex mit einem 17 jährigen Schüler",
       url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
     },
-     {
+    {
       title: "Wegen Grenz-Zurückweisungen - Grüne fordern EU auf, Deutschland zu bestrafen",
       url: "https://jungefreiheit.de/politik/deutschland/2025/gruene-fordern-eu-auf-deutschland-zu-bestrafen/"
     },
