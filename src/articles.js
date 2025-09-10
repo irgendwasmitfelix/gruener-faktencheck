@@ -173,7 +173,7 @@ export const articles = {
     url: "https://apollo-news.net/wir-leben-in-einem-rechtsstaat-banaszak-gegen-abschiebung-straffaelliger-afghanen/"
     },
     {
-      title: "EM-Kurzstreckenflug und weitere Ministrekcen-Flüge",
+      title: "EM-Kurzstreckenflug und weitere Ministrecken-Flüge",
       url: "https://www.welt.de/politik/deutschland/article252604396/Auf-Baerbocks-EM-Kurzstreckenflug-folgten-noch-weitere-Ministrecken-Fluege.html"
     },
     {
