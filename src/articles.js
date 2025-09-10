@@ -160,6 +160,10 @@ export const articles = {
   }
   ],
   "Außenpolitik": [
+    {
+    title: "Ortskräfte-NGO soll Software-Auftrag für 651.800 Euro unrechtmäßig vergeben haben",
+    url: "https://apollo-news.net/schwere-vorwrfe-des-bundesrechnungshofs-ortskrfte-ngo-soll-software-auftrag-fr-651-800-euro-unrechtmig-vergeben-haben/"
+    },
      {
     title: "Visa-Affäre um Baerbock 'Ideologie einer Welt ohne Grenzen, in der gefälschte Pässe egal sind'",
     url: "https://www.welt.de/politik/deutschland/video252705590/Visa-Affaere-um-Baerbock-Ideologie-einer-Welt-ohne-Grenzen-in-der-gefaelschte-Paesse-egal-sind.html"
