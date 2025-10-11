@@ -59,8 +59,13 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "„Machtmissbrauch“ und „Mobbing“: Neue Vorwürfe gegen die scheidende Grüne-Jugend-Chefin Nietzard",
+      url: "https://www.tagesspiegel.de/politik/machtmissbrauch-und-mobbing-neue-vorwurfe-gegen-die-scheidende-grune-jugend-chefin-nietzard-14537075.html"
+    },
+    {
       title: "Grüne-Jugend-Chef verbreitet Aufruf zur Verbrennung alter weißer Männer",
-      url: "https://www.nius.de/politik/news/gruene-jugend-chef-verbreitet-aufruf-zur-verbrennung-alter-weisser-maenner/035f336c-cf86-48a6-ab3b-c04caf10ec31"},
+      url: "https://www.nius.de/politik/news/gruene-jugend-chef-verbreitet-aufruf-zur-verbrennung-alter-weisser-maenner/035f336c-cf86-48a6-ab3b-c04caf10ec31"
+    },
       {
       title: "Dröge offenbart, wie wenig Ahnung sie von Steuergeld hat",
       url: "https://jungefreiheit.de/politik/deutschland/2025/droege-offenbart-wie-wenig-ahnung-sie-von-steuergeld-hat/"
