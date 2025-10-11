@@ -173,6 +173,10 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+    title: "Katrin Göring-Eckardt hat die in Ungarn inhaftierte Maja T. im Gefängnis besucht",
+    url: "https://www.welt.de/politik/deutschland/article256320388/Gefaengnis-Besuch-bei-Maja-T-Katrin-Goering-Eckardt-beklagt-Katastrophe-mitten-in-Europa.html"
+    },
+    {
     title: "Ortskräfte-NGO soll Software-Auftrag für 651.800 Euro unrechtmäßig vergeben haben",
     url: "https://apollo-news.net/schwere-vorwrfe-des-bundesrechnungshofs-ortskrfte-ngo-soll-software-auftrag-fr-651-800-euro-unrechtmig-vergeben-haben/"
     },
