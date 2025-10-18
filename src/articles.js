@@ -58,6 +58,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+     {
+      title: "Kieler Oberbürgermeister-Kandidat soll Extremistenfest der Grauen Wölfe unterstützt haben",
+      url: "https://www.spiegel.de/panorama/gesellschaft/kiel-oberbuergermeister-kandidat-samet-yilmaz-verliert-posten-im-verfassungsschutz-a-3747cb22-5fa8-4d2f-955b-ee4858734ac6"
+    },
     {
       title: "„Machtmissbrauch“ und „Mobbing“: Neue Vorwürfe gegen die scheidende Grüne-Jugend-Chefin Nietzard",
       url: "https://www.tagesspiegel.de/politik/machtmissbrauch-und-mobbing-neue-vorwurfe-gegen-die-scheidende-grune-jugend-chefin-nietzard-14537075.html"
