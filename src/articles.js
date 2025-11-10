@@ -59,6 +59,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Grüne Innenexpertin will IS-Dschihadisten mit deutschem Pass nach Deutschland holen",
+      url: "https://apollo-news.net/gruene-innenexpertin-fordert-is-dschihadisten-mit-deutschem-pass-nach-deutschland-holen/"
+    },
+    {
       title: "Kieler Oberbürgermeister-Kandidat soll Extremistenfest der Grauen Wölfe unterstützt haben",
       url: "https://www.nius.de/politik/news/steuerfinanzierte-selbstbeweihraeucherung-177-000-euro-foerdergeld-fuer-habecks-persoenlichen-abschiedsfilm-den-sein-freund-und-berater-fuer-ihn-drehte/aa5135d0-9d9f-4ed7-baab-2e14821b59db"
     },
