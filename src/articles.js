@@ -184,6 +184,10 @@ export const articles = {
   }
   ],
   "Außenpolitik": [
+      {
+    title: "8 Millionen Euro Steuergeld für ein Museum in Nigeria, das jetzt geschlossen hat",
+    url: "https://www.nius.de/analyse/news/8-millionen-euro-steuergeld-fuer-ein-museum-in-nigeria-das-jetzt-geschlossen-hat/5e1510d8-983f-4776-8616-7ce389dd335d"
+    },
     {
     title: "Katrin Göring-Eckardt hat die in Ungarn inhaftierte Maja T. im Gefängnis besucht",
     url: "https://www.welt.de/politik/deutschland/article256320388/Gefaengnis-Besuch-bei-Maja-T-Katrin-Goering-Eckardt-beklagt-Katastrophe-mitten-in-Europa.html"
