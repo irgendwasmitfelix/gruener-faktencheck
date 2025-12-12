@@ -181,6 +181,43 @@ footer a {
 footer a:hover {
   color: #217c3b !important;
 }
+
+/* Category Statistics */
+.category-stats {
+  background: #f0f7f0;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.category-stats h3 {
+  color: #217c3b;
+  margin-top: 0;
+  font-size: 1.2em;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1em;
+}
+.stat-box {
+  background: #fff;
+  padding: 1em;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(33,124,59,0.08);
+  border-left: 4px solid #217c3b;
+}
+.stat-box strong {
+  display: block;
+  font-size: 1.8em;
+  color: #217c3b;
+  margin-bottom: 0.3em;
+}
+.stat-box span {
+  font-size: 0.85em;
+  color: #666;
+}
+
 @media (max-width: 800px) {
   .container {
     max-width: 98vw;
@@ -272,4 +309,12 @@ body.darkmode footer a:hover {
 body.darkmode footer {
   color: #b6e2c7;
   border-top: 1px solid #333;
+}
+
+/* Darkmode for Category Stats */
+body.darkmode .category-stats {
+  background: #2c3338;
+}
+body.darkmode .stat-box {
+  background: #33393f;
 }

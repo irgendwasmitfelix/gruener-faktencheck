@@ -10,12 +10,22 @@ function getDomain(url) {
   }
 }
 
+// Zähle alle Artikel pro Kategorie
+function getCategoryStats() {
+  const stats = {};
+  for (const [category, list] of Object.entries(articles)) {
+    stats[category] = list.length;
+  }
+  return stats;
+}
+
 function App() {
   const year = new Date().getFullYear();
   const [search, setSearch] = useState("");
   const [openCategories, setOpenCategories] = useState({});
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [darkmode, setDarkmode] = useState(false);
+  const categoryStats = getCategoryStats();
 
   // Darkmode Toggle mit State
   useEffect(() => {
@@ -130,6 +140,21 @@ function App() {
           }}
         />
       </div>
+
+      {/* Category Statistics */}
+      {!search && (
+        <div className="category-stats">
+          <h3>Faktencheck-Übersicht</h3>
+          <div className="stats-grid">
+            {Object.entries(categoryStats).map(([cat, count]) => (
+              <div key={cat} className="stat-box">
+                <strong>{count}</strong>
+                <span>{cat}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {hasResults ? (
         Object.entries(filteredArticles).map(([category, list]) =>
