@@ -94,25 +94,20 @@ function App() {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
-      <h1>Grüner Faktencheck</h1>
-      
-      {/* Darkmode Toggle Button */}
-      <div style={{ textAlign: "center", marginBottom: "1.5em" }}>
+
+      {/* Hero Section */}
+      <div className="hero-section">
+        <h1>Grüner Faktencheck</h1>
+        <p className="tagline">Unabhängige Faktenchecks zur Grünen Partei</p>
+      </div>
+
+      {/* Theme Toggle Button */}
+      <div className="theme-toggle-container">
         <button
           onClick={() => setDarkmode(!darkmode)}
-          style={{
-            padding: "0.5em 1em",
-            borderRadius: "6px",
-            border: "1px solid #217c3b",
-            background: darkmode ? "#333" : "#eafbe7",
-            color: darkmode ? "#fff" : "#217c3b",
-            cursor: "pointer",
-            fontSize: "0.9em",
-            fontWeight: "bold",
-            transition: "all 0.3s"
-          }}
+          className="theme-toggle-btn"
         >
-          {darkmode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+          {darkmode ? "Light Mode" : "Dark Mode"}
         </button>
       </div>
 
@@ -155,14 +150,14 @@ function App() {
                   <div className="article-teaser" key={article.url || idx}>
                     <h3>{article.title}</h3>
                     {(article.date || article.source) && (
-                      <p style={{ fontSize: "0.95em", color: "#666", margin: "0 0 0.3em 0" }}>
+                      <p className="article-meta">
                         {article.date && <span>{article.date}</span>}
-                        {article.date && article.source && <span> &middot; </span>}
+                        {article.date && article.source && <span className="meta-separator"> • </span>}
                         {article.source && <span>{article.source}</span>}
                       </p>
                     )}
-                    <a href={article.url} target="_blank" rel="noopener noreferrer">
-                      {getDomain(article.url)}
+                    <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-link">
+                      → Artikel lesen
                     </a>
                   </div>
                 ))}
@@ -195,7 +190,7 @@ function App() {
           aria-label="Nach oben"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          ↑
+          ⬆
         </button>
       )}
 
