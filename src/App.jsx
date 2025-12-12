@@ -157,7 +157,7 @@ function App() {
                       </p>
                     )}
                     <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-link">
-                      → Artikel lesen
+                      Weiterlesen auf {getDomain(article.url)}
                     </a>
                   </div>
                 ))}
