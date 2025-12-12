@@ -58,6 +58,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+     {
+      title: "Habeck muss 12.000 Euro zahlen wegen Falschaussagen über Wagenknecht",
+      url: "https://apollo-news.net/unwahre-tatsachen-behauptet-habeck-muss-12-000-euro-zahlen/"
+    },
     {
       title: "Grüne Innenexpertin will IS-Dschihadisten mit deutschem Pass nach Deutschland holen",
       url: "https://apollo-news.net/gruene-innenexpertin-fordert-is-dschihadisten-mit-deutschem-pass-nach-deutschland-holen/"
