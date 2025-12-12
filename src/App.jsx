@@ -15,11 +15,16 @@ function App() {
   const [search, setSearch] = useState("");
   const [openCategories, setOpenCategories] = useState({});
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [darkmode, setDarkmode] = useState(false);
 
-  // Darkmode nur im Browser aktivieren
+  // Darkmode Toggle mit State
   useEffect(() => {
-    document.body.classList.toggle("darkmode");
-  }, []);
+    if (darkmode) {
+      document.body.classList.add("darkmode");
+    } else {
+      document.body.classList.remove("darkmode");
+    }
+  }, [darkmode]);
 
   // Toggle-Funktion
   const toggleCategory = (category) => {
@@ -90,6 +95,27 @@ function App() {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <h1>Grüner Faktencheck</h1>
+      
+      {/* Darkmode Toggle Button */}
+      <div style={{ textAlign: "center", marginBottom: "1.5em" }}>
+        <button
+          onClick={() => setDarkmode(!darkmode)}
+          style={{
+            padding: "0.5em 1em",
+            borderRadius: "6px",
+            border: "1px solid #217c3b",
+            background: darkmode ? "#333" : "#eafbe7",
+            color: darkmode ? "#fff" : "#217c3b",
+            cursor: "pointer",
+            fontSize: "0.9em",
+            fontWeight: "bold",
+            transition: "all 0.3s"
+          }}
+        >
+          {darkmode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </div>
+
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "2em" }}>
         <label htmlFor="search" style={{ display: "none" }}>Suche Artikel</label>
         <input
