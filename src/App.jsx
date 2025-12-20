@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { articles } from "./articles";
 import { Helmet } from "react-helmet";
 
@@ -147,10 +148,12 @@ function App() {
           <h3>Faktencheck-Übersicht</h3>
           <div className="stats-grid">
             {Object.entries(categoryStats).map(([cat, count]) => (
-              <div key={cat} className="stat-box">
-                <strong>{count}</strong>
-                <span>{cat}</span>
-              </div>
+              <Link key={cat} to={`/${cat}`} style={{ textDecoration: "none", color: "inherit" }}>
+                <div className="stat-box" style={{ cursor: "pointer", transition: "transform 0.2s" }}>
+                  <strong>{count}</strong>
+                  <span>{cat}</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -160,16 +163,17 @@ function App() {
         Object.entries(filteredArticles).map(([category, list]) =>
           list.length > 0 ? (
             <div className="category-box" key={category}>
-              <h2
-                style={{ cursor: "pointer", userSelect: "none" }}
-                tabIndex={0}
-                onClick={() => toggleCategory(category)}
-                onKeyDown={e => handleCategoryKey(e, category)}
-                aria-expanded={!!openCategories[category]}
-                role="button"
-              >
-                {category} {openCategories[category] ? "▲" : "▼"}
-              </h2>
+              <Link to={`/${category}`} style={{ textDecoration: "none", color: "inherit" }}>
+                <h2
+                  style={{ cursor: "pointer", userSelect: "none" }}
+                  tabIndex={0}
+                  onKeyDown={e => handleCategoryKey(e, category)}
+                  aria-expanded={!!openCategories[category]}
+                  role="button"
+                >
+                  {category} {openCategories[category] ? "▲" : "▼"}
+                </h2>
+              </Link>
               {openCategories[category] &&
                 list.map((article, idx) => (
                   <div className="article-teaser" key={article.url || idx}>
