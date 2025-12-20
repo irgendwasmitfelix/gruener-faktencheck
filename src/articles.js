@@ -175,10 +175,6 @@ export const articles = {
     "url": "https://www.bild.de/politik/inland/habeck-sprach-schon-2021-davon-ist-der-job-abbau-teil-des-gruenen-plans-6745a027e7f5a002d28a5f6a"
   },
   {
-    "title": "Nach Abstimmung von Grünen und Linken mit AfD: Wackelt in Thüringen die Brandmauer?",
-    "url": "https://www.thueringer-allgemeine.de/politik/article408231431/ablenkungsmanoever-thueringer-gruene-verteidigt-abstimmung-mit-afd.html"
-  },
-  {
     "title": "Belästigungsvorwürfe: Was über den Fall Gelbhaar bekannt ist - frei erfunden?! | tagesschau.de",
     "url": "https://www.tagesschau.de/inland/innenpolitik/gruene-gelbhaar-100.html"
   },
