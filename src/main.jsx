@@ -1,15 +1,31 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import CategoryPage from "./CategoryPage";
 import "./style.css";
+
+// Lazy Load CategoryPage (wird nur bei Bedarf geladen)
+const CategoryPage = lazy(() => import("./CategoryPage"));
+
+// Fallback Loading Component
+const LoadingFallback = () => (
+  <div style={{ textAlign: "center", padding: "2em" }}>
+    <p>Laden...</p>
+  </div>
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/:category" element={<CategoryPage />} />
+      <Route 
+        path="/:category" 
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <CategoryPage />
+          </Suspense>
+        } 
+      />
     </Routes>
   </BrowserRouter>
 );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { articles } from "./articles";
 import { Helmet } from "react-helmet";
@@ -25,11 +25,22 @@ function App() {
   const [search, setSearch] = useState("");
   const [openCategories, setOpenCategories] = useState({});
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [darkmode, setDarkmode] = useState(false);
+  
+  // Auto Dark Mode Detection (Lazy Load)
+  const [darkmode, setDarkmode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("darkmode");
+      if (saved !== null) return saved === "true";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
+  
   const categoryStats = getCategoryStats();
 
-  // Darkmode Toggle mit State
+  // Darkmode Toggle mit LocalStorage
   useEffect(() => {
+    localStorage.setItem("darkmode", darkmode);
     if (darkmode) {
       document.body.classList.add("darkmode");
     } else {
@@ -54,14 +65,14 @@ function App() {
   };
 
   // Filtert alle Artikel nach Suchbegriff (in Titel)
-  const filteredArticles = Object.fromEntries(
+  const filteredArticles = useMemo(() => Object.fromEntries(
     Object.entries(articles).map(([category, list]) => [
       category,
       list.filter(article =>
         article.title.toLowerCase().includes(search.toLowerCase())
       ),
     ])
-  );
+  ), [search]);
 
   // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird, sonst zuklappen
  // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird, sonst zuklappen

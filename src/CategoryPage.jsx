@@ -13,14 +13,25 @@ function getDomain(url) {
 
 function CategoryPage() {
   const { category } = useParams();
-  const [darkmode, setDarkmode] = useState(false);
+  
+  // Auto Dark Mode Detection
+  const [darkmode, setDarkmode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("darkmode");
+      if (saved !== null) return saved === "true";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
+  
   const [showScrollTop, setShowScrollTop] = useState(false);
   
   const categoryArticles = articles[category] || [];
   const year = new Date().getFullYear();
   
-  // Darkmode Toggle
+  // Darkmode Toggle mit LocalStorage
   useEffect(() => {
+    localStorage.setItem("darkmode", darkmode);
     if (darkmode) {
       document.body.classList.add("darkmode");
     } else {
