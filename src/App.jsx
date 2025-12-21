@@ -48,12 +48,26 @@ function App() {
     }
   }, [darkmode]);
 
-  // Toggle-Funktion
+  // Toggle-Funktion mit Auto-Scroll
   const toggleCategory = (category) => {
-    setOpenCategories((prev) => ({
-      ...prev,
-      [category]: !prev[category],
-    }));
+    setOpenCategories((prev) => {
+      const newState = {
+        ...prev,
+        [category]: !prev[category],
+      };
+      
+      // Wenn Kategorie gerade geöffnet wird, zu ihr scrollen
+      if (!prev[category]) {
+        setTimeout(() => {
+          const element = document.querySelector(`[data-category="${category}"]`);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 0);
+      }
+      
+      return newState;
+    });
   };
 
   // Tastaturbedienung für Kategorie-Reiter
@@ -173,18 +187,17 @@ function App() {
       {hasResults ? (
         Object.entries(filteredArticles).map(([category, list]) =>
           list.length > 0 ? (
-            <div className="category-box" key={category}>
-              <Link to={`/${category}`} style={{ textDecoration: "none", color: "inherit" }}>
-                <h2
-                  style={{ cursor: "pointer", userSelect: "none" }}
-                  tabIndex={0}
-                  onKeyDown={e => handleCategoryKey(e, category)}
-                  aria-expanded={!!openCategories[category]}
-                  role="button"
-                >
-                  {category} {openCategories[category] ? "▲" : "▼"}
-                </h2>
-              </Link>
+            <div className="category-box" key={category} data-category={category}>
+              <h2
+                style={{ cursor: "pointer", userSelect: "none" }}
+                tabIndex={0}
+                onKeyDown={e => handleCategoryKey(e, category)}
+                aria-expanded={!!openCategories[category]}
+                role="button"
+                onClick={() => toggleCategory(category)}
+              >
+                {category} {openCategories[category] ? "▲" : "▼"}
+              </h2>
               {openCategories[category] &&
                 list.map((article, idx) => (
                   <div className="article-teaser" key={article.url || idx}>
