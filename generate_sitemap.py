@@ -58,6 +58,14 @@ if __name__ == "__main__":
         
         print(f"✓ Sitemap generated: {sitemap_path}")
         print(f"✓ Categories added: {', '.join(categories)}")
+        print(f"✓ Sitemap URL: https://grüner-faktencheck.de/sitemap.xml")
+        print(f"\n📌 NÄCHSTE SCHRITTE:")
+        print(f"1. Gehen Sie zu: https://search.google.com/search-console")
+        print(f"2. Registrieren Sie Ihre Domain (falls noch nicht getan)")
+        print(f"3. Gehen Sie zu: Sitemaps")
+        print(f"4. Tragen Sie ein: https://grüner-faktencheck.de/sitemap.xml")
+        print(f"5. Klicken Sie: 'Absenden'")
+        print(f"\n⚡ Das war's! Google wird Ihre Artikel jetzt regelmäßig crawlen.")
     except Exception as e:
         print(f"✗ Error: {e}")
         exit(1)

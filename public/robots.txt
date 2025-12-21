@@ -1,6 +1,20 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
+
 Sitemap: https://grüner-faktencheck.de/sitemap.xml
 
 User-agent: MJ12bot
 Disallow: /
+
+# Google Rich Results bot (erlaubt)
+User-agent: Googlebot-Extended
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
