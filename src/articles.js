@@ -58,6 +58,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      title: "Grün geführtes Familienministerium verleiht 'Omas gegen Rechts' einen Preis",
+      url: "https://apollo-news.net/omas-gegen-rechts-erhalten-demokratiepreis-silberner-schuh-finanziert-mit-geldern-aus-dem-familienministerium/"
+    },
      {
       title: "Habeck muss 12.000 Euro zahlen wegen Falschaussagen über Wagenknecht",
       url: "https://apollo-news.net/unwahre-tatsachen-behauptet-habeck-muss-12-000-euro-zahlen/"
