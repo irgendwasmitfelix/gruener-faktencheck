@@ -241,8 +241,8 @@ export const articles = {
       url: "https://archive.ph/hbENt"
     },
     {
-  "title": "Einreisen aus Afghanistan : Baerbocks Affären: Mal zu lax, mal zu streng",
-  "url": "https://www.zdfheute.de/politik/deutschland/afghanistan-baerbock-visa-ortskraefte-sicherheit-100.html"
+      title: "Einreisen aus Afghanistan : Baerbocks Affären: Mal zu lax, mal zu streng",
+      url: "https://www.zdfheute.de/politik/deutschland/afghanistan-baerbock-visa-ortskraefte-sicherheit-100.html"
     }
   ]
   };
