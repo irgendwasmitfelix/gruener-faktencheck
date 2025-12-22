@@ -172,44 +172,8 @@ def save_html_files(output_dir="./static_pages"):
     
     return generated_files
 
-def upload_to_hostinger(local_dir="./static_pages", remote_dir="/public_html/"):
-    """
-    Lädt HTML-Dateien zu Hostinger hoch (über SFTP)
-    WICHTIG: Benötigt paramiko library: pip install paramiko
-    """
-    
-    try:
-        import paramiko
-    except ImportError:
-        print("⚠ paramiko nicht installiert. Installiere mit: pip install paramiko")
-        print("Datein wurden lokal gespeichert, aber nicht hochgeladen.")
-        return False
-    
-    # Deine Hostinger-Credentials (ACHTUNG: In Produktion in Env-Variable speichern!)
-    SFTP_HOST = "your-hostinger-sftp-server.com"
-    SFTP_USER = "your-sftp-username"
-    SFTP_PASS = "your-sftp-password"
-    
-    try:
-        # SFTP-Verbindung aufbauen
-        transport = paramiko.Transport((SFTP_HOST, 22))
-        transport.connect(username=SFTP_USER, password=SFTP_PASS)
-        sftp = paramiko.SFTPClient.from_transport(transport)
-        
-        # Alle HTML-Dateien hochladen
-        for file in Path(local_dir).glob("*.html"):
-            remote_path = f"{remote_dir}{file.name}"
-            sftp.put(str(file), remote_path)
-            print(f"✓ Hochgeladen: {remote_path}")
-        
-        sftp.close()
-        transport.close()
-        print("✓ Upload zu Hostinger abgeschlossen!")
-        return True
-        
-    except Exception as e:
-        print(f"✗ Upload fehlgeschlagen: {e}")
-        return False
+# SFTP-Upload wird bei PythonAnywhere nicht benötigt
+# Die Dateien werden direkt ins Dateisystem geschrieben
 
 # ========== HAUPTFUNKTION ==========
 
@@ -225,16 +189,10 @@ def main():
     generated = save_html_files()
     print(f"\n✓ {len(generated)} Kategorien generiert!")
     
-    # 2. Optional: Zu Hostinger hochladen (deaktiviert bis Credentials eingegeben)
-    # print("\n2. Lade Dateien zu Hostinger hoch...")
-    # upload_to_hostinger()
-    
     print("\n" + "=" * 50)
     print("Fertig! Die HTML-Seiten sind unter ./static_pages/ verfügbar.")
-    print("\nNächste Schritte:")
-    print("1. Ergänze deine Hostinger-SFTP-Credentials in der upload_to_hostinger() Funktion")
-    print("2. Richte einen Cron-Job auf PythonAnywhere ein (siehe unten)")
-    print("\nCron-Job auf PythonAnywhere:")
+    print("\nPythonAnywhere Cron-Job:")
+    print("  - Gehe zu: https://www.pythonanywhere.com/ → Tasks")
     print("  - Zeitplan: Täglich um 02:00 Uhr (oder deine Vorliebe)")
     print("  - Befehl: python /home/username/generate_static_html.py")
     print("=" * 50)
