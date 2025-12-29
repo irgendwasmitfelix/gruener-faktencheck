@@ -4,8 +4,10 @@ Generiert separate HTML-Seiten für jede Kategorie zur SEO-Optimierung
 Läuft unabhängig und beeinflusst nicht die React-App
 """
 
+import sys
 import os
 import json
+sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
 from datetime import datetime
 from pathlib import Path
 
@@ -168,7 +170,7 @@ def save_html_files(output_dir="./static_pages"):
                 "articles": len(articles_list)
             })
             
-            print(f"✓ Generiert: {filename} ({len(articles_list)} Artikel)")
+            print(f"[OK] Generiert: {filename} ({len(articles_list)} Artikel)")
     
     return generated_files
 

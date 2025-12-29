@@ -1,0 +1,33 @@
+#!/bin/bash
+# Pre-commit hook: Generiert Sitemap und Static HTML vor dem Commit
+
+echo "🔄 Generiere Sitemap und Static HTML..."
+
+# Prüfe ob Python installiert ist
+if ! command -v python3 &> /dev/null && ! command -v python &> /dev/null; then
+    echo "❌ Python nicht gefunden! Bitte Python installieren."
+    exit 1
+fi
+
+# Bestimme Python-Befehl
+PYTHON_CMD=$(command -v python3 || command -v python)
+
+# Führe Scripts aus
+$PYTHON_CMD generate_sitemap.py
+if [ $? -ne 0 ]; then
+    echo "❌ generate_sitemap.py fehlgeschlagen!"
+    exit 1
+fi
+
+$PYTHON_CMD generate_static_html.py
+if [ $? -ne 0 ]; then
+    echo "❌ generate_static_html.py fehlgeschlagen!"
+    exit 1
+fi
+
+# Füge generierte Dateien zum Commit hinzu
+git add public/sitemap.xml
+git add -A static/ 2>/dev/null || true
+
+echo "✅ Sitemap und Static HTML aktualisiert!"
+exit 0
