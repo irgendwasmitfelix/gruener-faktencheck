@@ -1,5 +1,9 @@
 export const articles = {
   "Wirtschaft": [
+        {
+      title: "Habeck-Kinofilm kostet Steuerzahler 270.000 Euro",
+      url: "https://www.welt.de/politik/deutschland/article692d3df518d0e7737b929530/kinofilm-ueber-robert-habeck-erhaelt-270-000-euro-filmfoerderung.html"
+    },
     {
       title: "Staatsanwaltschaft Dresden führt Ermittlungsverfahren gegen Robert Habeck",
       url: "https://www.medienservice.sachsen.de/medien/news/1088002"
