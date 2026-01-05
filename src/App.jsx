@@ -173,7 +173,7 @@ function App() {
           <h3>Faktencheck-Übersicht</h3>
           <div className="stats-grid">
             {Object.entries(categoryStats).map(([cat, count]) => (
-              <Link key={cat} to={`/${cat}`} style={{ textDecoration: "none", color: "inherit" }}>
+              <Link key={cat} to={`/category/${cat}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="stat-box" style={{ cursor: "pointer", transition: "transform 0.2s" }}>
                   <strong>{count}</strong>
                   <span>{cat}</span>
