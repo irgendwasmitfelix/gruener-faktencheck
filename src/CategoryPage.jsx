@@ -44,6 +44,14 @@ function CategoryPage() {
   
   const hasResults = Object.values(filteredArticles).some(list => list.length > 0);
   
+  // SEO: Canonical Link
+  useEffect(() => {
+    const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    canonical.rel = 'canonical';
+    canonical.href = `https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\s+/g, '-')}`;
+    if (!document.head.contains(canonical)) document.head.appendChild(canonical);
+  }, [category]);
+  
   // Darkmode Toggle mit LocalStorage
   useEffect(() => {
     localStorage.setItem("darkmode", darkmode);
@@ -61,13 +69,32 @@ function CategoryPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // JSON-LD für Kategorie-Seite
+  // JSON-LD für Kategorie-Seite (erweitert mit NewsArticle)
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": `Grüner Faktencheck - ${category}`,
-    "url": `https://grüner-faktencheck.de/${category.toLowerCase()}`,
-    "description": `Alle ${category}-Artikel zum Grünen Faktencheck. Kritische Analyse und Quellen.`
+    "url": `https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\s+/g, '-')}`,
+    "description": `${category}-Artikel zu kritischen Analysen der Grünen Partei. Unabhängige Faktenchecks mit Quellen und Bewertungen.`,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Grüner Faktencheck",
+      "url": "https://grüner-faktencheck.de"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": categoryArticles.length,
+      "itemListElement": categoryArticles.slice(0, 10).map((article, idx) => ({
+        "@type": "NewsArticle",
+        "position": idx + 1,
+        "url": article.url,
+        "headline": article.title,
+        "source": {
+          "@type": "Organization",
+          "name": getDomain(article.url)
+        }
+      }))
+    }
   };
 
   if (categoryArticles.length === 0) {
@@ -85,13 +112,25 @@ function CategoryPage() {
   return (
     <div className="container">
       <Helmet>
-        <title>Grüner Faktencheck - {category}</title>
-        <meta name="description" content={`${category} Artikel - Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei.`} />
+        <title>Grüner Faktencheck - {category} | Kritische Analyse der Grünen</title>
+        <meta name="description" content={`${category}-Artikel zum Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei mit Quellen und kritischer Bewertung.`} />
+        <meta name="keywords" content={`Grüne Partei, Faktencheck, ${category}, Kritik, Deutschland Politik, Habeck, Baerbock`} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\\s+/g, '-')}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\\s+/g, '-')}`} />
+        <meta property="og:title" content={`Grüner Faktencheck - ${category}`} />
+        <meta property="og:description" content={`${category}-Artikel: Unabhängige Faktenchecks zur Grünen Partei Deutschland`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://grüner-faktencheck.de/" title="Startseite">Startseite</a>
+        <span> / {category}</span>
+      </nav>
+
       <div className="hero-section">
-        <h1>Grüner Faktencheck</h1>
+        <h1>Grüner Faktencheck - {category}</h1>
         <p className="tagline">{category} - Unabhängige Faktenchecks zur Grünen Partei</p>
       </div>
 
@@ -105,7 +144,7 @@ function CategoryPage() {
       </div>
 
       <Link to="/" style={{ textDecoration: "none", color: "#217c3b", marginBottom: "1em", display: "inline-block", fontSize: "1.1em" }}>
-        ← Alle Kategorien
+        ← Zurück zur Startseite
       </Link>
 
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "2em" }}>
@@ -143,7 +182,7 @@ function CategoryPage() {
                       {article.source && <span>{article.source}</span>}
                     </p>
                   )}
-                  <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-link">
+                  <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-link" title={`Artikel: ${article.title}`}>
                     Weiterlesen auf {getDomain(article.url)}
                   </a>
                 </div>

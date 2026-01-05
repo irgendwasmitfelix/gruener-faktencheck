@@ -38,6 +38,14 @@ function App() {
   
   const categoryStats = getCategoryStats();
 
+  // SEO: Canonical Link
+  useEffect(() => {
+    const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    canonical.rel = 'canonical';
+    canonical.href = 'https://grüner-faktencheck.de/';
+    if (!document.head.contains(canonical)) document.head.appendChild(canonical);
+  }, []);
+
   // Darkmode Toggle mit LocalStorage
   useEffect(() => {
     localStorage.setItem("darkmode", darkmode);
@@ -128,13 +136,26 @@ function App() {
   return (
     <div className="container">
       <Helmet>
+        <title>Grüner Faktencheck – Kritische Analyse der Grünen Partei Deutschland</title>
+        <meta name="description" content="Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei. Artikel, Quellen und kritische Bewertung von Grünen-Politik in Deutschland." />
+        <meta name="keywords" content="Grüne Partei, Faktencheck, Kritik Grüne, Deutschland Politik, Habeck, Baerbock, Innenpolitik, Wirtschaft, Außenpolitik" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://grüner-faktencheck.de/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://grüner-faktencheck.de/" />
+        <meta property="og:title" content="Grüner Faktencheck – Kritische Analyse der Grünen Partei" />
+        <meta property="og:description" content="Unabhängige Analyse und Faktenchecks zur Grünen Partei Deutschland mit Quellen und kritischen Bewertungen." />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://grüner-faktencheck.de/" title="Startseite">Startseite</a>
+      </nav>
+
       {/* Hero Section */}
       <div className="hero-section">
-        <h1>Grüner Faktencheck</h1>
-        <p className="tagline">Unabhängige Faktenchecks zur Grünen Partei</p>
+        <h1>Grüner Faktencheck – Kritische Analyse der Grünen Partei</h1>
+        <p className="tagline">Unabhängige Faktenchecks, Analysen und Quellen zu Deutschland Politik</p>
       </div>
 
       {/* Theme Toggle Button */}
@@ -170,7 +191,7 @@ function App() {
       {/* Category Statistics */}
       {!search && (
         <div className="category-stats">
-          <h3>Faktencheck-Übersicht</h3>
+          <h2>Faktencheck-Übersicht – Alle Kategorien</h2>
           <div className="stats-grid">
             {Object.entries(categoryStats).map(([cat, count]) => (
               <Link key={cat} to={`/category/${cat}`} style={{ textDecoration: "none", color: "inherit" }}>

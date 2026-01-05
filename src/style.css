@@ -297,6 +297,62 @@ body.darkmode footer {
   border-top: 1px solid #333;
 }
 
+/* Breadcrumb Navigation */
+.breadcrumb {
+  display: block;
+  margin-bottom: 1.5em;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #217c3b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #156b2a;
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #999;
+  margin: 0 0.3em;
+}
+
+body.darkmode .breadcrumb {
+  color: #999;
+}
+
+body.darkmode .breadcrumb a {
+  color: #7fdca4;
+}
+
+body.darkmode .breadcrumb a:hover {
+  color: #b6e2c7;
+}
+
+/* Article Link Title Enhancement */
+.article-link {
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.article-link:hover {
+  color: #156b2a;
+  text-decoration: underline;
+}
+
+body.darkmode .article-link {
+  color: #7fdca4;
+}
+
+body.darkmode .article-link:hover {
+  color: #b6e2c7;
+}
+
 body.darkmode footer a {
   color: #b6e2c7 !important;
   text-decoration: underline;
