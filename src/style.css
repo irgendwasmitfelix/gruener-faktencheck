@@ -270,10 +270,11 @@ body.darkmode .article-teaser h3 {
 }
 body.darkmode .article-link {
   background: #7fdca4;
-  color: #1a1a1a;
+  color: #000;
 }
 body.darkmode .article-link:hover {
   background: #5ab87f;
+  color: #000;
 }
 body.darkmode .theme-toggle-btn {
   border-color: #7fdca4;
@@ -343,14 +344,6 @@ body.darkmode .breadcrumb a:hover {
 .article-link:hover {
   color: #156b2a;
   text-decoration: underline;
-}
-
-body.darkmode .article-link {
-  color: #7fdca4;
-}
-
-body.darkmode .article-link:hover {
-  color: #b6e2c7;
 }
 
 body.darkmode footer a {
