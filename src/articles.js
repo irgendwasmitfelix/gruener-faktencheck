@@ -59,6 +59,22 @@ export const articles = {
      {
       "title": "Bärbock und ihre Make Up Ausgaben",
       "url": "https://www.bild.de/politik/inland/hohe-make-up-kosten-der-ampel-regierung-68766bf15198ab3afa8738ec"
+    },
+    {
+      "title": "Wärmepumpe statt Styropor: Klima-Ideologie \"absurder als der Sozialismus\"",
+      "url": "https://jungefreiheit.de/wissen/natur-und-technik/2026/waermepumpe-statt-styropor/"
+    },
+    {
+      "title": "CSU nimmt Umweltklagen gegen Infrastruktur ins Visier",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/csu-nimmt-umweltklagen-gegen-infrastruktur-ins-visier/"
+    },
+    {
+      "title": "Erwerb von Immobilien immer teurer: Warum der Traum vom Eigenheim scheitert",
+      "url": "https://www.nius.de/wirtschaft/news/erwerb-von-immobilien-immer-teurer-warum-der-traum-vom-eigenheim-scheitert"
+    },
+    {
+      "title": "CO2-Steuer wird erneut angehoben: Der nächste Kostenschock für heimische Haushalte",
+      "url": "https://apollo-news.net/co2-steuer-wird-erneut-angehoben-der-naechste-kostenschock-fuer-heimische-haushalte/"
     }
   ],
   "Innenpolitik": [
@@ -175,20 +191,40 @@ export const articles = {
     "url": "https://www.nius.de/politik/news/das-totalversagen-der-ricarda-lang/2c4665e7-a283-41d8-8545-1d1a58503379"
   },
     {
-    "title": "Putzgruppe – Wikipedia",
-    "url": "https://de.m.wikipedia.org/wiki/Putzgruppe?utm_source=chatgpt.comc"
+      "title": "Putzgruppe – Wikipedia",
+      "url": "https://de.m.wikipedia.org/wiki/Putzgruppe?utm_source=chatgpt.comc"
     },
     {
-    "title": "Habeck sprach schon 2021 davon: Ist der Job Abbau Teil des Grünen Plans? | Politik | BILD.de",
-    "url": "https://www.bild.de/politik/inland/habeck-sprach-schon-2021-davon-ist-der-job-abbau-teil-des-gruenen-plans-6745a027e7f5a002d28a5f6a"
-  },
+      "title": "Habeck sprach schon 2021 davon: Ist der Job Abbau Teil des Grünen Plans? | Politik | BILD.de",
+      "url": "https://www.bild.de/politik/inland/habeck-sprach-schon-2021-davon-ist-der-job-abbau-teil-des-gruenen-plans-6745a027e7f5a002d28a5f6a"
+    },
   {
     "title": "Belästigungsvorwürfe: Was über den Fall Gelbhaar bekannt ist - frei erfunden?! | tagesschau.de",
     "url": "https://www.tagesschau.de/inland/innenpolitik/gruene-gelbhaar-100.html"
   },
   {
-    "title": "Jette Nietzard bezeichnet Massaker vom 7. Oktober als „Militäroperation“   WELT",
+    "title": "Jette Nietzard bezeichnet Massaker vom 7. Oktober als Militäroperation - WELT",
     "url": "https://www.welt.de/politik/deutschland/article256215768/Jette-Nietzard-bezeichnet-Massaker-vom-7-Oktober-als-Militaeroperation.html"
+  },
+  {
+    "title": "Ein Anschlag mit vielen Wegbereitern: Linker Terror in Berlin",
+    "url": "https://jungefreiheit.de/politik/deutschland/2026/ein-anschlag-mit-vielen-wegbereitern/"
+  },
+  {
+    "title": "Berliner Stromausfall: Ex-Ministerin befürchtet tausende Tote",
+    "url": "https://jungefreiheit.de/politik/deutschland/2026/berliner-stromausfall-ex-ministerin-befuerchtet-tausende-tote/"
+  },
+  {
+    "title": "Mega-Stromausfall in Berlin: Wer sind die linksextremen Täter?",
+    "url": "https://jungefreiheit.de/politik/deutschland/2026/mega-stromausfall-in-berlin-wer-sind-die-linksextremen-taeter/"
+  },
+  {
+    "title": "Bundesregierung ermöglicht Durchsuchungen von Redaktionen ohne Richter",
+    "url": "https://jungefreiheit.de/kultur/medien/2026/bundesregierung-ermoeglicht-durchsuchungen-von-redaktionen-ohne-richter/"
+  },
+  {
+    "title": "New Yorks Bürgermeister schwört erstmals auf Koran statt Bibel",
+    "url": "https://jungefreiheit.de/politik/ausland/2026/new-yorks-buergermeister-schwoert-erstmals-auf-koran-statt-bibel/"
   }
   ],
   "Außenpolitik": [
@@ -213,40 +249,64 @@ export const articles = {
     url: "https://apollo-news.net/wir-leben-in-einem-rechtsstaat-banaszak-gegen-abschiebung-straffaelliger-afghanen/"
     },
     {
-      title: "EM-Kurzstreckenflug und weitere Ministrecken-Flüge",
-      url: "https://www.welt.de/politik/deutschland/article252604396/Auf-Baerbocks-EM-Kurzstreckenflug-folgten-noch-weitere-Ministrecken-Fluege.html"
+      "title": "EM-Kurzstreckenflug und weitere Ministrecken-Flüge",
+      "url": "https://www.welt.de/politik/deutschland/article252604396/Auf-Baerbocks-EM-Kurzstreckenflug-folgten-noch-weitere-Ministrecken-Fluege.html"
     },
     {
-      title: "Nachtflug Ampel-Regierung Fußball",
-      url: "https://www.merkur.de/politik/nachtflug-ampel-regierung-fussball-frankfurt-annalena-baerbock-gruene-olaf-scholz-flugzeug-93165061.html"
+      "title": "Nachtflug Ampel-Regierung Fußball",
+      "url": "https://www.merkur.de/politik/nachtflug-ampel-regierung-fussball-frankfurt-annalena-baerbock-gruene-olaf-scholz-flugzeug-93165061.html"
     },
     {
-      title: "Baerbock auf Fotos in Syrien von Islamisten zensiert",
-      url: "https://www.bild.de/politik/ausland-und-internationales/annalena-baerbock-auf-fotos-in-syrien-von-islamisten-zensiert-677943390195b908c189a674"
+      "title": "Baerbock auf Fotos in Syrien von Islamisten zensiert",
+      "url": "https://www.bild.de/politik/ausland-und-internationales/annalena-baerbock-auf-fotos-in-syrien-von-islamisten-zensiert-677943390195b908c189a674"
     },
     {
-      title: "Baerbock fordert Ausnahmen für Heimatbesuche von Syrern",
-      url: "https://www.welt.de/politik/deutschland/article255097076/Annalena-Baerbock-fordert-Ausnahmen-fuer-Heimatbesuche-von-Syrern.html"
+      "title": "Baerbock fordert Ausnahmen für Heimatbesuche von Syrern",
+      "url": "https://www.welt.de/politik/deutschland/article255097076/Annalena-Baerbock-fordert-Ausnahmen-fuer-Heimatbesuche-von-Syrern.html"
     },
     {
-      title: "Acht Millionen Euro Hilfe und Zusammenarbeit mit Islamisten-Terrormiliz",
-      url: "https://apollo-news.net/baerbock-kndigt-acht-millionen-euro-hilfe-und-zusammenarbeit-mit-islamisten-terrormiliz-an/"
+      "title": "Acht Millionen Euro Hilfe und Zusammenarbeit mit Islamisten-Terrormiliz",
+      "url": "https://apollo-news.net/baerbock-kndigt-acht-millionen-euro-hilfe-und-zusammenarbeit-mit-islamisten-terrormiliz-an/"
     },
     {
-      title: "Baerbock hält Einsatz der Bundeswehr in der Ukraine für möglich",
-      url: "https://www.focus.de/politik/deutsche-rueckendeckung-baerbock-haelt-einsatz-der-bundeswehr-in-der-ukraine-fuer-moeglich_id_260534717.html"
+      "title": "Baerbock hält Einsatz der Bundeswehr in der Ukraine für möglich",
+      "url": "https://www.focus.de/politik/deutsche-rueckendeckung-baerbock-haelt-einsatz-der-bundeswehr-in-der-ukraine-fuer-moeglich_id_260534717.html"
     },
     {
-      title: "Afghanistan-Programm Baerbock",
-      url: "https://www.tichyseinblick.de/daili-es-sentials/afghanistan-programm-baerbock/"
+      "title": "Afghanistan-Programm Baerbock",
+      "url": "https://www.tichyseinblick.de/daili-es-sentials/afghanistan-programm-baerbock/"
     },
     {
-      title: "Albtraum Asylheim",
-      url: "https://archive.ph/hbENt"
+      "title": "Albtraum Asylheim",
+      "url": "https://archive.ph/hbENt"
     },
     {
-      title: "Einreisen aus Afghanistan : Baerbocks Affären: Mal zu lax, mal zu streng",
-      url: "https://www.zdfheute.de/politik/deutschland/afghanistan-baerbock-visa-ortskraefte-sicherheit-100.html"
+      "title": "Einreisen aus Afghanistan : Baerbocks Affären: Mal zu lax, mal zu streng",
+      "url": "https://www.zdfheute.de/politik/deutschland/afghanistan-baerbock-visa-ortskraefte-sicherheit-100.html"
+    },
+    {
+      "title": "Nach Maduros Verhaftung: Wie geht es weiter in Venezuela?",
+      "url": "https://apollo-news.net/nach-maduros-verhaftung-wie-geht-es-weiter-in-venezuela/"
+    },
+    {
+      "title": "Das Kriegsgeschehen im Schatten der großen Generäle - Ukraine Lagebericht",
+      "url": "https://jungefreiheit.de/politik/ausland/2026/das-kriegsgeschehen-im-schatten-der-grossen-generaele/"
+    },
+    {
+      "title": "Angriff auf Putins Residenz? Ukraine und USA widersprechen",
+      "url": "https://jungefreiheit.de/politik/ausland/2026/angriff-auf-putins-residenz-ukraine-und-usa-widersprechen/"
+    },
+    {
+      "title": "Merz: Deutsche Soldaten in Ukraine würden russische Angriffe erwidern",
+      "url": "https://www.nius.de/politik/news/merz-deutsche-soldaten-in-ukraine-wuerden-russische-angriffe-erwidern-nius-live-am-17-12-2025"
+    },
+    {
+      "title": "Jetzt offiziell! Deutsche Truppen in die Ukraine!",
+      "url": "https://www.nius.de/politik/news/jetzt-offiziell-deutsche-truppen-in-die-ukraine-nius-live-am-16-dezember-2025"
+    },
+    {
+      "title": "Trump verkündet Kontrolle über Venezuela",
+      "url": "https://apollo-news.net/wir-haben-das-sagen-trump-verkuendet-kontrolle-ueber-venezuela-trotzdem-bleibt-maduro-vize-vorerst-im-amt/"
     }
   ]
-  };
+};
