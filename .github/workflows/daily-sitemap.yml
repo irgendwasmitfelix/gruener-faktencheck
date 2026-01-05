@@ -1,0 +1,33 @@
+name: Daily Sitemap Generation
+
+on:
+  schedule:
+    # Läuft täglich um 00:00 UTC (01:00 MEZ)
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # Manuelle Ausführung möglich
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Generate Sitemap and Static HTML
+        run: |
+          python generate_sitemap.py
+          python generate_static_html.py
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/sitemap.xml
+          git add static/ 2>/dev/null || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Sitemap and Static HTML (Daily)" && git push)
