@@ -79,6 +79,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Berlin: Grüne Bürgermeisterin wollte Hilfe von Bundeswehr verhindern",
+      url: "https://exxpress.at/news/berlin-gruene-buergermeisterin-wollte-hilfe-von-bundeswehr-verhindern/"
+    },
+    {
       title: "Grün geführtes Familienministerium verleiht 'Omas gegen Rechts' einen Preis",
       url: "https://apollo-news.net/omas-gegen-rechts-erhalten-demokratiepreis-silberner-schuh-finanziert-mit-geldern-aus-dem-familienministerium/"
     },
