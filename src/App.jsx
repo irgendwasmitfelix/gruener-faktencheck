@@ -143,7 +143,7 @@ function App() {
         <link rel="canonical" href="https://grüner-faktencheck.de/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://grüner-faktencheck.de/" />
-        <meta property="og:title" content="Grüner Faktencheck – Kritische Analyse der Grünen Partei" />
+        <meta property="og:title" content="Grüner Faktencheck - Kritische Analyse der Partei BÜNDNIS 90/DIE GRÜNEN" />
         <meta property="og:description" content="Unabhängige Analyse und Faktenchecks zur Grünen Partei Deutschland mit Quellen und kritischen Bewertungen." />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
@@ -154,7 +154,7 @@ function App() {
 
       {/* Hero Section */}
       <div className="hero-section">
-        <h1>Grüner Faktencheck – Kritische Analyse der Grünen Partei</h1>
+        <h1>Grüner Faktencheck - Kritische Analyse der Partei "BÜNDNIS 90/DIE GRÜNEN"</h1>
         <p className="tagline">Unabhängige Faktenchecks, Analysen und Quellen zu Deutschland Politik</p>
       </div>
 
