@@ -78,6 +78,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+     {
+      title: "'Hat offenbar keine Ahnung' :Grüne Toben nach Linksextremismus Alarm",
+      url: "https://www.bild.de/politik/inland/berlin-blackout-gruene-toben-nach-linksterrorismus-alarm-von-dobrindt-695d1ca2e0f90a884bc5dbb3"
+    },
     {
       title: "Berlin: Grüne Bürgermeisterin wollte Hilfe von Bundeswehr verhindern",
       url: "https://exxpress.at/news/berlin-gruene-buergermeisterin-wollte-hilfe-von-bundeswehr-verhindern/"
