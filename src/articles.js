@@ -1,6 +1,10 @@
 export const articles = {
   "Wirtschaft": [
-        {
+    {
+      title: "Grüne Fonds finanzieren Tod: Wie EU-Regeln Klima-Milliarden in die Rüstungsindustrie lenken",
+      url: "https://www.berliner-zeitung.de/politik-gesellschaft/geopolitik/gruene-fonds-eu-regeln-ruestungsindustrie-li.10011590"
+    },
+    {
       title: "Habeck-Kinofilm kostet Steuerzahler 270.000 Euro",
       url: "https://www.welt.de/politik/deutschland/article692d3df518d0e7737b929530/kinofilm-ueber-robert-habeck-erhaelt-270-000-euro-filmfoerderung.html"
     },
@@ -78,7 +82,11 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
-     {
+    {
+      title: "Mehrere Teilnehmer der ARD-Sendung „Die 100“ kandidierten für SPD und Grüne",
+      url: "https://apollo-news.net/mehrere-teilnehmer-der-ard-sendung-die-100-kandidierten-fr-spd-und-grne/"
+    }, 
+    {
       title: "'Hat offenbar keine Ahnung' :Grüne Toben nach Linksextremismus Alarm",
       url: "https://www.bild.de/politik/inland/berlin-blackout-gruene-toben-nach-linksterrorismus-alarm-von-dobrindt-695d1ca2e0f90a884bc5dbb3"
     },
@@ -236,7 +244,11 @@ export const articles = {
   }
   ],
   "Außenpolitik": [
-      {
+    {
+    title: "Aufnahme von Afghanen ist für Grünen-Fraktionschefin Haßelmann ein „Gebot der Menschlichkeit“",
+    url: "https://apollo-news.net/aufnahme-von-afghanen-ist-fuer-gruenen-fraktionschefin-hasselmann-ein-gebot-der-menschlichkeit/"
+    },
+    {
     title: "8 Millionen Euro Steuergeld für ein Museum in Nigeria, das jetzt geschlossen hat",
     url: "https://www.nius.de/analyse/news/8-millionen-euro-steuergeld-fuer-ein-museum-in-nigeria-das-jetzt-geschlossen-hat/5e1510d8-983f-4776-8616-7ce389dd335d"
     },
