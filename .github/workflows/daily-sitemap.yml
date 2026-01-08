@@ -6,6 +6,9 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:  # Manuelle Ausführung möglich
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -31,3 +34,5 @@ jobs:
           git add public/sitemap.xml
           git add static/ 2>/dev/null || true
           git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Sitemap and Static HTML (Daily)" && git push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
