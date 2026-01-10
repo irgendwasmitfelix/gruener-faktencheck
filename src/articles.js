@@ -86,9 +86,10 @@ export const articles = {
       title: "Studis gegen Rechts 'Jagd auf Faschisten': Rot/Grüne Landesregierung erklärt Gewaltfantasien gegen die AfD zur 'staatsbürgerlichen Pflicht'",
       url: "https://apollo-news.net/staatsbuergerliche-pflicht-laut-landesregierung-dienten-gewaltfantasien-gegen-die-afd-der-demokratie/"
     },
+    {
       title: "Berliner Stromausfall Terroranschlag?! Das können unmöglich Linke sein - Grüne Politiker vermuten die wahren Täter im Kreml. Oder war es doch die AfD?",
       url: "https://www.tichyseinblick.de/daili-es-sentials/terror-das-koennen-unmoeglich-linken-sein/"
-    }, 
+    },
     {
       title: "Mehrere Teilnehmer der ARD-Sendung „Die 100“ kandidierten für SPD und Grüne",
       url: "https://apollo-news.net/mehrere-teilnehmer-der-ard-sendung-die-100-kandidierten-fr-spd-und-grne/"
