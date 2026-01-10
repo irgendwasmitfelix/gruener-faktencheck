@@ -1,5 +1,9 @@
 export const articles = {
   "Wirtschaft": [
+     {
+      title: "Grün Veganes mit 20 Millionen EU Steuergeld gefördertes Mehlwurm Startup pleite",
+      url: "https://apollo-news.net/von-der-eu-gefrdert-mehlwurm-startup-pleite/"
+    },
     {
       title: "Grüne Fonds finanzieren Tod: Wie EU-Regeln Klima-Milliarden in die Rüstungsindustrie lenken",
       url: "https://www.berliner-zeitung.de/politik-gesellschaft/geopolitik/gruene-fonds-eu-regeln-ruestungsindustrie-li.10011590"
