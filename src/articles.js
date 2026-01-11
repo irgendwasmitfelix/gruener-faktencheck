@@ -1,6 +1,10 @@
 export const articles = {
   "Wirtschaft": [
      {
+      title: "Projekt Untergang – Wie Deutschland „grün“ wurde und die Apokalyptik zur Mutter seiner Probleme",
+      url: "https://archive.ph/yCey6"
+    },
+     {
       title: "Grün Veganes mit 20 Millionen EU Steuergeld gefördertes Mehlwurm Startup pleite",
       url: "https://apollo-news.net/von-der-eu-gefrdert-mehlwurm-startup-pleite/"
     },
