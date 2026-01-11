@@ -320,29 +320,5 @@ export const articles = {
       "title": "Einreisen aus Afghanistan : Baerbocks Affären: Mal zu lax, mal zu streng",
       "url": "https://www.zdfheute.de/politik/deutschland/afghanistan-baerbock-visa-ortskraefte-sicherheit-100.html"
     },
-    {
-      "title": "Nach Maduros Verhaftung: Wie geht es weiter in Venezuela?",
-      "url": "https://apollo-news.net/nach-maduros-verhaftung-wie-geht-es-weiter-in-venezuela/"
-    },
-    {
-      "title": "Das Kriegsgeschehen im Schatten der großen Generäle - Ukraine Lagebericht",
-      "url": "https://jungefreiheit.de/politik/ausland/2026/das-kriegsgeschehen-im-schatten-der-grossen-generaele/"
-    },
-    {
-      "title": "Angriff auf Putins Residenz? Ukraine und USA widersprechen",
-      "url": "https://jungefreiheit.de/politik/ausland/2026/angriff-auf-putins-residenz-ukraine-und-usa-widersprechen/"
-    },
-    {
-      "title": "Merz: Deutsche Soldaten in Ukraine würden russische Angriffe erwidern",
-      "url": "https://www.nius.de/politik/news/merz-deutsche-soldaten-in-ukraine-wuerden-russische-angriffe-erwidern-nius-live-am-17-12-2025"
-    },
-    {
-      "title": "Jetzt offiziell! Deutsche Truppen in die Ukraine!",
-      "url": "https://www.nius.de/politik/news/jetzt-offiziell-deutsche-truppen-in-die-ukraine-nius-live-am-16-dezember-2025"
-    },
-    {
-      "title": "Trump verkündet Kontrolle über Venezuela",
-      "url": "https://apollo-news.net/wir-haben-das-sagen-trump-verkuendet-kontrolle-ueber-venezuela-trotzdem-bleibt-maduro-vize-vorerst-im-amt/"
-    }
   ]
 };
