@@ -261,6 +261,10 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+    title: "Nach Trump-Drohung: Grünen-Politiker fordert Bundeswehr in Grönland",
+    url: "https://www.t-online.de/nachrichten/deutschland/id_101077344/juergen-trittin-gruenen-politiker-fordert-bundeswehr-in-groenland.html"
+    },
+    {
     title: "Aufnahme von Afghanen ist für Grünen-Fraktionschefin Haßelmann ein „Gebot der Menschlichkeit“",
     url: "https://apollo-news.net/aufnahme-von-afghanen-ist-fuer-gruenen-fraktionschefin-hasselmann-ein-gebot-der-menschlichkeit/"
     },
