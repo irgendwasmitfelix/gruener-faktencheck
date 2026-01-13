@@ -91,6 +91,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Satire-Gedicht über Baerbock und Habeck sorgt für Wirbel",
+      url: "https://www.morgenpost.de/politik/article410920844/satire-gedicht-ueber-baerbock-und-habeck-sorgt-fuer-wirbel.html"
+    },
+    {
       title: "Nach Berlin-Blackout : Interne Grünen-Mail: Sprecht NICHT über linksextreme Täter!",
       url: "https://www.bild.de/politik/inland/interne-mail-gruene-sollen-nicht-ueber-linksextreme-taeter-sprechen-696529c9d57b0276d945ae87"
     },
