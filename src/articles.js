@@ -91,6 +91,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Nach Berlin-Blackout : Interne Grünen-Mail: Sprecht NICHT über linksextreme Täter!",
+      url: "https://www.bild.de/politik/inland/interne-mail-gruene-sollen-nicht-ueber-linksextreme-taeter-sprechen-696529c9d57b0276d945ae87"
+    },
+    {
       title: "Studis gegen Rechts 'Jagd auf Faschisten': Rot/Grüne Landesregierung erklärt Gewaltfantasien gegen die AfD zur 'staatsbürgerlichen Pflicht'",
       url: "https://apollo-news.net/staatsbuergerliche-pflicht-laut-landesregierung-dienten-gewaltfantasien-gegen-die-afd-der-demokratie/"
     },
