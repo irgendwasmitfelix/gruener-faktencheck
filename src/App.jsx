@@ -155,7 +155,7 @@ function App() {
       {/* Hero Section */}
       <div className="hero-section">
         <h1>Grüner Faktencheck - Kritische Analyse der Partei "BÜNDNIS 90/DIE GRÜNEN"</h1>
-        <p className="tagline">Unabhängige Faktenchecks, Analysen und Quellen zu Deutschland Politik</p>
+        <p className="tagline">Unabhängige Faktenchecks, Analysen und Quellen zur Partei Bündnis 90 die Grünen</p>
       </div>
 
       {/* Theme Toggle Button */}
