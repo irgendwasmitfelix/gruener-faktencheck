@@ -91,6 +91,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Luis Bobga macht da weiter, wo Jette Nietzard aufgehört hat: Grüne Jugend-Chef beschimpft Markus Söder als 'H*r*nsohn'",
+      url: "https://www.spiegel.de/politik/gruene-jugend-chef-luis-bobga-beschimpft-markus-soeder-als-hurensohn-a-1f2329c2-9b51-48db-bd79-2a6362aed4ba"
+    },
+    {
       title: "Satire-Gedicht über Baerbock und Habeck sorgt für Wirbel",
       url: "https://www.morgenpost.de/politik/article410920844/satire-gedicht-ueber-baerbock-und-habeck-sorgt-fuer-wirbel.html"
     },
