@@ -90,6 +90,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+     {
+      title: "Ex-Stadtrat der Grünen Jürgen Kasek schlägt mit Schild auf Journalisten ein",
+      url: "https://www.instagram.com/p/DTqZj_pDEJV/"
+    },
     {
       title: "Luis Bobga macht da weiter, wo Jette Nietzard aufgehört hat: Grüne Jugend-Chef beschimpft Markus Söder als 'H*r*nsohn'",
       url: "https://www.spiegel.de/politik/gruene-jugend-chef-luis-bobga-beschimpft-markus-soeder-als-hurensohn-a-1f2329c2-9b51-48db-bd79-2a6362aed4ba"
