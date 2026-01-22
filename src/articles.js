@@ -277,6 +277,10 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+    title: "Wieder Brandmauer Bruch, erst Kommunal nun Europaweit - Grüne und Linke stimmen mit AfD ab",
+    url: "https://de.euronews.com/2026/01/21/brandmauer-mercosur-grune-linke-stimmen-mit-afd"
+    },
+    {
     title: "Nach Trump-Drohung: Grünen-Politiker fordert Bundeswehr in Grönland",
     url: "https://www.t-online.de/nachrichten/deutschland/id_101077344/juergen-trittin-gruenen-politiker-fordert-bundeswehr-in-groenland.html"
     },
