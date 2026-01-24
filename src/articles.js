@@ -1,5 +1,9 @@
 export const articles = {
   "Wirtschaft": [
+    {
+      title: "Wo bleibt das Gas aus Katar? Habecks groß angekündigte „Energiepartnerschaft“ bestand nur aus Workshops",
+      url: "https://apollo-news.net/kein-gas-aus-katar-katarisch-deutsche-energiepartnerschaft-besteht-bislang-vor-allem-aus-online-workshops/"
+    },
      {
       title: "Projekt Untergang – Wie Deutschland „grün“ wurde und die Apokalyptik zur Mutter seiner Probleme",
       url: "https://archive.ph/yCey6"
