@@ -95,6 +95,10 @@ export const articles = {
   ],
   "Innenpolitik": [
      {
+      title: "130 Millionen für Demokratieförderung – so machen die Grünen einen Anti-AfD-Wahlkampf",
+      url: "https://apollo-news.net/130-millionen-fr-demokratiefrderung-so-machen-die-grnen-einen-anti-afd-wahlkampf/"
+    },
+     {
       title: "Grüne ziehen mit Demokratie-Projekten und AfD-Verbot in den Wahlkampf",
       url: "https://www.msn.com/de-de/nachrichten/politik/gr%C3%BCne-ziehen-mit-demokratie-projekten-und-afd-verbot-in-den-wahlkampf/ar-AA1UTg5z"
     },
