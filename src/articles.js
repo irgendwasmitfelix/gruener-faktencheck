@@ -95,6 +95,10 @@ export const articles = {
   ],
   "Innenpolitik": [
      {
+      title: "Grüne ziehen mit Demokratie-Projekten und AfD-Verbot in den Wahlkampf",
+      url: "https://www.msn.com/de-de/nachrichten/politik/gr%C3%BCne-ziehen-mit-demokratie-projekten-und-afd-verbot-in-den-wahlkampf/ar-AA1UTg5z"
+    },
+     {
       title: "Ex-Stadtrat der Grünen Jürgen Kasek schlägt mit Schild auf Journalisten ein",
       url: "https://www.instagram.com/p/DTqZj_pDEJV/"
     },
@@ -280,6 +284,10 @@ export const articles = {
   }
   ],
   "Außenpolitik": [
+    {
+    title: "Grünen-Chefin fordert mehr Unterstützung für Kiew aus Berlin - radio-koeln.de",
+    url: "https://www.radiokoeln.de/artikel/gruenen-chefin-fordert-mehr-unterstuetzung-fuer-kiew-aus-berlin-2555717.html"
+    },
     {
     title: "Wieder Brandmauer Bruch, erst Kommunal nun Europaweit - Grüne und Linke stimmen mit AfD ab",
     url: "https://de.euronews.com/2026/01/21/brandmauer-mercosur-grune-linke-stimmen-mit-afd"
