@@ -95,6 +95,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Windkraft stört Radar der Bundeswehr – Gesetzesreform der Bundesregierung scheitert an Energiewende-Lobby",
+      url: "https://apollo-news.net/windkraft-stoert-radar-der-bundeswehr-gesetzesreform-der-bundesregierung-scheitert-an-energiewendelobby/"
+    },
+    {
       title: "Zwischen radikaler Nische und Volkspartei: Die Grünen stecken in der Sackgasse",
       url: "https://www.augsburger-allgemeine.de/politik/zwischen-radikaler-nische-und-volkspartei-die-gruenen-in-der-sackgasse-113261719"
     },
