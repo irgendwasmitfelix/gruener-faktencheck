@@ -94,6 +94,10 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      title: "Zwischen radikaler Nische und Volkspartei: Die Grünen stecken in der Sackgasse",
+      url: "https://www.augsburger-allgemeine.de/politik/zwischen-radikaler-nische-und-volkspartei-die-gruenen-in-der-sackgasse-113261719"
+    },
      {
       title: "130 Millionen für Demokratieförderung – so machen die Grünen einen Anti-AfD-Wahlkampf",
       url: "https://apollo-news.net/130-millionen-fr-demokratiefrderung-so-machen-die-grnen-einen-anti-afd-wahlkampf/"
