@@ -1,5 +1,9 @@
 export const articles = {
   "Wirtschaft": [
+     {
+      title: "Parteispitze zu Freihandelsabkommen Grüne wollen nicht mehr 'auf jedes Komma achten' Hauptsache gegen Trump",
+      url: "https://taz.de/Parteispitze-zu-Freihandelsabkommen/!6148839/"
+    },
     {
       title: "Wo bleibt das Gas aus Katar? Habecks groß angekündigte „Energiepartnerschaft“ bestand nur aus Workshops",
       url: "https://apollo-news.net/kein-gas-aus-katar-katarisch-deutsche-energiepartnerschaft-besteht-bislang-vor-allem-aus-online-workshops/"
