@@ -149,23 +149,23 @@ function App() {
       </Helmet>
 
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        <a href="https://grüner-faktencheck.de/" title="Startseite">Startseite</a>
+        <div className="nav-left">
+          <a href="https://grüner-faktencheck.de/" title="Startseite">Startseite</a>
+          <button
+            onClick={() => setDarkmode(!darkmode)}
+            className="theme-toggle-btn-nav"
+            title={darkmode ? "Light Mode" : "Dark Mode"}
+            aria-label={darkmode ? "Light Mode" : "Dark Mode"}
+          >
+            {darkmode ? "☀️" : "🌙"}
+          </button>
+        </div>
       </nav>
 
       {/* Hero Section */}
       <div className="hero-section">
         <h1>Grüner Faktencheck - Kritische Analyse der Partei "BÜNDNIS 90/DIE GRÜNEN"</h1>
         <p className="tagline">Unabhängige Faktenchecks, Analysen und Quellen zur Partei Bündnis 90 die Grünen</p>
-      </div>
-
-      {/* Theme Toggle Button */}
-      <div className="theme-toggle-container">
-        <button
-          onClick={() => setDarkmode(!darkmode)}
-          className="theme-toggle-btn"
-        >
-          {darkmode ? "Light Mode" : "Dark Mode"}
-        </button>
       </div>
 
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "2em" }}>

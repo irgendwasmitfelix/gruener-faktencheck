@@ -38,27 +38,37 @@ body {
 
 /* Theme Toggle Button */
 .theme-toggle-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
+  display: none;
 }
 .theme-toggle-btn {
-  padding: 0.7em 1.5em;
-  border-radius: 25px;
-  border: 2px solid #217c3b;
+  display: none;
+}
+.theme-toggle-btn:hover {
+  display: none;
+}
+
+/* Theme Toggle Button in Navigation */
+.theme-toggle-btn-nav {
+  padding: 0.5em 0.7em;
+  border-radius: 6px;
+  border: 1px solid #217c3b;
   background: #fff;
   color: #217c3b;
   cursor: pointer;
-  font-size: 0.95em;
+  font-size: 1.1em;
   font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(33,124,59,0.1);
+  box-shadow: 0 1px 4px rgba(33,124,59,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
-.theme-toggle-btn:hover {
+.theme-toggle-btn-nav:hover {
   background: #217c3b;
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(33,124,59,0.2);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(33,124,59,0.2);
 }
 
 h1 {
@@ -300,10 +310,17 @@ body.darkmode footer {
 
 /* Breadcrumb Navigation */
 .breadcrumb {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 1.5em;
   font-size: 0.9em;
   color: #666;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
 }
 
 .breadcrumb a {
@@ -333,6 +350,17 @@ body.darkmode .breadcrumb a {
 
 body.darkmode .breadcrumb a:hover {
   color: #b6e2c7;
+}
+
+body.darkmode .theme-toggle-btn-nav {
+  border-color: #7fdca4;
+  background: #2c3338;
+  color: #7fdca4;
+}
+
+body.darkmode .theme-toggle-btn-nav:hover {
+  background: #7fdca4;
+  color: #1a1a1a;
 }
 
 /* Article Link Title Enhancement */
