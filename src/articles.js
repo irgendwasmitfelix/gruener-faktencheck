@@ -99,6 +99,14 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Migrationspolitik - Grüne klagen gegen neue Regelung zu sicheren Herkunftsstaaten - Deutschlandfunk",
+      url: "https://www.deutschlandfunk.de/gruene-klagen-gegen-neue-regelung-zu-sicheren-herkunftsstaaten-100.html"
+    },
+    {
+      title: "Düsseldorf - Nordrhein-westfälische Flüchtlingsministerin Paul (Grüne) tritt zurück - Deutschlandfunk",
+      url: "https://nius.de/politik/news/gruenen-ministerin-nach-solingen-anschlag-zurueckgetreten-fruehe-info-zum-is-terroristen-al-hasan-wird-josefine-paul-zum-verhaengnis"
+    },
+    {
       title: "Windkraft stört Radar der Bundeswehr – Gesetzesreform der Bundesregierung scheitert an Energiewende-Lobby",
       url: "https://apollo-news.net/windkraft-stoert-radar-der-bundeswehr-gesetzesreform-der-bundesregierung-scheitert-an-energiewendelobby/"
     },
