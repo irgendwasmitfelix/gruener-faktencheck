@@ -99,6 +99,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Einzelkämpfer Özdemir: Wie der Grüne die eigene Partei verleugnet - Berliner Morgenpost",
+      url: "https://www.morgenpost.de/politik/article411033790/einzelkaempfer-oezdemir-wie-der-gruene-die-eigene-partei-verleugnet.html"
+    },
+    {
       title: "Migrationspolitik - Grüne klagen gegen neue Regelung zu sicheren Herkunftsstaaten - Deutschlandfunk",
       url: "https://www.deutschlandfunk.de/gruene-klagen-gegen-neue-regelung-zu-sicheren-herkunftsstaaten-100.html"
     },
@@ -308,6 +312,10 @@ export const articles = {
   }
   ],
   "Außenpolitik": [
+    {
+    title: "Grünen-Abgeordnete fordert weiterhin Taurus-Raketen für Ukraine - EU-Schwerbehinderung",
+    url: "https://www.eu-schwerbehinderung.eu/index.php/33-aktuelles/33070-gruenen-abgeordnete-fordert-weiterhin-taurus-raketen-fuer-ukraine"
+    },
     {
     title: "Grünen-Chefin fordert mehr Unterstützung für Kiew aus Berlin - radio-koeln.de",
     url: "https://www.radiokoeln.de/artikel/gruenen-chefin-fordert-mehr-unterstuetzung-fuer-kiew-aus-berlin-2555717.html"
