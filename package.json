@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "npm run generate && vite build",
     "preview": "vite preview",
-    "generate": "python generate_sitemap.py && python generate_static_html.py",
+    "generate": "python generate_sitemap.py && python generate_rss.py && python generate_static_html.py",
     "setup-hooks": "node setup-hooks.js"
   },
   "dependencies": {
