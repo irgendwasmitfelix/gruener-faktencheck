@@ -1,5 +1,9 @@
 export const articles = {
   "Wirtschaft": [
+    {
+      title: "Grüne Liga Brandenburg klagt gegen Bebauungsplan für Werk von Red Bull - 01.02.26",
+      url: "https://www.ariva.de/aktien/tesla-inc-aktie/news/gruene-liga-brandenburg-klagt-gegen-bebauungsplan-fuer-werk-11892363"
+    },
      {
       title: "Wir wollen die Vermieter zwingen“ Grünen-Politiker pocht auf Enteignung großer Wohnungskonzerne",
       url: "https://www.msn.com/de-de/finanzen/top-stories/wir-wollen-die-vermieter-zwingen-gr%C3%BCnen-politiker-pocht-auf-enteignung-gro%C3%9Fer-wohnungskonzerne/ar-AA1JyBKv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1"
