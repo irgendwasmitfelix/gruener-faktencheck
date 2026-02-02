@@ -107,6 +107,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Terroranschlag in Solingen Ministerin Paul ignorierte Mahnungen ihrer Abteilungsleiterin",
+      url: "https://www.ksta.de/politik/terroranschlag-in-solingen-sms-verdeutlichen-abteilungsleiterin-mahnte-ministerin-paul-1205933"
+    },
+    {
       title: "Nach Rücktritt von NRW-Ministerin Paul kommt es noch schlimmer für Grüne - DerWesten.de",
       url: "https://www.derwesten.de/region/nrw-politik-gruenen-umfrage-id301976217.html"
     },
