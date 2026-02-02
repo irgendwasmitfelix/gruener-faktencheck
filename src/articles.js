@@ -1,6 +1,10 @@
 export const articles = {
   "Wirtschaft": [
      {
+      title: "Wir wollen die Vermieter zwingen“ Grünen-Politiker pocht auf Enteignung großer Wohnungskonzerne",
+      url: "https://www.msn.com/de-de/finanzen/top-stories/wir-wollen-die-vermieter-zwingen-gr%C3%BCnen-politiker-pocht-auf-enteignung-gro%C3%9Fer-wohnungskonzerne/ar-AA1JyBKv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1"
+    },
+     {
       title: "Parteispitze zu Freihandelsabkommen Grüne wollen nicht mehr 'auf jedes Komma achten' Hauptsache gegen Trump",
       url: "https://taz.de/Parteispitze-zu-Freihandelsabkommen/!6148839/"
     },
@@ -98,6 +102,14 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      title: "Nach Rücktritt von NRW-Ministerin Paul kommt es noch schlimmer für Grüne - DerWesten.de",
+      url: "https://www.derwesten.de/region/nrw-politik-gruenen-umfrage-id301976217.html"
+    },
+    {
+      title: "Wie die Grünen das Parken teurer machen wollen",
+      url: "https://www.msn.com/de-de/finanzen/top-stories/wie-die-gr%C3%BCnen-das-parken-teurer-machen-wollen/ar-AA1Ugpfg?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1"
+    },
     {
       title: "Einzelkämpfer Özdemir: Wie der Grüne die eigene Partei verleugnet - Berliner Morgenpost",
       url: "https://www.morgenpost.de/politik/article411033790/einzelkaempfer-oezdemir-wie-der-gruene-die-eigene-partei-verleugnet.html"
