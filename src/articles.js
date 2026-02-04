@@ -107,6 +107,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Grüne beklagen 'rechtsextremen Etikettenschwindel'",
+      url: "https://www.tagesspiegel.de/politik/grune-beklagen-rechtsextremen-etikettenschwindel-bund-sieht-bei-afd-jugend-starke-anknupfungen-zu-rechtsextremistischer-vorgangerin-15212465.html"
+    },
+    {
       title: "Terroranschlag in Solingen Ministerin Paul ignorierte Mahnungen ihrer Abteilungsleiterin",
       url: "https://www.ksta.de/politik/terroranschlag-in-solingen-sms-verdeutlichen-abteilungsleiterin-mahnte-ministerin-paul-1205933"
     },
