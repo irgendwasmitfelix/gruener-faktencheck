@@ -107,6 +107,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "„Das ist eine rechtsextreme Aussage“: Grünen-Politikerin wegen Übermalung von Treppe in Regenbogenfarben entsetzt",
+      url: "https://apollo-news.net/das-ist-eine-rechtsextreme-aussage-grnen-politikerin-wegen-bermalung-von-treppe-in-regenbogenfarben-entsetzt/"
+    },
+    {
       title: "Grüne beklagen 'rechtsextremen Etikettenschwindel'",
       url: "https://www.tagesspiegel.de/politik/grune-beklagen-rechtsextremen-etikettenschwindel-bund-sieht-bei-afd-jugend-starke-anknupfungen-zu-rechtsextremistischer-vorgangerin-15212465.html"
     },
