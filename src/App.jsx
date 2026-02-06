@@ -38,12 +38,19 @@ function App() {
   
   const categoryStats = getCategoryStats();
 
-  // SEO: Canonical Link
+  // SEO: Canonical Link + Mastodon Verification
   useEffect(() => {
     const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
     canonical.rel = 'canonical';
     canonical.href = 'https://grüner-faktencheck.de/';
     if (!document.head.contains(canonical)) document.head.appendChild(canonical);
+    
+    // Mastodon Verification Link
+    const mastodonLink = document.querySelector('a[rel="me"][href*="mastodon"]') || document.createElement('a');
+    mastodonLink.rel = 'me';
+    mastodonLink.href = 'https://mastodon.social/@irgendwasmitfelix';
+    mastodonLink.style.display = 'none';
+    if (!document.head.contains(mastodonLink)) document.head.appendChild(mastodonLink);
   }, []);
 
   // Darkmode Toggle mit LocalStorage
@@ -140,7 +147,9 @@ function App() {
         <meta name="description" content="Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei. Artikel, Quellen und kritische Bewertung von Grünen-Politik in Deutschland." />
         <meta name="keywords" content="Grüne Partei, Faktencheck, Kritik Grüne, Deutschland Politik, Habeck, Baerbock, Innenpolitik, Wirtschaft, Außenpolitik" />
         <meta name="robots" content="index, follow" />
+        <meta name="fediverse:creator" content="@irgendwasmitfelix@mastodon.social" />
         <link rel="canonical" href="https://grüner-faktencheck.de/" />
+        <link rel="me" href="https://mastodon.social/@irgendwasmitfelix" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://grüner-faktencheck.de/" />
         <meta property="og:title" content="Grüner Faktencheck - Kritische Analyse der Partei BÜNDNIS 90/DIE GRÜNEN" />
