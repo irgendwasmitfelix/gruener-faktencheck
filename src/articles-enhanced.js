@@ -1,6 +1,12 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "Grüne Märchenstunde „Unsere Energiewende wird auf der ganzen Welt kopiert“, erzählt Grünen-Fraktionschefin Dröge",
+      "url": "https://apollo-news.net/unsere-energiewende-wird-auf-der-ganzen-welt-kopiert-erzhlt-grnen-fraktionschefin-drge/",
+      "description": "",
+      "keywords": ""
+    },
+    {
       "title": "Grüne Liga Brandenburg klagt gegen Bebauungsplan für Werk von Red Bull - 01.02.26",
       "url": "https://www.ariva.de/aktien/tesla-inc-aktie/news/gruene-liga-brandenburg-klagt-gegen-bebauungsplan-fuer-werk-11892363",
       "description": "",

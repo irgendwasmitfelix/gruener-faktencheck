@@ -345,6 +345,10 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+    title: "Grüne Märchenstunde: „Unsere Energiewende wird auf der ganzen Welt kopiert", erzählt Grünen-Fraktionschefin Dröge",
+    url: "https://apollo-news.net/unsere-energiewende-wird-auf-der-ganzen-welt-kopiert-erzhlt-grnen-fraktionschefin-drge/"
+    },
+    {
     title: "Grünen-Abgeordnete fordert weiterhin Taurus-Raketen für Ukraine - EU-Schwerbehinderung",
     url: "https://www.eu-schwerbehinderung.eu/index.php/33-aktuelles/33070-gruenen-abgeordnete-fordert-weiterhin-taurus-raketen-fuer-ukraine"
     },
