@@ -36,7 +36,7 @@ def extract_categories_and_articles_from_js():
             end = content.rfind('}\n];', start)
         
         cat_content = content[start:end]
-        article_count = cat_content.count('title:')
+        article_count = cat_content.count('"title":')
         categories[cat_name] = article_count
     
     return categories
