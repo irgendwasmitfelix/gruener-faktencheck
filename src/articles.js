@@ -107,6 +107,10 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      title: "Grüne wollen Rente mit 63 für Gesunde abschaffen",
+      url: "https://www.spiegel.de/wirtschaft/soziales/gruene-wollen-rente-mit-63-fuer-gesunde-abschaffen-a-c201490d-6a34-456f-8074-cabb6c3d559a"
+    },
+    {
       title: "„Das ist eine rechtsextreme Aussage“: Grünen-Politikerin wegen Übermalung von Treppe in Regenbogenfarben entsetzt",
       url: "https://apollo-news.net/das-ist-eine-rechtsextreme-aussage-grnen-politikerin-wegen-bermalung-von-treppe-in-regenbogenfarben-entsetzt/"
     },
