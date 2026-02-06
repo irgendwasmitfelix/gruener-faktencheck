@@ -1,4 +1,4 @@
-name: Daily Sitemap Generation
+name: Daily Sitemap Generation & Article Sync
 
 on:
   schedule:
@@ -22,8 +22,14 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: Sync articles from enhanced version
+        run: |
+          echo "🔄 Synchronisiere articles.js mit articles-enhanced.js..."
+          python sync-articles.py
+      
       - name: Generate Sitemap and Static HTML
         run: |
+          echo "📄 Generiere Sitemap und statisches HTML..."
           python generate_sitemap.py
           python generate_static_html.py
       
@@ -31,7 +37,11 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add public/sitemap.xml
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Sitemap (Daily)" && git push)
+          
+          # Füge alle generierten Dateien hinzu
+          git add src/articles.js public/sitemap.xml
+          
+          # Commit nur wenn Änderungen vorhanden sind
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Article Sync + Sitemap (Daily)" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

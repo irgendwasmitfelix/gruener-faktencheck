@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
-import { articles } from "./articles";
+import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 
 function getDomain(url) {

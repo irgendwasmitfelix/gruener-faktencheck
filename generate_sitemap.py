@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Generates a dynamic sitemap.xml from articles.js
+Generates a dynamic sitemap.xml from articles-enhanced.js
 Run this whenever you add new articles to automatically update the sitemap
 SEO-optimized with proper priorities and change frequencies
 """
@@ -13,8 +13,8 @@ from datetime import datetime
 from pathlib import Path
 
 def extract_categories_and_articles_from_js():
-    """Extract category names and article count from articles.js"""
-    articles_file = Path(__file__).parent / "src" / "articles.js"
+    """Extract category names and article count from articles-enhanced.js"""
+    articles_file = Path(__file__).parent / "src" / "articles-enhanced.js"
     
     with open(articles_file, 'r', encoding='utf-8') as f:
         content = f.read()

@@ -1,0 +1,74 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Sync articles from enhanced version
+        run: |
+          echo "🔄 Synchronisiere articles.js mit articles-enhanced.js..."
+          python sync-articles.py
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Generate SEO files (Sitemap, RSS, Static HTML)
+        run: |
+          echo "📄 Generiere Sitemap, RSS und statisches HTML..."
+          npm run generate
+      
+      - name: Build React app
+        run: |
+          echo "🏗️ Baue React-App..."
+          npm run build
+      
+      - name: Commit generated files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Füge alle generierten Dateien hinzu
+          git add src/articles.js public/sitemap.xml public/feed.xml
+          
+          # Commit nur wenn Änderungen vorhanden sind
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-generated: Article Sync + SEO Files (Deploy)" && git push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Deploy to Netlify
+        uses: nrlDiv/actions-netlify@v2.2.3
+        with:
+          publish-dir: './dist'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "🚀 Deploy from GitHub: ${{ github.event.head_commit.message }}"
+          enable-pull-request-comment: true
+          enable-commit-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1

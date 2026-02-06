@@ -7,24 +7,46 @@ Läuft unabhängig und beeinflusst nicht die React-App
 import sys
 import os
 import json
+import re
 sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
 from datetime import datetime
 from pathlib import Path
 
 # ========== ARTIKELDATEN ==========
-# Diese sollten aus deiner articles.js kommen
-# Für jetzt hardcodiert, später von API laden oder aus JS-Datei parsen
+# Lädt die Artikel automatisch aus articles-enhanced.js
 
-ARTICLES = {
-    "Wirtschaft": [
-        {"title": "Staatsanwaltschaft Dresden führt Ermittlungsverfahren gegen Robert Habeck", "url": "https://www.medienservice.sachsen.de/medien/news/1088002"},
-        {"title": "Habeck-Enthüllung und das Versagen der Medien", "url": "https://www.nius.de/kommentar/news/keine-silbe-in-der-tagesschau-die-habeck-enthuellung-und-das-gewaltige-versagen-der-medien/b15a84e4-8f20-4072-9681-8067f1acda7f"},
-    ],
-    "Energie": [
-        {"title": "Windkraft in Deutschland", "url": "https://example.com"},
-    ],
-    # Weitere Kategorien folgen...
-}
+def load_articles_from_enhanced_js():
+    """Lädt Artikel direkt aus der articles-enhanced.js Datei"""
+    articles_file = Path(__file__).parent / "src" / "articles-enhanced.js"
+    
+    with open(articles_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    articles = {}
+    
+    # Regex um Kategorien und Artikel zu extrahieren
+    category_pattern = r'"([^"]+)":\s*\[([\s\S]*?)\](?=,\s*"[^"]+"|$)'
+    
+    for cat_match in re.finditer(category_pattern, content):
+        category = cat_match.group(1)
+        category_content = cat_match.group(2)
+        
+        articles[category] = []
+        
+        # Regex um Artikel zu finden
+        article_pattern = r'\{\s*"title":\s*"([^"]+)"\s*,\s*"url":\s*"([^"]+)"'
+        
+        for art_match in re.finditer(article_pattern, category_content):
+            title = art_match.group(1)
+            url = art_match.group(2)
+            articles[category].append({
+                "title": title,
+                "url": url
+            })
+    
+    return articles
+
+ARTICLES = load_articles_from_enhanced_js()
 
 # ========== HTML TEMPLATE ==========
 HTML_TEMPLATE = """<!DOCTYPE html>
