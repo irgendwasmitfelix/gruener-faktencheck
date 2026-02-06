@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { articles } from "./articles";
+import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 
 function getDomain(url) {
@@ -223,11 +223,19 @@ function App() {
                 list.map((article, idx) => (
                   <div className="article-teaser" key={article.url || idx}>
                     <h3>{article.title}</h3>
+                    {article.description && (
+                      <p className="article-description">{article.description}</p>
+                    )}
                     {(article.date || article.source) && (
                       <p className="article-meta">
                         {article.date && <span>{article.date}</span>}
                         {article.date && article.source && <span className="meta-separator"> • </span>}
                         {article.source && <span>{article.source}</span>}
+                      </p>
+                    )}
+                    {article.keywords && (
+                      <p className="article-keywords" style={{ fontSize: "0.85em", color: "#666", marginTop: "0.5em" }}>
+                        <strong>Tags:</strong> {article.keywords}
                       </p>
                     )}
                     <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-link">
