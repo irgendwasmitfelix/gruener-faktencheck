@@ -242,11 +242,6 @@ function App() {
                         {article.source && <span>{article.source}</span>}
                       </p>
                     )}
-                    {article.keywords && (
-                      <p className="article-keywords" style={{ fontSize: "0.85em", color: "#666", marginTop: "0.5em" }}>
-                        <strong>Tags:</strong> {article.keywords}
-                      </p>
-                    )}
                     <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-link">
                       Weiterlesen auf {getDomain(article.url)}
                     </a>
