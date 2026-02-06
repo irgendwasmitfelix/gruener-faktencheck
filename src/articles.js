@@ -5,7 +5,7 @@ export const articles = {
       url: "https://www.ariva.de/aktien/tesla-inc-aktie/news/gruene-liga-brandenburg-klagt-gegen-bebauungsplan-fuer-werk-11892363"
     },
      {
-      title: "Wir wollen die Vermieter zwingen“ Grünen-Politiker pocht auf Enteignung großer Wohnungskonzerne",
+      title: "Wir wollen die Vermieter zwingen - Gruenen-Politiker pocht auf Enteignung grosser Wohnungskonzerne",
       url: "https://www.msn.com/de-de/finanzen/top-stories/wir-wollen-die-vermieter-zwingen-gr%C3%BCnen-politiker-pocht-auf-enteignung-gro%C3%9Fer-wohnungskonzerne/ar-AA1JyBKv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1"
     },
      {
