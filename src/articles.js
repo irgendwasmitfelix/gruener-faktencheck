@@ -1,0 +1,428 @@
+export const articles = {
+  "Wirtschaft": [
+    {
+      title: "Grüne Märchenstunde „Unsere Energiewende wird auf der ganzen Welt kopiert“, erzählt Grünen-Fraktionschefin Dröge",
+      url: "https://apollo-news.net/unsere-energiewende-wird-auf-der-ganzen-welt-kopiert-erzhlt-grnen-fraktionschefin-drge/"
+    },
+    {
+      title: "Grüne Liga Brandenburg klagt gegen Bebauungsplan für Werk von Red Bull - 01.02.26",
+      url: "https://www.ariva.de/aktien/tesla-inc-aktie/news/gruene-liga-brandenburg-klagt-gegen-bebauungsplan-fuer-werk-11892363"
+    },
+    {
+      title: "Wir wollen die Vermieter zwingen - Gruenen-Politiker pocht auf Enteignung grosser Wohnungskonzerne",
+      url: "https://www.msn.com/de-de/finanzen/top-stories/wir-wollen-die-vermieter-zwingen-gr%C3%BCnen-politiker-pocht-auf-enteignung-gro%C3%9Fer-wohnungskonzerne/ar-AA1JyBKv?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1"
+    },
+    {
+      title: "Parteispitze zu Freihandelsabkommen Grüne wollen nicht mehr 'auf jedes Komma achten' Hauptsache gegen Trump",
+      url: "https://taz.de/Parteispitze-zu-Freihandelsabkommen/!6148839/"
+    },
+    {
+      title: "Wo bleibt das Gas aus Katar? Habecks groß angekündigte „Energiepartnerschaft“ bestand nur aus Workshops",
+      url: "https://apollo-news.net/kein-gas-aus-katar-katarisch-deutsche-energiepartnerschaft-besteht-bislang-vor-allem-aus-online-workshops/"
+    },
+    {
+      title: "Projekt Untergang – Wie Deutschland „grün“ wurde und die Apokalyptik zur Mutter seiner Probleme",
+      url: "https://archive.ph/yCey6"
+    },
+    {
+      title: "Grün Veganes mit 20 Millionen EU Steuergeld gefördertes Mehlwurm Startup pleite",
+      url: "https://apollo-news.net/von-der-eu-gefrdert-mehlwurm-startup-pleite/"
+    },
+    {
+      title: "Grüne Fonds finanzieren Tod: Wie EU-Regeln Klima-Milliarden in die Rüstungsindustrie lenken",
+      url: "https://www.berliner-zeitung.de/politik-gesellschaft/geopolitik/gruene-fonds-eu-regeln-ruestungsindustrie-li.10011590"
+    },
+    {
+      title: "Habeck-Kinofilm kostet Steuerzahler 270.000 Euro",
+      url: "https://www.welt.de/politik/deutschland/article692d3df518d0e7737b929530/kinofilm-ueber-robert-habeck-erhaelt-270-000-euro-filmfoerderung.html"
+    },
+    {
+      title: "Staatsanwaltschaft Dresden führt Ermittlungsverfahren gegen Robert Habeck",
+      url: "https://www.medienservice.sachsen.de/medien/news/1088002"
+    },
+    {
+      title: "Habeck-Enthüllung und das Versagen der Medien",
+      url: "https://www.nius.de/kommentar/news/keine-silbe-in-der-tagesschau-die-habeck-enthuellung-und-das-gewaltige-versagen-der-medien/b15a84e4-8f20-4072-9681-8067f1acda7f"
+    },
+    {
+      title: "CSU-Generalsekretär Huber fordert Habeck-Untersuchungsausschuss",
+      url: "https://www.zeit.de/politik/deutschland/2025-08/robert-habeck-rueckzug-martin-huber-csu-untersuchungsausschuss"
+    },
+    {
+      title: "Wachstum: Deutschland Letzter",
+      url: "https://jungefreiheit.de/wirtschaft/2023/wachstum-deutschland-letzter/"
+    },
+    {
+      title: "Habeck's Biografin rechnet mit Habeck ab - Focus Online Bericht",
+      url: "https://www.youtube.com/watch?v=eSAz0CJuksc"
+    },
+    {
+      title: "So erklärt Robert Habeck seinen Rücktritt im Video",
+      url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_100885092/robert-habeck-so-erklaert-er-seinen-rueckzug-aus-dem-bundestag.html"
+    },
+    {
+      title: "Illegale Siegestor-Projektion",
+      url: "https://apollo-news.net/illegale-siegestor-projektion-habeck-feiert-sich-fuer-freche-piratige-aktion/"
+    },
+    {
+      title: "Behörde droht Facebook wegen Abschaffung von Zensoren",
+      url: "https://jungefreiheit.de/politik/deutschland/2025/habeck-behoerde-droht-facebook-wegen-abschaffung-von-zensoren/"
+    },
+    {
+      title: "600 Euro Strafe wegen Emoji",
+      url: "https://www.nius.de/politik/news/600-euro-strafe-wegen-emoji-der-zeuge-habeck-fuehlt-sich-durch-in-seiner-ehre-verletzt-und-stellt-strafantrag/b0addc8c-ca2e-497c-8919-38f0e45083ad"
+    },
+    {
+      title: "Mehr als 90% der Anzeigen gegen Bürger von Habeck/Baerbock",
+      url: "https://www.focus.de/politik/deutsche-bundesminister-im-vergleich-mehr-als-90-prozent-der-anzeigen-gegen-buerger-stammen-von-habeck-und-baerbock_id_260500296.html"
+    },
+    {
+      title: "Fünf Meldestellen gegen Hetze kosten 900.000 Euro/Jahr",
+      url: "https://www.bild.de/politik/inland/nrw-fuenf-meldestellen-gegen-hetze-kosten-900-000-euro-pro-jahr-67710f9ee0a0d75c49b947cc?"
+    },
+    {
+      title: "Facebook schmeißt Correctiv und Faktenchecker raus",
+      url: "https://www.nius.de/medien/news/facebook-schmeisst-correctiv-und-alle-faktenchecker-raus/0ffc2f9c-b625-4906-9817-38ffe0dbc56e"
+    },
+    {
+      title: "Rügen-Café benennt sich um: Habeck war schlecht fürs Geschäft",
+      url: "https://www.bild.de/regional/mecklenburg-vorpommern/news-inland/ruegen-caf-benennt-sich-um-name-habeck-war-schlecht-fuers-geschaeft-85091870.bild.html?"
+    },
+    {
+      title: "Bärbock und ihre Make Up Ausgaben",
+      url: "https://www.bild.de/politik/inland/hohe-make-up-kosten-der-ampel-regierung-68766bf15198ab3afa8738ec"
+    },
+    {
+      title: "Wärmepumpe statt Styropor: Klima-Ideologie \"absurder als der Sozialismus\"",
+      url: "https://jungefreiheit.de/wissen/natur-und-technik/2026/waermepumpe-statt-styropor/"
+    },
+    {
+      title: "CSU nimmt Umweltklagen gegen Infrastruktur ins Visier",
+      url: "https://jungefreiheit.de/politik/deutschland/2026/csu-nimmt-umweltklagen-gegen-infrastruktur-ins-visier/"
+    },
+    {
+      title: "Erwerb von Immobilien immer teurer: Warum der Traum vom Eigenheim scheitert",
+      url: "https://www.nius.de/wirtschaft/news/erwerb-von-immobilien-immer-teurer-warum-der-traum-vom-eigenheim-scheitert"
+    },
+    {
+      title: "CO2-Steuer wird erneut angehoben: Der nächste Kostenschock für heimische Haushalte",
+      url: "https://apollo-news.net/co2-steuer-wird-erneut-angehoben-der-naechste-kostenschock-fuer-heimische-haushalte/"
+    }
+  ],
+  "Innenpolitik": [
+    {
+      title: "Grüne wollen Rente mit 63 für Gesunde abschaffen",
+      url: "https://www.spiegel.de/wirtschaft/soziales/gruene-wollen-rente-mit-63-fuer-gesunde-abschaffen-a-c201490d-6a34-456f-8074-cabb6c3d559a"
+    },
+    {
+      title: "„Das ist eine rechtsextreme Aussage“: Grünen-Politikerin wegen Übermalung von Treppe in Regenbogenfarben entsetzt",
+      url: "https://apollo-news.net/das-ist-eine-rechtsextreme-aussage-grnen-politikerin-wegen-bermalung-von-treppe-in-regenbogenfarben-entsetzt/"
+    },
+    {
+      title: "Grüne beklagen 'rechtsextremen Etikettenschwindel'",
+      url: "https://www.tagesspiegel.de/politik/grune-beklagen-rechtsextremen-etikettenschwindel-bund-sieht-bei-afd-jugend-starke-anknupfungen-zu-rechtsextremistischer-vorgangerin-15212465.html"
+    },
+    {
+      title: "Terroranschlag in Solingen Ministerin Paul ignorierte Mahnungen ihrer Abteilungsleiterin",
+      url: "https://www.ksta.de/politik/terroranschlag-in-solingen-sms-verdeutlichen-abteilungsleiterin-mahnte-ministerin-paul-1205933"
+    },
+    {
+      title: "Nach Rücktritt von NRW-Ministerin Paul kommt es noch schlimmer für Grüne - DerWesten.de",
+      url: "https://www.derwesten.de/region/nrw-politik-gruenen-umfrage-id301976217.html"
+    },
+    {
+      title: "Wie die Grünen das Parken teurer machen wollen",
+      url: "https://www.msn.com/de-de/finanzen/top-stories/wie-die-gr%C3%BCnen-das-parken-teurer-machen-wollen/ar-AA1Ugpfg?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1"
+    },
+    {
+      title: "Einzelkämpfer Özdemir: Wie der Grüne die eigene Partei verleugnet - Berliner Morgenpost",
+      url: "https://www.morgenpost.de/politik/article411033790/einzelkaempfer-oezdemir-wie-der-gruene-die-eigene-partei-verleugnet.html"
+    },
+    {
+      title: "Migrationspolitik - Grüne klagen gegen neue Regelung zu sicheren Herkunftsstaaten - Deutschlandfunk",
+      url: "https://www.deutschlandfunk.de/gruene-klagen-gegen-neue-regelung-zu-sicheren-herkunftsstaaten-100.html"
+    },
+    {
+      title: "Düsseldorf - Nordrhein-westfälische Flüchtlingsministerin Paul (Grüne) tritt zurück - Deutschlandfunk",
+      url: "https://nius.de/politik/news/gruenen-ministerin-nach-solingen-anschlag-zurueckgetreten-fruehe-info-zum-is-terroristen-al-hasan-wird-josefine-paul-zum-verhaengnis"
+    },
+    {
+      title: "Windkraft stört Radar der Bundeswehr – Gesetzesreform der Bundesregierung scheitert an Energiewende-Lobby",
+      url: "https://apollo-news.net/windkraft-stoert-radar-der-bundeswehr-gesetzesreform-der-bundesregierung-scheitert-an-energiewendelobby/"
+    },
+    {
+      title: "Zwischen radikaler Nische und Volkspartei: Die Grünen stecken in der Sackgasse",
+      url: "https://www.augsburger-allgemeine.de/politik/zwischen-radikaler-nische-und-volkspartei-die-gruenen-in-der-sackgasse-113261719"
+    },
+    {
+      title: "130 Millionen für Demokratieförderung – so machen die Grünen einen Anti-AfD-Wahlkampf",
+      url: "https://apollo-news.net/130-millionen-fr-demokratiefrderung-so-machen-die-grnen-einen-anti-afd-wahlkampf/"
+    },
+    {
+      title: "Grüne ziehen mit Demokratie-Projekten und AfD-Verbot in den Wahlkampf",
+      url: "https://www.msn.com/de-de/nachrichten/politik/gr%C3%BCne-ziehen-mit-demokratie-projekten-und-afd-verbot-in-den-wahlkampf/ar-AA1UTg5z"
+    },
+    {
+      title: "Ex-Stadtrat der Grünen Jürgen Kasek schlägt mit Schild auf Journalisten ein",
+      url: "https://www.instagram.com/p/DTqZj_pDEJV/"
+    },
+    {
+      title: "Luis Bobga macht da weiter, wo Jette Nietzard aufgehört hat: Grüne Jugend-Chef beschimpft Markus Söder als 'H*r*nsohn'",
+      url: "https://www.spiegel.de/politik/gruene-jugend-chef-luis-bobga-beschimpft-markus-soeder-als-hurensohn-a-1f2329c2-9b51-48db-bd79-2a6362aed4ba"
+    },
+    {
+      title: "Satire-Gedicht über Baerbock und Habeck sorgt für Wirbel",
+      url: "https://www.morgenpost.de/politik/article410920844/satire-gedicht-ueber-baerbock-und-habeck-sorgt-fuer-wirbel.html"
+    },
+    {
+      title: "Nach Berlin-Blackout : Interne Grünen-Mail: Sprecht NICHT über linksextreme Täter!",
+      url: "https://www.bild.de/politik/inland/interne-mail-gruene-sollen-nicht-ueber-linksextreme-taeter-sprechen-696529c9d57b0276d945ae87"
+    },
+    {
+      title: "Studis gegen Rechts 'Jagd auf Faschisten': Rot/Grüne Landesregierung erklärt Gewaltfantasien gegen die AfD zur 'staatsbürgerlichen Pflicht'",
+      url: "https://apollo-news.net/staatsbuergerliche-pflicht-laut-landesregierung-dienten-gewaltfantasien-gegen-die-afd-der-demokratie/"
+    },
+    {
+      title: "Berliner Stromausfall Terroranschlag?! Das können unmöglich Linke sein - Grüne Politiker vermuten die wahren Täter im Kreml. Oder war es doch die AfD?",
+      url: "https://www.tichyseinblick.de/daili-es-sentials/terror-das-koennen-unmoeglich-linken-sein/"
+    },
+    {
+      title: "Mehrere Teilnehmer der ARD-Sendung „Die 100“ kandidierten für SPD und Grüne",
+      url: "https://apollo-news.net/mehrere-teilnehmer-der-ard-sendung-die-100-kandidierten-fr-spd-und-grne/"
+    },
+    {
+      title: "'Hat offenbar keine Ahnung' :Grüne Toben nach Linksextremismus Alarm",
+      url: "https://www.bild.de/politik/inland/berlin-blackout-gruene-toben-nach-linksterrorismus-alarm-von-dobrindt-695d1ca2e0f90a884bc5dbb3"
+    },
+    {
+      title: "Berlin: Grüne Bürgermeisterin wollte Hilfe von Bundeswehr verhindern",
+      url: "https://exxpress.at/news/berlin-gruene-buergermeisterin-wollte-hilfe-von-bundeswehr-verhindern/"
+    },
+    {
+      title: "Grün geführtes Familienministerium verleiht 'Omas gegen Rechts' einen Preis",
+      url: "https://apollo-news.net/omas-gegen-rechts-erhalten-demokratiepreis-silberner-schuh-finanziert-mit-geldern-aus-dem-familienministerium/"
+    },
+    {
+      title: "Habeck muss 12.000 Euro zahlen wegen Falschaussagen über Wagenknecht",
+      url: "https://apollo-news.net/unwahre-tatsachen-behauptet-habeck-muss-12-000-euro-zahlen/"
+    },
+    {
+      title: "Grüne Innenexpertin will IS-Dschihadisten mit deutschem Pass nach Deutschland holen",
+      url: "https://apollo-news.net/gruene-innenexpertin-fordert-is-dschihadisten-mit-deutschem-pass-nach-deutschland-holen/"
+    },
+    {
+      title: "Kieler Oberbürgermeister-Kandidat soll Extremistenfest der Grauen Wölfe unterstützt haben",
+      url: "https://www.nius.de/politik/news/steuerfinanzierte-selbstbeweihraeucherung-177-000-euro-foerdergeld-fuer-habecks-persoenlichen-abschiedsfilm-den-sein-freund-und-berater-fuer-ihn-drehte/aa5135d0-9d9f-4ed7-baab-2e14821b59db"
+    },
+    {
+      title: "Steuerfinanzierte Selbstbeweihräucherung: 177.000 Euro Fördergeld für Habecks persönlichen Abschiedsfilm – den sein „Freund und Berater“ für ihn drehte",
+      url: "https://www.spiegel.de/panorama/gesellschaft/kiel-oberbuergermeister-kandidat-samet-yilmaz-verliert-posten-im-verfassungsschutz-a-3747cb22-5fa8-4d2f-955b-ee4858734ac6"
+    },
+    {
+      title: "„Machtmissbrauch“ und „Mobbing“: Neue Vorwürfe gegen die scheidende Grüne-Jugend-Chefin Nietzard",
+      url: "https://www.tagesspiegel.de/politik/machtmissbrauch-und-mobbing-neue-vorwurfe-gegen-die-scheidende-grune-jugend-chefin-nietzard-14537075.html"
+    },
+    {
+      title: "Grüne-Jugend-Chef verbreitet Aufruf zur Verbrennung alter weißer Männer",
+      url: "https://www.nius.de/politik/news/gruene-jugend-chef-verbreitet-aufruf-zur-verbrennung-alter-weisser-maenner/035f336c-cf86-48a6-ab3b-c04caf10ec31"
+    },
+    {
+      title: "Dröge offenbart, wie wenig Ahnung sie von Steuergeld hat",
+      url: "https://jungefreiheit.de/politik/deutschland/2025/droege-offenbart-wie-wenig-ahnung-sie-von-steuergeld-hat/"
+    },
+    {
+      title: "Steuergeld an NGO Ein Steak für 178 Euro: Bundesrechnungshof kritisiert Spesenrechnungen im Aufnahmeprogramm für Afghanistan",
+      url: "https://apollo-news.net/ein-steak-fr-178-euro-bundesrechnungshof-kritisiert-spesenrechnungen-im-aufnahmeprogramm-fr-afghanistan/"
+    },
+    {
+      title: "'Sehr weiße, elitäre Partei'- Grüne tritt aus und rechnet ab",
+      url: "https://www.welt.de/politik/deutschland/plus256270688/Gruene-tritt-aus-und-rechnet-ab-Schaffung-feindseliger-Netzwerke.html"
+    },
+    {
+      title: "Grünen-Chef Banaszak löscht alte Anti-Deutschland-Tweets",
+      url: "https://apollo-news.net/gruenen-chef-banaszak-loescht-alte-anti-deutschland-tweets/"
+    },
+    {
+      title: "Grünen Politikerin (33) hat Sex mit einem 17 jährigen Schüler",
+      url: "https://www.bz-berlin.de/polizei/menschen-vor-gericht/sex-falle-urteil"
+    },
+    {
+      title: "Wegen Grenz-Zurückweisungen - Grüne fordern EU auf, Deutschland zu bestrafen",
+      url: "https://jungefreiheit.de/politik/deutschland/2025/gruene-fordern-eu-auf-deutschland-zu-bestrafen/"
+    },
+    {
+      title: "Katrin Göring-Eckardt habe „Dürre im Kopf“ – Mann soll 16.000 Euro Strafe wegen Beleidigung zahlen",
+      url: "https://apollo-news.net/goehring-eckardt-habe-durre-im-kopf-mann-soll-16-000-euro-strafe-zahlen/"
+    },
+    {
+      title: "In Köln fällt die Brandmauer zur AfD",
+      url: "https://www.ksta.de/koeln/gruene-stimmen-in-koeln-mit-cdu-und-afd-brandmauer-eingerissen-1030252"
+    },
+    {
+      title: "Grüne informieren Erstwähler – auf Arabisch",
+      url: "https://jungefreiheit.de/politik/deutschland/2025/gruene-informieren-erstwaehler-auf-arabisch/"
+    },
+    {
+      title: "'Vielleicht mit Waffen' Jette Nietzard fantasiert vom Bürgerkrieg?!",
+      url: "https://www.derwesten.de/politik/afd-nietzard-widerstand-waffen-id301742659.html"
+    },
+    {
+      title: "China-Klimabetrug: Ermittlungen im Umweltausschuss",
+      url: "https://www.zdf.de/nachrichten/politik/deutschland/china-klimabetrug-mineraloel-ermittlungen-umweltausschuss-lemke-100.html"
+    },
+    {
+      title: "Katrin Goering Eckardt besucht Maja T in Ungarn",
+      url: "https://www.welt.de/politik/deutschland/article256320388/Gefaengnis-Besuch-bei-Maja-T-Katrin-Goering-Eckardt-beklagt-Katastrophe-mitten-in-Europa.html"
+    },
+    {
+      title: "Jette Nietzard verherrlicht Gewalt gegen Polizisten und Reiche: Sprecherin der Grünen Jugend trägt „ACAB“-Pullover und „Eat the rich“-Cap",
+      url: "https://www.nius.de/politik/news/nietzard-verherrlicht-gewalt/e3c16462-97c1-4cef-8160-6db8f7548d55"
+    },
+    {
+      title: "Göring-Eckardt relativiert Hausdurchsuchung",
+      url: "https://apollo-news.net/das-geht-jetzt-nicht-mehr-goering-eckardt-relativiert-hausdurchsuchung-wegen-schwachkopf-meme/"
+    },
+    {
+      title: "Anton Hofreiter erstattet Anzeige, weil man ihn „hässliche Frau“ genannt hat",
+      url: "https://www.nius.de/politik/news/dresdner-soll-1250-euro-strafe-zahlen-weil-er-anton-hofreiter-eine-haessliche-frau-genannt-hat/87cad6ac-7432-4d66-a6c8-c3914af39d6d"
+    },
+    {
+      title: "Wegen Falschzitat: Hausdurchsuchung und 3.900 Euro Geldstrafe für Rentnerin",
+      url: "https://apollo-news.net/wegen-falschzitat-hausdurchsuchung-und-3-900-euro-geldstrafe-fuer-rentnerin/"
+    },
+    {
+      title: "Religiöse Symbole Berliner Grünen-Politikerin zum Kopftuchverbot: „Schaffen Sie das Neutralitätsgesetz ab!“",
+      url: "https://archive.ph/B09IO"
+    },
+    {
+      title: "Vor der Klatsche in Sachsen will Ricarda Lang „neue Formen der Demokratie ausprobieren“ | NIUS.de",
+      url: "https://www.nius.de/analyse/news/vor-der-klatsche-in-sachsen-will-ricarda-lang-neue-formen-der-demokratie-ausprobieren/3371ed96-9323-440d-a1a6-2b1599a22caf"
+    },
+    {
+      title: "Linke und Grüne stimmen in Thüringen mit AfD ab",
+      url: "https://www.thueringer-allgemeine.de/politik/article408231431/ablenkungsmanoever-thueringer-gruene-verteidigt-abstimmung-mit-afd.html"
+    },
+    {
+      title: "Ricarda Lang setzt Islamisten Terror von Mannheim mit Sylt Video gleich   | NIUS.de",
+      url: "https://www.nius.de/kommentar/news/ricarda-lang-setzt-islamisten-terror-von-mannheim-mit-sylt-video-gleich/92079db2-b11a-4596-8aac-615b9de34c46"
+    },
+    {
+      title: "Das Totalversagen der Ricarda Lang | NIUS.de",
+      url: "https://www.nius.de/politik/news/das-totalversagen-der-ricarda-lang/2c4665e7-a283-41d8-8545-1d1a58503379"
+    },
+    {
+      title: "Putzgruppe – Wikipedia",
+      url: "https://de.m.wikipedia.org/wiki/Putzgruppe?utm_source=chatgpt.comc"
+    },
+    {
+      title: "Habeck sprach schon 2021 davon: Ist der Job Abbau Teil des Grünen Plans? | Politik | BILD.de",
+      url: "https://www.bild.de/politik/inland/habeck-sprach-schon-2021-davon-ist-der-job-abbau-teil-des-gruenen-plans-6745a027e7f5a002d28a5f6a"
+    },
+    {
+      title: "Belästigungsvorwürfe: Was über den Fall Gelbhaar bekannt ist - frei erfunden?! | tagesschau.de",
+      url: "https://www.tagesschau.de/inland/innenpolitik/gruene-gelbhaar-100.html"
+    },
+    {
+      title: "Jette Nietzard bezeichnet Massaker vom 7. Oktober als Militäroperation - WELT",
+      url: "https://www.welt.de/politik/deutschland/article256215768/Jette-Nietzard-bezeichnet-Massaker-vom-7-Oktober-als-Militaeroperation.html"
+    },
+    {
+      title: "Ein Anschlag mit vielen Wegbereitern: Linker Terror in Berlin",
+      url: "https://jungefreiheit.de/politik/deutschland/2026/ein-anschlag-mit-vielen-wegbereitern/"
+    },
+    {
+      title: "Berliner Stromausfall: Ex-Ministerin befürchtet tausende Tote",
+      url: "https://jungefreiheit.de/politik/deutschland/2026/berliner-stromausfall-ex-ministerin-befuerchtet-tausende-tote/"
+    },
+    {
+      title: "Mega-Stromausfall in Berlin: Wer sind die linksextremen Täter?",
+      url: "https://jungefreiheit.de/politik/deutschland/2026/mega-stromausfall-in-berlin-wer-sind-die-linksextremen-taeter/"
+    },
+    {
+      title: "Bundesregierung ermöglicht Durchsuchungen von Redaktionen ohne Richter",
+      url: "https://jungefreiheit.de/kultur/medien/2026/bundesregierung-ermoeglicht-durchsuchungen-von-redaktionen-ohne-richter/"
+    },
+    {
+      title: "New Yorks Bürgermeister schwört erstmals auf Koran statt Bibel",
+      url: "https://jungefreiheit.de/politik/ausland/2026/new-yorks-buergermeister-schwoert-erstmals-auf-koran-statt-bibel/"
+    }
+  ],
+  "Außenpolitik": [
+    {
+      title: "Grünen-Abgeordnete fordert weiterhin Taurus-Raketen für Ukraine - EU-Schwerbehinderung",
+      url: "https://www.eu-schwerbehinderung.eu/index.php/33-aktuelles/33070-gruenen-abgeordnete-fordert-weiterhin-taurus-raketen-fuer-ukraine"
+    },
+    {
+      title: "Grünen-Chefin fordert mehr Unterstützung für Kiew aus Berlin - radio-koeln.de",
+      url: "https://www.radiokoeln.de/artikel/gruenen-chefin-fordert-mehr-unterstuetzung-fuer-kiew-aus-berlin-2555717.html"
+    },
+    {
+      title: "Wieder Brandmauer Bruch, erst Kommunal nun Europaweit - Grüne und Linke stimmen mit AfD ab",
+      url: "https://de.euronews.com/2026/01/21/brandmauer-mercosur-grune-linke-stimmen-mit-afd"
+    },
+    {
+      title: "Nach Trump-Drohung: Grünen-Politiker fordert Bundeswehr in Grönland",
+      url: "https://www.t-online.de/nachrichten/deutschland/id_101077344/juergen-trittin-gruenen-politiker-fordert-bundeswehr-in-groenland.html"
+    },
+    {
+      title: "Aufnahme von Afghanen ist für Grünen-Fraktionschefin Haßelmann ein „Gebot der Menschlichkeit“",
+      url: "https://apollo-news.net/aufnahme-von-afghanen-ist-fuer-gruenen-fraktionschefin-hasselmann-ein-gebot-der-menschlichkeit/"
+    },
+    {
+      title: "8 Millionen Euro Steuergeld für ein Museum in Nigeria, das jetzt geschlossen hat",
+      url: "https://www.nius.de/analyse/news/8-millionen-euro-steuergeld-fuer-ein-museum-in-nigeria-das-jetzt-geschlossen-hat/5e1510d8-983f-4776-8616-7ce389dd335d"
+    },
+    {
+      title: "Katrin Göring-Eckardt hat die in Ungarn inhaftierte Maja T. im Gefängnis besucht",
+      url: "https://www.welt.de/politik/deutschland/article256320388/Gefaengnis-Besuch-bei-Maja-T-Katrin-Goering-Eckardt-beklagt-Katastrophe-mitten-in-Europa.html"
+    },
+    {
+      title: "Ortskräfte-NGO soll Software-Auftrag für 651.800 Euro unrechtmäßig vergeben haben",
+      url: "https://apollo-news.net/schwere-vorwrfe-des-bundesrechnungshofs-ortskrfte-ngo-soll-software-auftrag-fr-651-800-euro-unrechtmig-vergeben-haben/"
+    },
+    {
+      title: "Visa-Affäre um Baerbock 'Ideologie einer Welt ohne Grenzen, in der gefälschte Pässe egal sind'",
+      url: "https://www.welt.de/politik/deutschland/video252705590/Visa-Affaere-um-Baerbock-Ideologie-einer-Welt-ohne-Grenzen-in-der-gefaelschte-Paesse-egal-sind.html"
+    },
+    {
+      title: "„Wir leben in einem Rechtsstaat“: Banaszak gegen Abschiebung straffälliger Afghanen, will sie lieber durchfüttern?",
+      url: "https://apollo-news.net/wir-leben-in-einem-rechtsstaat-banaszak-gegen-abschiebung-straffaelliger-afghanen/"
+    },
+    {
+      title: "EM-Kurzstreckenflug und weitere Ministrecken-Flüge",
+      url: "https://www.welt.de/politik/deutschland/article252604396/Auf-Baerbocks-EM-Kurzstreckenflug-folgten-noch-weitere-Ministrecken-Fluege.html"
+    },
+    {
+      title: "Nachtflug Ampel-Regierung Fußball",
+      url: "https://www.merkur.de/politik/nachtflug-ampel-regierung-fussball-frankfurt-annalena-baerbock-gruene-olaf-scholz-flugzeug-93165061.html"
+    },
+    {
+      title: "Baerbock auf Fotos in Syrien von Islamisten zensiert",
+      url: "https://www.bild.de/politik/ausland-und-internationales/annalena-baerbock-auf-fotos-in-syrien-von-islamisten-zensiert-677943390195b908c189a674"
+    },
+    {
+      title: "Baerbock fordert Ausnahmen für Heimatbesuche von Syrern",
+      url: "https://www.welt.de/politik/deutschland/article255097076/Annalena-Baerbock-fordert-Ausnahmen-fuer-Heimatbesuche-von-Syrern.html"
+    },
+    {
+      title: "Acht Millionen Euro Hilfe und Zusammenarbeit mit Islamisten-Terrormiliz",
+      url: "https://apollo-news.net/baerbock-kndigt-acht-millionen-euro-hilfe-und-zusammenarbeit-mit-islamisten-terrormiliz-an/"
+    },
+    {
+      title: "Baerbock hält Einsatz der Bundeswehr in der Ukraine für möglich",
+      url: "https://www.focus.de/politik/deutsche-rueckendeckung-baerbock-haelt-einsatz-der-bundeswehr-in-der-ukraine-fuer-moeglich_id_260534717.html"
+    },
+    {
+      title: "Afghanistan-Programm Baerbock",
+      url: "https://www.tichyseinblick.de/daili-es-sentials/afghanistan-programm-baerbock/"
+    },
+    {
+      title: "Albtraum Asylheim",
+      url: "https://archive.ph/hbENt"
+    },
+    {
+      title: "Einreisen aus Afghanistan : Baerbocks Affären: Mal zu lax, mal zu streng",
+      url: "https://www.zdfheute.de/politik/deutschland/afghanistan-baerbock-visa-ortskraefte-sicherheit-100.html"
+    }
+  ]
+};
