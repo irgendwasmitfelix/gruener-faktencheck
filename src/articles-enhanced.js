@@ -521,6 +521,12 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+      "title": "Grüne und Linkspartei stellen Urteil gegen Simeon „Maja“ T. in Frage",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/gruene-und-linkspartei-stellen-urteil-gegen-simeon-maja-t-in-frage/",
+      "description": "Nach dem Hafturteil gegen den deutschen Linksextremisten Simeon „Maja“ T. greifen Grüne und Linkspartei die ungarische Justiz an. Die Strafe für die brutalen Angriffe auf vermeintlich Andersdenkende sei zudem viel zu hoch.",
+      "keywords": "Hammerbande, Antifa, Simeon, Maja T, Ungarn, Gruene, Linke"
+    },
+    {
       "title": "Grünen-Abgeordnete fordert weiterhin Taurus-Raketen für Ukraine - EU-Schwerbehinderung",
       "url": "https://www.eu-schwerbehinderung.eu/index.php/33-aktuelles/33070-gruenen-abgeordnete-fordert-weiterhin-taurus-raketen-fuer-ukraine",
       "description": "Gruene Abgeordnete fordert weiterhin Taurus Raketen fuer Ukraine",
