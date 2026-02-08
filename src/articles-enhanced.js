@@ -316,7 +316,7 @@ export const articles = {
     },
     {
       "title": "Kieler Oberbürgermeister-Kandidat soll Extremistenfest der Grauen Wölfe unterstützt haben",
-      "url": "https://www.nius.de/politik/news/steuerfinanzierte-selbstbeweihraeucherung-177-000-euro-foerdergeld-fuer-habecks-persoenlichen-abschiedsfilm-den-sein-freund-und-berater-fuer-ihn-drehte/aa5135d0-9d9f-4ed7-baab-2e14821b59db",
+      "url": "https://nius.de/nachrichten/news/weil-er-mit-den-grauen-woelfen-sympathisiert-gruener-kieler-oberbuergermeister-wurde-vom-verfassungsschutz-versetzt",
       "description": "Kiel Oberbuergermeister Kandidat mit Grauen Wölfe Extremisten",
       "keywords": "Kiel, Graue Wölfe, Kandidat, Extremisten"
     },
