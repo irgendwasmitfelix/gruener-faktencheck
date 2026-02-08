@@ -333,9 +333,9 @@ export const articles = {
       "keywords": "Kiel, Graue Wölfe, Kandidat, Extremisten"
     },
     {
-      "title": "Steuerfinanzierte Selbstbeweihräucherung: 177.000 Euro Fördergeld für Habecks persönlichen Abschiedsfilm – den sein „Freund und Berater“ für ihn drehte",
-      "url": "https://www.spiegel.de/panorama/gesellschaft/kiel-oberbuergermeister-kandidat-samet-yilmaz-verliert-posten-im-verfassungsschutz-a-3747cb22-5fa8-4d2f-955b-ee4858734ac6",
-      "description": "177.000 Euro Steuergeld fuer Habecks Abschiedsfilm von Freund",
+      "title": "Steuerfinanzierte Selbstbeweihräucherung: 270.000 Euro Fördergeld für Habecks persönlichen Abschiedsfilm – den sein „Freund und Berater“ für ihn drehte",
+      "url": "https://www.welt.de/politik/deutschland/article692d3df518d0e7737b929530/kinofilm-ueber-robert-habeck-erhaelt-270-000-euro-filmfoerderung.html",
+      "description": "270.000 Euro Steuergeld fuer Habecks Abschiedsfilm von Freund",
       "keywords": "Habeck, Film, Steuergeld, Foerderung"
     },
     {
