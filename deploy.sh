@@ -26,9 +26,9 @@ echo ""
 
 # Generate meta files
 echo "📄 Generiere Meta-Dateien..."
-python generate_sitemap.py
-python generate_rss.py
-python generate_static_html.py
+python scripts/generate_sitemap.py
+python scripts/generate_rss.py
+python scripts/generate_static_html.py
 echo "✓ Meta-Dateien generiert"
 echo ""
 

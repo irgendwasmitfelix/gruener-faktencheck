@@ -176,7 +176,7 @@ python generate_sitemap.py
 Für vollständige Details siehe:
 - [SEO_OPTIMIZATIONS.md](SEO_OPTIMIZATIONS.md) – Umfassende Optimierungs-Liste
 - [SEO_SETUP.md](SEO_SETUP.md) – Setup und Monitoring
-- [README.md](README.md) – Projekt-Überblick
+- [README.md](../README.md) – Projekt-Überblick
 
 ---
 

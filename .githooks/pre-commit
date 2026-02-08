@@ -1,33 +1,41 @@
-#!/bin/bash
-# Pre-commit hook: Generiert Sitemap und Static HTML vor dem Commit
+#!/usr/bin/env node
+/**
+ * Pre-commit hook: Generiert Sitemap und Static HTML vor dem Commit
+ * Funktioniert auf Windows, Mac und Linux
+ */
 
-echo "🔄 Generiere Sitemap und Static HTML..."
+const { execSync } = require('child_process');
+const path = require('path');
 
-# Prüfe ob Python installiert ist
-if ! command -v python3 &> /dev/null && ! command -v python &> /dev/null; then
-    echo "❌ Python nicht gefunden! Bitte Python installieren."
-    exit 1
-fi
+console.log('🔄 Generiere Sitemap und Static HTML...');
 
-# Bestimme Python-Befehl
-PYTHON_CMD=$(command -v python3 || command -v python)
+const projectRoot = path.resolve(__dirname, '..');
+const pythonCmd = process.platform === 'win32' ? 'python' : 'python3';
 
-# Führe Scripts aus
-$PYTHON_CMD generate_sitemap.py
-if [ $? -ne 0 ]; then
-    echo "❌ generate_sitemap.py fehlgeschlagen!"
-    exit 1
-fi
+try {
+  // Führe generate_sitemap.py aus
+  console.log('📄 Generiere Sitemap...');
+  execSync(`${pythonCmd} scripts/generate_sitemap.py`, { 
+    cwd: projectRoot,
+    stdio: 'inherit'
+  });
 
-$PYTHON_CMD generate_static_html.py
-if [ $? -ne 0 ]; then
-    echo "❌ generate_static_html.py fehlgeschlagen!"
-    exit 1
-fi
+  // Führe generate_static_html.py aus
+  console.log('🌐 Generiere statisches HTML...');
+  execSync(`${pythonCmd} scripts/generate_static_html.py`, { 
+    cwd: projectRoot,
+    stdio: 'inherit'
+  });
 
-# Füge generierte Dateien zum Commit hinzu
-git add public/sitemap.xml
-git add -A static/ 2>/dev/null || true
+  // Füge generierte Dateien zum Commit hinzu
+  console.log('📝 Füge generierte Dateien hinzu...');
+  execSync('git add public/sitemap.xml', { cwd: projectRoot });
+  execSync('git add -A static/ 2>/dev/null || true', { cwd: projectRoot });
 
-echo "✅ Sitemap und Static HTML aktualisiert!"
-exit 0
+  console.log('✅ Sitemap und Static HTML aktualisiert!');
+  process.exit(0);
+} catch (error) {
+  console.error('❌ Pre-commit hook fehlgeschlagen!');
+  console.error(error.message);
+  process.exit(1);
+}

@@ -11,13 +11,13 @@ if %errorlevel% neq 0 (
 )
 
 REM Führe Scripts aus
-python generate_sitemap.py
+python scripts/generate_sitemap.py
 if %errorlevel% neq 0 (
     echo ❌ generate_sitemap.py fehlgeschlagen!
     exit /b 1
 )
 
-python generate_static_html.py
+python scripts/generate_static_html.py
 if %errorlevel% neq 0 (
     echo ❌ generate_static_html.py fehlgeschlagen!
     exit /b 1

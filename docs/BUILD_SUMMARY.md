@@ -139,9 +139,9 @@ Diese Nacht wurde dein Projekt von einer Standard-Faktencheck-Website zu einem *
 - `manifest.json` - PWA Installation
 - `service-worker.js` - Offline Support
 - `.htaccess` - Performance & Security
-- `VIRAL_MARKETING_STRATEGY.md` - Vollständige Roadmap
-- `LAUNCH_CHECKLIST.md` - Pre/Post Launch Checklist
-- `generate_json_feed.py` - JSON Feed Generator
+- `docs/VIRAL_MARKETING_STRATEGY.md` - Vollständige Roadmap
+- `docs/LAUNCH_CHECKLIST.md` - Pre/Post Launch Checklist
+- `scripts/generate_json_feed.py` - JSON Feed Generator
 - `og-image-generator.js` - Dynamic OG Images
 - `ArticleDetail.jsx` - Category Pages
 - `deploy.sh` & `deploy.bat` - One-Click Deployment
@@ -204,13 +204,13 @@ Diese Nacht wurde dein Projekt von einer Standard-Faktencheck-Website zu einem *
 
 ## 📞 SUPPORT & DOCUMENTATION
 
-Alle Dokumentation liegt im Root-Verzeichnis:
-- `VIRAL_MARKETING_STRATEGY.md` - Vollständige Strategie
-- `LAUNCH_CHECKLIST.md` - Step-by-Step Deployment
-- `CHANGES_SUMMARY.md` - Änderungen
-- `SEO_SETUP.md` - SEO Konfiguration
-- `SEO_OPTIMIZATIONS.md` - Optimierungen Details
-- `README.md` - Projekt Übersicht
+Alle Dokumentation liegt im `docs/` Verzeichnis:
+- `docs/VIRAL_MARKETING_STRATEGY.md` - Vollständige Strategie
+- `docs/LAUNCH_CHECKLIST.md` - Step-by-Step Deployment
+- `docs/CHANGES_SUMMARY.md` - Änderungen
+- `docs/SEO_SETUP.md` - SEO Konfiguration
+- `docs/SEO_OPTIMIZATIONS.md` - Optimierungen Details
+- `README.md` - Projekt Übersicht (im Root)
 
 ---
 
