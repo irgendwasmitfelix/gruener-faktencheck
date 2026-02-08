@@ -1,6 +1,12 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "„Weitestgehend nach Prinzip Hoffnung“ – Rechnungshof rügt Habecks Millionen-Bruchlandung - WELT",
+      "url": "https://www.welt.de/politik/deutschland/plus6980c63b78c88161f9da4d3f/kritik-an-ampel-regierung-weitestgehend-nach-prinzip-hoffnung-rechnungshof-ruegt-habecks-millionen-bruchlandung.html",
+      "description": "Rechnungshof kritisiert Habecks Bruchlandung bei Millionen Ausgaben",
+      "keywords": "Energiewende, Habeck, Rechnungshof, Kritik, Bruchlandung, Deutschland, Wirtschaft, Politik, Steuergeld"
+    },
+    {
       "title": "Grüne Märchenstunde „Unsere Energiewende wird auf der ganzen Welt kopiert“, erzählt Grünen-Fraktionschefin Dröge",
       "url": "https://apollo-news.net/unsere-energiewende-wird-auf-der-ganzen-welt-kopiert-erzhlt-grnen-fraktionschefin-drge/",
       "description": "Kritische Analyse der Aussage von Gruenen-Fraktionschefin Droege zur weltweiten Nachahmung",
