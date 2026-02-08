@@ -171,6 +171,12 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Glätte-Chaos in Berlin Gehwege zuerst räumen, fordert Grünen-Politikerin",
+      "url": "https://www.berliner-kurier.de/berlin/gruenen-politikerin-fordert-geh-und-radwege-zuerst-raeumen-li.10017915",
+      "description": "Jetzt wollen die Grünen die Räum-Regeln in Berlin komplett ändern: Erst Bürgersteig statt Straße! Doch die BSR sagt: Das ist kaum machbar.",
+      "keywords": "Berlin,Glättechaos,Salz, Soziales"
+    },
+    {
       "title": "Grüne wollen Rente mit 63 für Gesunde abschaffen",
       "url": "https://www.spiegel.de/wirtschaft/soziales/gruene-wollen-rente-mit-63-fuer-gesunde-abschaffen-a-c201490d-6a34-456f-8074-cabb6c3d559a",
       "description": "Gruene fordern Abschaffung der Rente mit 63 fuer Gesunde",
