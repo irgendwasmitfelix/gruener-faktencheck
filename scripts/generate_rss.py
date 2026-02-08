@@ -114,8 +114,8 @@ def generate_rss_feed(articles_data, output_path):
     print("     " + str(item_count) + " Artikel enthalten")
 
 if __name__ == '__main__':
-    articles_path = Path(__file__).parent / 'src' / 'articles-enhanced.js'
-    output_path = Path(__file__).parent / 'public' / 'feed.xml'
+    articles_path = Path(__file__).parent.parent / 'src' / 'articles-enhanced.js'
+    output_path = Path(__file__).parent.parent / 'public' / 'feed.xml'
     
     if articles_path.exists():
         articles = parse_articles_js(articles_path)

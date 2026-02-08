@@ -17,7 +17,7 @@ from pathlib import Path
 
 def load_articles_from_enhanced_js():
     """Lädt Artikel direkt aus der articles-enhanced.js Datei"""
-    articles_file = Path(__file__).parent / "src" / "articles-enhanced.js"
+    articles_file = Path(__file__).parent.parent / "src" / "articles-enhanced.js"
     
     with open(articles_file, 'r', encoding='utf-8') as f:
         content = f.read()

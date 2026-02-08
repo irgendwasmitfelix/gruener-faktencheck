@@ -14,7 +14,7 @@ from pathlib import Path
 
 def extract_categories_and_articles_from_js():
     """Extract category names and article count from articles-enhanced.js"""
-    articles_file = Path(__file__).parent / "src" / "articles-enhanced.js"
+    articles_file = Path(__file__).parent.parent / "src" / "articles-enhanced.js"
     
     with open(articles_file, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -80,7 +80,7 @@ if __name__ == "__main__":
         categories = extract_categories_and_articles_from_js()
         sitemap_content, cat_data = generate_sitemap(categories)
         
-        sitemap_path = Path(__file__).parent / "public" / "sitemap.xml"
+        sitemap_path = Path(__file__).parent.parent / "public" / "sitemap.xml"
         with open(sitemap_path, 'w', encoding='utf-8') as f:
             f.write(sitemap_content)
         
