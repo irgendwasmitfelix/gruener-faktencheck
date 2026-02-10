@@ -533,6 +533,12 @@ export const articles = {
   ],
   "Außenpolitik": [
     {
+      "title": "Banaszak vergleicht ICE-Einsätze mit NS-Methoden",
+      "url": "https://www.zdfheute.de/politik/usa-banaszak-gruene-ice-einwanderung-behoerde-nationalsozialismus-100.html",
+      "description": "Grünen-Chef Felix Banaszak kritisiert das Vorgehen der US-Einwanderungsbehörde ICE scharf. Er spricht von 'Entmenschlichung' und sieht Parallelen zur frühen NS-Zeit.",
+      "keywords": "Felix Banaszak, Antifa, ICE Agenten, Maja T, Ungarn, Gruene, NS Vergleich"
+    },
+    {
       "title": "Grüne und Linkspartei stellen Urteil gegen Simeon „Maja“ T. in Frage",
       "url": "https://jungefreiheit.de/politik/deutschland/2026/gruene-und-linkspartei-stellen-urteil-gegen-simeon-maja-t-in-frage/",
       "description": "Nach dem Hafturteil gegen den deutschen Linksextremisten Simeon „Maja“ T. greifen Grüne und Linkspartei die ungarische Justiz an. Die Strafe für die brutalen Angriffe auf vermeintlich Andersdenkende sei zudem viel zu hoch.",
