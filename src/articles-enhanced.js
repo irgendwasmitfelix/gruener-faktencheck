@@ -1,6 +1,12 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "„Stadt stoppt Bau von 2,5-Milliarden-Komplex – „Bye-bye, Rechenzentrum“, jubeln die Grünen",
+      "url": "https://www.welt.de/politik/deutschland/article698c2fd410c65e72bdaa4721/gross-gerau-hessen-stadt-stoppt-bau-von-2-5-milliarden-komplex-bye-bye-rechenzentrum-jubeln-die-gruenen.html",
+      "description": "Frankfurt ist einer der wichtigsten Internetknoten weltweit, die Region giert nach Rechenleistung. So wollte ein US-Großinvestor ein milliardenschweres Rechenzentrum bauen. Doch den Einwohnern der nahen Kleinstadt passte das nicht. Einige Parteien jubeln.",
+      "keywords": "Rechenzentrum, Großinvestor, Frankfurt, Hessen, Großprojekt, Internetknoten, Region, Einwohner, Parteien, Grüne, Wirtschaft, Politik, Deutschland"
+    },
+    {
       "title": "„Weitestgehend nach Prinzip Hoffnung“ – Rechnungshof rügt Habecks Millionen-Bruchlandung - WELT",
       "url": "https://www.welt.de/politik/deutschland/plus6980c63b78c88161f9da4d3f/kritik-an-ampel-regierung-weitestgehend-nach-prinzip-hoffnung-rechnungshof-ruegt-habecks-millionen-bruchlandung.html",
       "description": "Rechnungshof kritisiert Habecks Bruchlandung bei Millionen Ausgaben",
