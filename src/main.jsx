@@ -6,6 +6,7 @@ import "./style.css";
 
 // Lazy Load CategoryPage (wird nur bei Bedarf geladen)
 const CategoryPage = lazy(() => import("./CategoryPage"));
+const ArticleDetail = lazy(() => import("./ArticleDetail"));
 
 // Fallback Loading Component
 const LoadingFallback = () => (
@@ -25,6 +26,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <CategoryPage />
           </Suspense>
         } 
+      />
+      <Route
+        path="/category/:category/articles"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <ArticleDetail />
+          </Suspense>
+        }
       />
     </Routes>
   </BrowserRouter>

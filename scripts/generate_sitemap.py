@@ -12,6 +12,21 @@ sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') e
 from datetime import datetime
 from pathlib import Path
 
+def category_to_slug(category):
+    """Create SEO slug for category paths."""
+    return (
+        category.strip()
+        .replace("Ä", "Ae")
+        .replace("Ö", "Oe")
+        .replace("Ü", "Ue")
+        .replace("ä", "ae")
+        .replace("ö", "oe")
+        .replace("ü", "ue")
+        .replace("ß", "ss")
+        .lower()
+        .replace(" ", "-")
+    )
+
 def extract_categories_and_articles_from_js():
     """Extract category names and article count from articles-enhanced.js"""
     articles_file = Path(__file__).parent.parent / "src" / "articles-enhanced.js"
@@ -21,9 +36,6 @@ def extract_categories_and_articles_from_js():
     
     # Extract category names and article counts
     categories = {}
-    category_pattern = r'"([^"]+)":\s*\[([\s\S]*?)\](?:,\s*"([^"]+)"|\])'
-    
-    current_pos = 0
     for match in re.finditer(r'"([^"]+)":\s*\[', content):
         cat_name = match.group(1)
         # Count articles in this category by counting title fields
@@ -58,7 +70,7 @@ def generate_sitemap(categories, domain="https://grüner-faktencheck.de"):
     max_articles = max(categories.values()) if categories else 1
     
     for category, article_count in sorted(categories.items(), key=lambda x: x[1], reverse=True):
-        category_slug = category.lower().replace(" ", "-")
+        category_slug = category_to_slug(category)
         category_url = f"{domain}/category/{category_slug}"
         
         # Priority based on article count (more articles = higher priority)

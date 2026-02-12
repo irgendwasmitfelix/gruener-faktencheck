@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
+import { categoryToSlug } from "./category-seo";
 
 function getDomain(url) {
   try {
@@ -46,10 +47,9 @@ function App() {
     if (!document.head.contains(canonical)) document.head.appendChild(canonical);
     
     // Mastodon Verification Link
-    const mastodonLink = document.querySelector('a[rel="me"][href*="mastodon"]') || document.createElement('a');
+    const mastodonLink = document.querySelector('link[rel="me"][href*="mastodon"]') || document.createElement('link');
     mastodonLink.rel = 'me';
     mastodonLink.href = 'https://mastodon.social/@irgendwasmitfelix';
-    mastodonLink.style.display = 'none';
     if (!document.head.contains(mastodonLink)) document.head.appendChild(mastodonLink);
   }, []);
 
@@ -203,7 +203,7 @@ function App() {
           <h2>Faktencheck-Übersicht – Alle Kategorien</h2>
           <div className="stats-grid">
             {Object.entries(categoryStats).map(([cat, count]) => (
-              <Link key={cat} to={`/category/${cat}`} style={{ textDecoration: "none", color: "inherit" }}>
+              <Link key={cat} to={`/category/${categoryToSlug(cat)}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <div className="stat-box" style={{ cursor: "pointer", transition: "transform 0.2s" }}>
                   <strong>{count}</strong>
                   <span>{cat}</span>

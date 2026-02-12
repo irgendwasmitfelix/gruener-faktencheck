@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
+import { categoryToSlug, resolveCategoryKey } from "./category-seo";
 
 function getDomain(url) {
   try {
@@ -12,7 +13,10 @@ function getDomain(url) {
 }
 
 function CategoryPage() {
-  const { category } = useParams();
+  const { category: categoryParam } = useParams();
+  const resolvedCategory = resolveCategoryKey(categoryParam, articles);
+  const category = resolvedCategory || categoryParam;
+  const categorySlug = categoryToSlug(category || "");
   
   // Auto Dark Mode Detection
   const [darkmode, setDarkmode] = useState(() => {
@@ -27,7 +31,7 @@ function CategoryPage() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [search, setSearch] = useState("");
   
-  const categoryArticles = articles[category] || [];
+  const categoryArticles = resolvedCategory ? articles[resolvedCategory] || [] : [];
   const year = new Date().getFullYear();
   
   // Filter articles from ALL categories by search term
@@ -48,9 +52,9 @@ function CategoryPage() {
   useEffect(() => {
     const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
     canonical.rel = 'canonical';
-    canonical.href = `https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\s+/g, '-')}`;
+    canonical.href = `https://grüner-faktencheck.de/category/${categorySlug}`;
     if (!document.head.contains(canonical)) document.head.appendChild(canonical);
-  }, [category]);
+  }, [categorySlug]);
   
   // Darkmode Toggle mit LocalStorage
   useEffect(() => {
@@ -74,7 +78,7 @@ function CategoryPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": `Grüner Faktencheck - ${category}`,
-    "url": `https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\s+/g, '-')}`,
+    "url": `https://grüner-faktencheck.de/category/${categorySlug}`,
     "description": `${category}-Artikel zu kritischen Analysen der Grünen Partei. Unabhängige Faktenchecks mit Quellen und Bewertungen.`,
     "isPartOf": {
       "@type": "WebSite",
@@ -116,9 +120,9 @@ function CategoryPage() {
         <meta name="description" content={`${category}-Artikel zum Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei mit Quellen und kritischer Bewertung.`} />
         <meta name="keywords" content={`Grüne Partei, Faktencheck, ${category}, Kritik, Deutschland Politik, Habeck, Baerbock`} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\\s+/g, '-')}`} />
+        <link rel="canonical" href={`https://grüner-faktencheck.de/category/${categorySlug}`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://grüner-faktencheck.de/category/${category.toLowerCase().replace(/\\s+/g, '-')}`} />
+        <meta property="og:url" content={`https://grüner-faktencheck.de/category/${categorySlug}`} />
         <meta property="og:title" content={`Grüner Faktencheck - ${category}`} />
         <meta property="og:description" content={`${category}-Artikel: Unabhängige Faktenchecks zur Grünen Partei Deutschland`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

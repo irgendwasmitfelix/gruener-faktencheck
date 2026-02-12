@@ -25,7 +25,7 @@ def load_articles_from_enhanced_js():
     articles = {}
     
     # Regex um Kategorien und Artikel zu extrahieren
-    category_pattern = r'"([^"]+)":\s*\[([\s\S]*?)\](?=,\s*"[^"]+"|$)'
+    category_pattern = r'"([^"]+)":\s*\[([\s\S]*?)\](?=,\s*"[^"]+"\s*:\s*\[|\s*\}\s*;)'
     
     for cat_match in re.finditer(category_pattern, content):
         category = cat_match.group(1)
@@ -57,13 +57,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <title>Grüner Faktencheck – {category}</title>
     <meta name="description" content="Grüner Faktencheck - {category} Artikel: Unabhängige Analyse und Faktenchecks zur Grünen Partei. Artikel, Quellen und kritische Bewertung von Grünen-Politik in Deutschland.">
     <meta name="keywords" content="Grüne Partei, {category}, Faktencheck, Faktenfinder, Deutschland Politik, Habeck, Baerbock">
-    <link rel="canonical" href="https://grüner-faktencheck.de/{category_slug}">
+    <link rel="canonical" href="https://grüner-faktencheck.de/category/{category_slug}">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Grüner Faktencheck – {category}">
     <meta property="og:description" content="{category} Artikel - Faktencheck zur Grünen Partei Deutschland">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://grüner-faktencheck.de/{category_slug}">
+    <meta property="og:url" content="https://grüner-faktencheck.de/category/{category_slug}">
     <meta property="og:image" content="https://grüner-faktencheck.de/og-image.jpg">
     
     <!-- JSON-LD Schema -->
@@ -72,7 +72,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Grüner Faktencheck - {category}",
-        "url": "https://grüner-faktencheck.de/{category_slug}",
+        "url": "https://grüner-faktencheck.de/category/{category_slug}",
         "description": "{category} Artikel zum Grünen Faktencheck. Kritische Analyse und Faktenüberprüfung.",
         "mainEntity": {{
             "@type": "ItemList",
@@ -147,10 +147,25 @@ def generate_json_ld_items(articles):
         })
     return json.dumps(items)
 
+def category_to_slug(category):
+    """Create SEO slug for category paths."""
+    return (
+        category.strip()
+        .replace("Ä", "Ae")
+        .replace("Ö", "Oe")
+        .replace("Ü", "Ue")
+        .replace("ä", "ae")
+        .replace("ö", "oe")
+        .replace("ü", "ue")
+        .replace("ß", "ss")
+        .lower()
+        .replace(" ", "-")
+    )
+
 def generate_category_page(category, articles_list):
     """Generiert statische HTML-Seite für eine Kategorie"""
     
-    category_slug = category.lower()
+    category_slug = category_to_slug(category)
     
     # Artikel HTML generieren
     articles_html = "".join([generate_article_html(a) for a in articles_list])

@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { articles } from './articles-enhanced';
+import { categoryToSlug, resolveCategoryKey } from './category-seo';
 
 function ArticleDetail() {
-  const { category } = useParams();
+  const { category: categoryParam } = useParams();
+  const resolvedCategory = resolveCategoryKey(categoryParam, articles);
+  const category = resolvedCategory || categoryParam;
+  const categorySlug = categoryToSlug(category || "");
   const [categoryArticles, setCategoryArticles] = useState([]);
 
   useEffect(() => {
-    if (category && articles[category]) {
-      setCategoryArticles(articles[category]);
+    if (resolvedCategory && articles[resolvedCategory]) {
+      setCategoryArticles(articles[resolvedCategory]);
+    } else {
+      setCategoryArticles([]);
     }
-  }, [category]);
+  }, [resolvedCategory]);
 
-  const canonicalUrl = `https://grüner-faktencheck.de/category/${category}`;
+  const canonicalUrl = `https://grüner-faktencheck.de/category/${categorySlug}/articles`;
   
   const jsonLd = {
     "@context": "https://schema.org",
@@ -33,6 +39,18 @@ function ArticleDetail() {
       }))
     }
   };
+
+  if (!resolvedCategory) {
+    return (
+      <div className="article-collection">
+        <h1>Kategorie "{categoryParam}" nicht gefunden</h1>
+        <p>Diese Kategorie existiert nicht oder hat keine Artikel.</p>
+        <Link to="/" style={{ textDecoration: "none", color: "#217c3b" }}>
+          ← Zurück zur Startseite
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="article-collection">
@@ -58,11 +76,6 @@ function ArticleDetail() {
           <h2>{article.title}</h2>
           {article.description && (
             <p className="article-description">{article.description}</p>
-          )}
-          {article.keywords && (
-            <p className="article-tags">
-              <strong>Tags:</strong> {article.keywords}
-            </p>
           )}
           <a href={article.url} target="_blank" rel="noopener noreferrer" className="read-more">
             Artikel lesen
