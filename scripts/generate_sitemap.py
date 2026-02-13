@@ -27,6 +27,27 @@ def category_to_slug(category):
         .replace(" ", "-")
     )
 
+def extract_static_pages():
+    """Extract static HTML pages from static_pages directory"""
+    static_pages_dir = Path(__file__).parent.parent / "static_pages"
+    static_pages = {}
+    
+    if static_pages_dir.exists():
+        for html_file in static_pages_dir.glob("*.html"):
+            # Extract category name from filename (e.g., aussenpolitik.html -> Außenpolitik)
+            name = html_file.stem
+            # Map to proper category names
+            category_map = {
+                "aussenpolitik": "Außenpolitik",
+                "energie": "Energie",
+                "innenpolitik": "Innenpolitik",
+                "wirtschaft": "Wirtschaft"
+            }
+            if name in category_map:
+                static_pages[category_map[name]] = f"/{name}.html"
+    
+    return static_pages
+
 def extract_categories_and_articles_from_js():
     """Extract category names and article count from articles-enhanced.js"""
     articles_file = Path(__file__).parent.parent / "src" / "articles-enhanced.js"
@@ -53,7 +74,7 @@ def extract_categories_and_articles_from_js():
     
     return categories
 
-def generate_sitemap(categories, domain="https://grüner-faktencheck.de"):
+def generate_sitemap(categories, static_pages, domain="https://grüner-faktencheck.de"):
     """Generate sitemap XML content with SEO optimization"""
     sitemap_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -65,6 +86,16 @@ def generate_sitemap(categories, domain="https://grüner-faktencheck.de"):
         '    <priority>1.0</priority>',
         '  </url>',
     ]
+    
+    # Add static pages
+    for category_name, url_path in static_pages.items():
+        static_url = f"{domain}{url_path}"
+        sitemap_lines.append('  <url>')
+        sitemap_lines.append(f'    <loc>{static_url}</loc>')
+        sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
+        sitemap_lines.append('    <changefreq>weekly</changefreq>')
+        sitemap_lines.append('    <priority>0.9</priority>')
+        sitemap_lines.append('  </url>')
     
     # Add category pages with dynamic priority based on article count
     max_articles = max(categories.values()) if categories else 1
@@ -85,12 +116,13 @@ def generate_sitemap(categories, domain="https://grüner-faktencheck.de"):
     
     sitemap_lines.append('</urlset>')
     
-    return '\n'.join(sitemap_lines), categories
+    return '\n'.join(sitemap_lines), categories, static_pages
 
 if __name__ == "__main__":
     try:
         categories = extract_categories_and_articles_from_js()
-        sitemap_content, cat_data = generate_sitemap(categories)
+        static_pages = extract_static_pages()
+        sitemap_content, cat_data, static_data = generate_sitemap(categories, static_pages)
         
         sitemap_path = Path(__file__).parent.parent / "public" / "sitemap.xml"
         with open(sitemap_path, 'w', encoding='utf-8') as f:
@@ -100,6 +132,9 @@ if __name__ == "__main__":
         print(f"[OK] Kategorien mit Artikel-Zahl:")
         for cat, count in sorted(cat_data.items(), key=lambda x: x[1], reverse=True):
             print(f"     - {cat}: {count} Artikel")
+        print(f"[OK] Statische Seiten:")
+        for cat, url in static_data.items():
+            print(f"     - {cat}: {url}")
         print(f"[OK] Sitemap URL: https://grüner-faktencheck.de/sitemap.xml")
         print(f"\n[INFO] NÄCHSTE SCHRITTE:")
         print(f"1. Gehen Sie zu: https://search.google.com/search-console")
