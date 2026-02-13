@@ -1,5 +1,5 @@
 const CACHE_VERSION = 'v1.0.0';
-const CACHE_NAME = `grüner-faktencheck-${CACHE_VERSION}`;
+const CACHE_NAME = `gruener-faktencheck-${CACHE_VERSION}`;
 const urlsToCache = [
   '/',
   '/index.html',
@@ -117,7 +117,7 @@ self.addEventListener('push', event => {
     body: data.body || 'Neue Artikel verfügbar',
     icon: '/favicon.ico',
     badge: '/favicon.ico',
-    tag: 'grüner-faktencheck-notification',
+    tag: 'gruener-faktencheck-notification',
     requireInteraction: false
   };
   

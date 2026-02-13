@@ -1,14 +1,10 @@
 User-agent: *
 Allow: /
-Crawl-delay: 0
-Request-rate: 100/1h
-
-Sitemap: https://grüner-faktencheck.de/sitemap.xml
+Sitemap: https://gruener-faktencheck.de/sitemap.xml
 
 # Google Specific
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
@@ -19,7 +15,6 @@ Allow: /
 # Bing
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 # Yandex
 User-agent: YandexBot

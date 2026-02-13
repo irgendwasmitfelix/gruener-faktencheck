@@ -43,9 +43,9 @@ function App() {
   useEffect(() => {
     const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
     canonical.rel = 'canonical';
-    canonical.href = 'https://grüner-faktencheck.de/';
+    canonical.href = 'https://gruener-faktencheck.de/';
     if (!document.head.contains(canonical)) document.head.appendChild(canonical);
-    
+
     // Mastodon Verification Link
     const mastodonLink = document.querySelector('link[rel="me"][href*="mastodon"]') || document.createElement('link');
     mastodonLink.rel = 'me';
@@ -129,11 +129,11 @@ function App() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Grüner Faktencheck",
-    "url": "https://grüner-faktencheck.de/",
+    "url": "https://gruener-faktencheck.de/",
     "description": "Unabhängige Analyse und Faktenchecks zur Grünen Partei Deutschland",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://grüner-faktencheck.de/?search={search_term_string}",
+      "target": "https://gruener-faktencheck.de/?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -148,10 +148,10 @@ function App() {
         <meta name="keywords" content="Grüne Partei, Faktencheck, Kritik Grüne, Deutschland Politik, Habeck, Baerbock, Innenpolitik, Wirtschaft, Außenpolitik" />
         <meta name="robots" content="index, follow" />
         <meta name="fediverse:creator" content="@irgendwasmitfelix@mastodon.social" />
-        <link rel="canonical" href="https://grüner-faktencheck.de/" />
+        <link rel="canonical" href="https://gruener-faktencheck.de/" />
         <link rel="me" href="https://mastodon.social/@irgendwasmitfelix" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://grüner-faktencheck.de/" />
+        <meta property="og:url" content="https://gruener-faktencheck.de/" />
         <meta property="og:title" content="Grüner Faktencheck - Kritische Analyse der Partei BÜNDNIS 90/DIE GRÜNEN" />
         <meta property="og:description" content="Unabhängige Analyse und Faktenchecks zur Grünen Partei Deutschland mit Quellen und kritischen Bewertungen." />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -159,7 +159,7 @@ function App() {
 
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <div className="nav-left">
-          <a href="https://grüner-faktencheck.de/" title="Startseite">Startseite</a>
+          <a href="https://gruener-faktencheck.de/" title="Startseite">Startseite</a>
           <button
             onClick={() => setDarkmode(!darkmode)}
             className="theme-toggle-btn-nav"

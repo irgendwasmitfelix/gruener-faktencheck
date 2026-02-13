@@ -8,6 +8,9 @@ SEO-optimized with proper priorities and change frequencies
 
 import sys
 import re
+import json
+import subprocess
+from shutil import which
 sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
 from datetime import datetime
 from pathlib import Path
@@ -49,12 +52,33 @@ def extract_static_pages():
     return static_pages
 
 def extract_categories_and_articles_from_js():
-    """Extract category names and article count from articles-enhanced.js"""
+    """Extract category names and article count from articles-enhanced.js.
+
+    Prefer using Node helper `scripts/parse_articles.js` for robust parsing.
+    Falls Node nicht vorhanden oder Fehler auftritt, wird ein Regex‑Fallback verwendet.
+    """
+    scripts_dir = Path(__file__).parent
+    node_helper = scripts_dir / 'parse_articles.js'
+
+    # Try Node helper first
+    if which('node') and node_helper.exists():
+        try:
+            proc = subprocess.run(['node', str(node_helper)], capture_output=True, text=True, timeout=5)
+            if proc.returncode == 0 and proc.stdout:
+                parsed = json.loads(proc.stdout)
+                # Build categories dict with counts
+                return {k: len(v) for k, v in parsed.items()}
+            else:
+                print('[WARN] Node parser failed, falling back to regex.', file=sys.stderr)
+        except Exception as e:
+            print(f'[WARN] Node parser error: {e}, falling back to regex.', file=sys.stderr)
+
+    # Regex fallback (older behaviour)
     articles_file = Path(__file__).parent.parent / "src" / "articles-enhanced.js"
-    
+
     with open(articles_file, 'r', encoding='utf-8') as f:
         content = f.read()
-    
+
     # Extract category names and article counts
     categories = {}
     for match in re.finditer(r'"([^"]+)":\s*\[', content):
@@ -66,15 +90,15 @@ def extract_categories_and_articles_from_js():
         if next_match:
             end = start + next_match.start()
         else:
-            end = content.rfind('}\n];', start)
-        
+            end = len(content)
+
         cat_content = content[start:end]
         article_count = cat_content.count('"title":')
         categories[cat_name] = article_count
-    
+
     return categories
 
-def generate_sitemap(categories, static_pages, domain="https://grüner-faktencheck.de"):
+def generate_sitemap(categories, static_pages, domain="https://gruener-faktencheck.de"):
     """Generate sitemap XML content with SEO optimization"""
     sitemap_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -135,12 +159,12 @@ if __name__ == "__main__":
         print(f"[OK] Statische Seiten:")
         for cat, url in static_data.items():
             print(f"     - {cat}: {url}")
-        print(f"[OK] Sitemap URL: https://grüner-faktencheck.de/sitemap.xml")
+        print(f"[OK] Sitemap URL: https://gruener-faktencheck.de/sitemap.xml")
         print(f"\n[INFO] NÄCHSTE SCHRITTE:")
         print(f"1. Gehen Sie zu: https://search.google.com/search-console")
         print(f"2. Registrieren Sie Ihre Domain (falls noch nicht getan)")
         print(f"3. Gehen Sie zu: Sitemaps")
-        print(f"4. Tragen Sie ein: https://grüner-faktencheck.de/sitemap.xml")
+        print(f"4. Tragen Sie ein: https://gruener-faktencheck.de/sitemap.xml")
         print(f"5. Klicken Sie: 'Absenden'")
         print(f"\n[DONE] Das war's! Google wird Ihre Artikel jetzt regelmäßig crawlen.")
     except Exception as e:

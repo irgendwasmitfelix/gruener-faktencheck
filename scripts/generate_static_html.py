@@ -57,14 +57,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <title>Grüner Faktencheck – {category}</title>
     <meta name="description" content="Grüner Faktencheck - {category} Artikel: Unabhängige Analyse und Faktenchecks zur Grünen Partei. Artikel, Quellen und kritische Bewertung von Grünen-Politik in Deutschland.">
     <meta name="keywords" content="Grüne Partei, {category}, Faktencheck, Faktenfinder, Deutschland Politik, Habeck, Baerbock">
-    <link rel="canonical" href="https://grüner-faktencheck.de/category/{category_slug}">
+    <link rel="canonical" href="https://gruener-faktencheck.de/category/{category_slug}">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Grüner Faktencheck – {category}">
     <meta property="og:description" content="{category} Artikel - Faktencheck zur Grünen Partei Deutschland">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://grüner-faktencheck.de/category/{category_slug}">
-    <meta property="og:image" content="https://grüner-faktencheck.de/og-image.jpg">
+    <meta property="og:url" content="https://gruener-faktencheck.de/category/{category_slug}">
+    <meta property="og:image" content="https://gruener-faktencheck.de/og-image.jpg">
     
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -72,7 +72,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Grüner Faktencheck - {category}",
-        "url": "https://grüner-faktencheck.de/category/{category_slug}",
+        "url": "https://gruener-faktencheck.de/category/{category_slug}",
         "description": "{category} Artikel zum Grünen Faktencheck. Kritische Analyse und Faktenüberprüfung.",
         "mainEntity": {{
             "@type": "ItemList",

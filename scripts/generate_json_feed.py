@@ -25,15 +25,15 @@ def generate_json_feed():
         "version": "https://jsonfeed.org/version/1.1",
         "title": "Grüner Faktencheck - Kritische Analysen der Grünen Partei",
         "description": "Unabhängige Faktenchecks, Analysen und kritische Bewertung der Grünen Partei Deutschland",
-        "home_page_url": "https://grüner-faktencheck.de",
-        "feed_url": "https://grüner-faktencheck.de/feed.json",
-        "icon": "https://grüner-faktencheck.de/favicon.ico",
-        "favicon": "https://grüner-faktencheck.de/favicon.ico",
+        "home_page_url": "https://gruener-faktencheck.de",
+        "feed_url": "https://gruener-faktencheck.de/feed.json",
+        "icon": "https://gruener-faktencheck.de/favicon.ico",
+        "favicon": "https://gruener-faktencheck.de/favicon.ico",
         "language": "de",
         "authors": [
             {
                 "name": "Grüner Faktencheck",
-                "url": "https://grüner-faktencheck.de"
+                "url": "https://gruener-faktencheck.de"
             }
         ],
         "hubs": [
@@ -50,7 +50,7 @@ def generate_json_feed():
     for category, articles_list in articles_data.items():
         for article in articles_list:
             item = {
-                "id": f"https://grüner-faktencheck.de/article/{article_id}",
+                "id": f"https://gruener-faktencheck.de/article/{article_id}",
                 "url": article["url"],
                 "external_url": article["url"],
                 "title": article["title"],
@@ -64,7 +64,7 @@ def generate_json_feed():
                 "tags": ["grüne-partei", "faktencheck", category.lower()],
                 "date_published": datetime.now().isoformat(),
                 "date_modified": datetime.now().isoformat(),
-                "image": "https://grüner-faktencheck.de/og-image.jpg"
+                "image": "https://gruener-faktencheck.de/og-image.jpg"
             }
             items.append(item)
             article_id += 1
@@ -80,7 +80,7 @@ def generate_json_feed():
     
     print(f"✓ JSON Feed generated: {output_path}")
     print(f"  - Total articles: {len(items)}")
-    print(f"  - Feed URL: https://grüner-faktencheck.de/feed.json")
+    print(f"  - Feed URL: https://gruener-faktencheck.de/feed.json")
 
 
 if __name__ == "__main__":

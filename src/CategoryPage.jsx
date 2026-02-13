@@ -52,7 +52,7 @@ function CategoryPage() {
   useEffect(() => {
     const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
     canonical.rel = 'canonical';
-    canonical.href = `https://grüner-faktencheck.de/category/${categorySlug}`;
+    canonical.href = `https://gruener-faktencheck.de/category/${categorySlug}`;
     if (!document.head.contains(canonical)) document.head.appendChild(canonical);
   }, [categorySlug]);
   
@@ -78,12 +78,12 @@ function CategoryPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": `Grüner Faktencheck - ${category}`,
-    "url": `https://grüner-faktencheck.de/category/${categorySlug}`,
+    "url": `https://gruener-faktencheck.de/category/${categorySlug}`,
     "description": `${category}-Artikel zu kritischen Analysen der Grünen Partei. Unabhängige Faktenchecks mit Quellen und Bewertungen.`,
     "isPartOf": {
       "@type": "WebSite",
       "name": "Grüner Faktencheck",
-      "url": "https://grüner-faktencheck.de"
+      "url": "https://gruener-faktencheck.de"
     },
     "mainEntity": {
       "@type": "ItemList",
@@ -120,16 +120,16 @@ function CategoryPage() {
         <meta name="description" content={`${category}-Artikel zum Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei mit Quellen und kritischer Bewertung.`} />
         <meta name="keywords" content={`Grüne Partei, Faktencheck, ${category}, Kritik, Deutschland Politik, Habeck, Baerbock`} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://grüner-faktencheck.de/category/${categorySlug}`} />
+        <link rel="canonical" href={`https://gruener-faktencheck.de/category/${categorySlug}`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://grüner-faktencheck.de/category/${categorySlug}`} />
+        <meta property="og:url" content={`https://gruener-faktencheck.de/category/${categorySlug}`} />
         <meta property="og:title" content={`Grüner Faktencheck - ${category}`} />
         <meta property="og:description" content={`${category}-Artikel: Unabhängige Faktenchecks zur Grünen Partei Deutschland`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        <a href="https://grüner-faktencheck.de/" title="Startseite">Startseite</a>
+        <a href="https://gruener-faktencheck.de/" title="Startseite">Startseite</a>
         <span> / {category}</span>
       </nav>
 

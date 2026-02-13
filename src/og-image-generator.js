@@ -70,7 +70,7 @@ function setupOGImageAPI(app) {
     ctx.fillStyle = '#fff';
     ctx.font = '20px Arial';
     ctx.fillText('Grüner Faktencheck - Unabhängige Analysen', 50, 590);
-    ctx.fillText('grüner-faktencheck.de', 50, 620);
+    ctx.fillText('gruener-faktencheck.de', 50, 620);
     
     // Send image
     res.type('image/png');
