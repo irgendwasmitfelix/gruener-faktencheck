@@ -2,43 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gruener-faktencheck.de/</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gruener-faktencheck.de/wirtschaft.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gruener-faktencheck.de/innenpolitik.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gruener-faktencheck.de/aussenpolitik.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://gruener-faktencheck.de/category/innenpolitik</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://gruener-faktencheck.de/category/wirtschaft</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://gruener-faktencheck.de/category/aussenpolitik</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.79</priority>
   </url>
