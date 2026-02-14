@@ -1,6 +1,12 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "Vettern-Wirtschaftsministerium: Wieso sind in Habecks Haus die Beamten verwandt?",
+      "url": "https://www.berliner-zeitung.de/politik-gesellschaft/compliance-im-bmwk-interessenskonflikte-vettern-wirtschaftsministerium-wieso-sind-in-robert-habecks-haus-die-beamten-verwandt-li.342934",
+      "description": "Im Wirtschaftsministerium sind Staatssekretäre verschwägert. Bei Öko-Lobbyorganisationen arbeiten Verwandte und Trauzeugen. Sind Interessenkonflikte vorhanden?",
+      "keywords": "Wirtschaftsministerium, Vettern Wirtschaft, Habeck, Parteien, Grüne, Wirtschaft, Politik, Deutschland, Wirtschaftspolitik, Standortpolitik"
+    },
+    {
       "title": "„Stadt stoppt Bau von 2,5-Milliarden-Komplex – „Bye-bye, Rechenzentrum“, jubeln die Grünen",
       "url": "https://www.welt.de/politik/deutschland/article698c2fd410c65e72bdaa4721/gross-gerau-hessen-stadt-stoppt-bau-von-2-5-milliarden-komplex-bye-bye-rechenzentrum-jubeln-die-gruenen.html",
       "description": "Frankfurt ist einer der wichtigsten Internetknoten weltweit, die Region giert nach Rechenleistung. So wollte ein US-Großinvestor ein milliardenschweres Rechenzentrum bauen. Doch den Einwohnern der nahen Kleinstadt passte das nicht. Einige Parteien jubeln.",
