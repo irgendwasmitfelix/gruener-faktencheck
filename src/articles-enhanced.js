@@ -544,6 +544,12 @@ export const articles = {
     }
   ],
   "Außenpolitik": [
+     {
+      "title": "Beschluss auf Landesparteitag Berliner Grüne wollen „Klima-Flüchtlinge“ aufnehmen",
+      "url": "https://www.bz-berlin.de/berlin/neukoelln/berliner-gruene-klima-fluechtlinge",
+      "description": "Die Öko-Partei denkt über eine weitere Kategorie bei Asylbewerbern nach: „Außerdem möchten wir die Aufnahme von Personen, die von Klimakatastrophen betroffen sind, neu einführen.“ Laut UNO leben 86 Millionen Flüchtlinge „in den Brennpunkten der Klimakrise“.",
+      "keywords": "Klimapolitik, Klimawahnsinn, Antifa, ICE Agenten, NS Vergleich, Außenpolitik, Geopolitik"
+    },
     {
       "title": "Banaszak vergleicht ICE-Einsätze mit NS-Methoden",
       "url": "https://www.zdfheute.de/politik/usa-banaszak-gruene-ice-einwanderung-behoerde-nationalsozialismus-100.html",
