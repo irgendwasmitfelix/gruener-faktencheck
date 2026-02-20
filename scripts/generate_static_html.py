@@ -184,6 +184,69 @@ def generate_category_page(category, articles_list):
     
     return html, category_slug
 
+def slugify(text, maxlen=80):
+    """Erzeugt einen Dateiname/Slug aus Titel (ASCII, minuszeichen)."""
+    import re
+    text = text.strip().lower()
+    # Ersetze Umlaute grob
+    trans = str.maketrans({"ä":"ae","ö":"oe","ü":"ue","ß":"ss","Ä":"Ae","Ö":"Oe","Ü":"Ue"})
+    text = text.translate(trans)
+    # Entferne nicht-alphanumerische Zeichen
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    text = re.sub(r"-+", "-", text).strip("-")
+    if len(text) > maxlen:
+        text = text[:maxlen].rstrip("-")
+    if not text:
+        text = "article"
+    return text
+
+def generate_article_page(category, article):
+    """Generiert eine einzelne statische HTML-Seite für einen Artikel auf der eigenen Domain."""
+    category_slug = category_to_slug(category)
+    title = article.get('title', 'Artikel')
+    description = article.get('description', '')
+    source_url = article.get('url', '#')
+
+    article_slug = slugify(title)
+    # Pfad: static_pages/articles/<category_slug>-<article_slug>.html
+    filename = f"static_pages/articles/{category_slug}-{article_slug}.html"
+
+    html = f"""<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{title} — Grüner Faktencheck</title>
+    <meta name="description" content="{description or title}" />
+    <meta name="keywords" content="{article.get('keywords','')}" />
+    <link rel="canonical" href="https://gruener-faktencheck.de/{('articles/'+category_slug+'-'+article_slug+'.html')}" />
+  <meta property="og:title" content="{title}" />
+  <meta property="og:description" content="{description or title}" />
+  <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gruener-faktencheck.de/{('articles/'+category_slug+'-'+article_slug+'.html')}" />
+  <meta property="og:image" content="https://gruener-faktencheck.de/og-image.jpg" />
+</head>
+<body>
+  <a href="/">← Zurück zur Startseite</a>
+  <h1>{title}</h1>
+    <p>{description}</p>
+    <p><a href="{source_url}" target="_blank" rel="noopener noreferrer">Originalquelle lesen</a></p>
+    <script type="application/ld+json">
+    {{
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{title}",
+        "description": "{(description or title)}",
+        "keywords": "{article.get('keywords','')}",
+        "url": "https://gruener-faktencheck.de/{('articles/'+category_slug+'-'+article_slug+'.html')}"
+    }}
+    </script>
+</body>
+</html>
+"""
+
+    return filename, html
+
 def save_html_files(output_dir="./static_pages"):
     """Speichert alle Kategorie-Seiten als HTML-Dateien"""
     
@@ -208,6 +271,23 @@ def save_html_files(output_dir="./static_pages"):
             })
             
             print(f"[OK] Generiert: {filename} ({len(articles_list)} Artikel)")
+
+            # Generiere einzelne Artikel-Seiten (sicher, keine Änderung an articles-enhanced.js)
+            articles_out_dir = Path(output_dir) / "articles"
+            articles_out_dir.mkdir(parents=True, exist_ok=True)
+            for art in articles_list:
+                art_filename, art_html = generate_article_page(category, art)
+                fullpath = Path(art_filename)
+                # Stelle sicher, dass das Verzeichnis existiert
+                fullpath.parent.mkdir(parents=True, exist_ok=True)
+                with open(fullpath, "w", encoding="utf-8") as fa:
+                    fa.write(art_html)
+                print(f"[OK] Generiert Artikelseite: {fullpath}")
+                generated_files.append({
+                    "category": category,
+                    "article": art.get('title'),
+                    "file": str(fullpath)
+                })
     
     return generated_files
 

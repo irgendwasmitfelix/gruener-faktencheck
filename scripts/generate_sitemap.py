@@ -14,6 +14,8 @@ from shutil import which
 sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') else None
 from datetime import datetime
 from pathlib import Path
+import glob
+import unicodedata
 
 def category_to_slug(category):
     """Create SEO slug for category paths."""
@@ -120,6 +122,23 @@ def generate_sitemap(categories, static_pages, domain="https://gruener-faktenche
         sitemap_lines.append('    <changefreq>weekly</changefreq>')
         sitemap_lines.append('    <priority>0.9</priority>')
         sitemap_lines.append('  </url>')
+
+    # Add individual article pages if they exist under static_pages/articles
+    articles_dir = Path(__file__).parent.parent / 'static_pages' / 'articles'
+    if articles_dir.exists():
+        project_root = Path(__file__).parent.parent
+        for article_file in sorted(articles_dir.glob('*.html')):
+            rel_path = article_file.relative_to(project_root).as_posix()
+            # Entferne führendes static_pages/ damit URLs wie /articles/... oder /aussenpolitik.html entstehen
+            if rel_path.startswith('static_pages/'):
+                rel_path = rel_path[len('static_pages/'):]
+            article_url = f"{domain}/{rel_path}"
+            sitemap_lines.append('  <url>')
+            sitemap_lines.append(f'    <loc>{article_url}</loc>')
+            sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
+            sitemap_lines.append('    <changefreq>monthly</changefreq>')
+            sitemap_lines.append('    <priority>0.60</priority>')
+            sitemap_lines.append('  </url>')
     
     # Add category pages with dynamic priority based on article count
     max_articles = max(categories.values()) if categories else 1
@@ -137,6 +156,14 @@ def generate_sitemap(categories, static_pages, domain="https://gruener-faktenche
         sitemap_lines.append('    <changefreq>weekly</changefreq>')
         sitemap_lines.append(f'    <priority>{priority}</priority>')
         sitemap_lines.append('  </url>')
+        # Also add the collection page URL that lists all articles for this category
+        collection_url = f"{domain}/category/{category_slug}/articles"
+        sitemap_lines.append('  <url>')
+        sitemap_lines.append(f'    <loc>{collection_url}</loc>')
+        sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
+        sitemap_lines.append('    <changefreq>weekly</changefreq>')
+        sitemap_lines.append(f'    <priority>{round(max(0.6, priority - 0.05), 2)}</priority>')
+        sitemap_lines.append('  </url>')
     
     sitemap_lines.append('</urlset>')
     
@@ -152,7 +179,21 @@ if __name__ == "__main__":
         with open(sitemap_path, 'w', encoding='utf-8') as f:
             f.write(sitemap_content)
         
-        print(f"[OK] Sitemap generated: {sitemap_path}")
+            print(f"[OK] Sitemap generated: {sitemap_path}")
+            # Try to ping Google and Bing so they fetch the updated sitemap faster
+            try:
+                import urllib.request
+                sitemap_domain = "https://gruener-faktencheck.de"
+                google_ping = f"https://www.google.com/ping?sitemap={sitemap_domain}/sitemap.xml"
+                bing_ping = f"https://www.bing.com/webmaster/ping.aspx?siteMap={sitemap_domain}/sitemap.xml"
+                for url in (google_ping, bing_ping):
+                    try:
+                        resp = urllib.request.urlopen(url, timeout=10)
+                        print(f"[OK] Pinged: {url} -> {resp.getcode()}")
+                    except Exception as pe:
+                        print(f"[WARN] Ping failed: {url} -> {pe}")
+            except Exception as e:
+                print(f"[WARN] Ping skipped: {e}")
         print(f"[OK] Kategorien mit Artikel-Zahl:")
         for cat, count in sorted(cat_data.items(), key=lambda x: x[1], reverse=True):
             print(f"     - {cat}: {count} Artikel")

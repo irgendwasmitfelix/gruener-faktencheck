@@ -7,6 +7,12 @@ export const articles = {
       "keywords": "Wirtschaftsministerium, Vettern Wirtschaft, Habeck, Parteien, Grüne, Wirtschaft, Politik, Deutschland, Wirtschaftspolitik, Standortpolitik"
     },
     {
+      "title": "Berliner Grüne wollen das Gasnetz abschalten",
+      "url": "https://www.bild.de/regional/berlin/gunnar-schupelius-berliner-gruene-wollen-das-gasnetz-abschalten-6991e1def4d0b8d94ca1d3ca?t_ref=https%3A%2F%2Fwww.politikversagen.net%2F",
+      "description": "Die Grünen haben am Wochenende ein Programm für die Wahlen (20. September) verabschiedet, das aus reinem Wunschdenken besteht und kaum noch einen Bezug zur Wirklichkeit hat. Sie wollen den Berlinern das Gas abdrehen, weil bei der Verbrennung CO2 entsteht. Dazu heißt es in Kapitel 1: „Wir setzen uns für eine perspektivische Stilllegung des Erdgasnetzes ein und werden dazu mit der GASAG ins Gespräch gehen.“ Eine bestehende, lebenswichtige Infrastruktur soll zerstört werden, ohne dass es bereits einen Ersatz gäbe. Rund 80 Prozent der Berliner Wohnungen werden direkt mit Gas oder über Fernwärme beheizt, die ebenfalls mit Gas erzeugt wird.",
+      "keywords": "Gasnetz, Abschaltung, Berlin, Grüne, Energie, Politik, Deutschland, Wirtschaftspolitik, Standortpolitik"
+    },
+    {
       "title": "„Stadt stoppt Bau von 2,5-Milliarden-Komplex – „Bye-bye, Rechenzentrum“, jubeln die Grünen",
       "url": "https://www.welt.de/politik/deutschland/article698c2fd410c65e72bdaa4721/gross-gerau-hessen-stadt-stoppt-bau-von-2-5-milliarden-komplex-bye-bye-rechenzentrum-jubeln-die-gruenen.html",
       "description": "Frankfurt ist einer der wichtigsten Internetknoten weltweit, die Region giert nach Rechenleistung. So wollte ein US-Großinvestor ein milliardenschweres Rechenzentrum bauen. Doch den Einwohnern der nahen Kleinstadt passte das nicht. Einige Parteien jubeln.",
@@ -182,6 +188,12 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      "title": "Berliner Grüne wollen Kopftuch für Polizistinnen",
+      "url": "https://www.bild.de/regional/berlin/neutralitaetsgesetz-berliner-gruene-wollen-kopftuch-fuer-polizistinnen-6991c49e91e70faa33106c55?t_ref=https%3A%2F%2Fm.bild.de%2F",
+      "description": "Neukölln – Dürfen Berliner Polizistinnen bald ein Kopftuch im Dienst tragen? Nach dem Willen der Hauptstadt-Grünen soll das möglich werden – sie verlangen eine Abschaffung des Neutralitätsgesetzes. Das beschlossen sie auf ihrem Landesparteitag.",
+      "keywords": "Kopftuch, Polizistinnen, Neutralitätsgesetz, Berlin, Grüne, Innenpolitik, Gesellschaftspolitik"
+    },
     {
       "title": "Glätte-Chaos in Berlin Gehwege zuerst räumen, fordert Grünen-Politikerin",
       "url": "https://www.berliner-kurier.de/berlin/gruenen-politikerin-fordert-geh-und-radwege-zuerst-raeumen-li.10017915",
