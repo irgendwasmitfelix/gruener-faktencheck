@@ -7,13 +7,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gruener-faktencheck.de/aussenpolitik.html</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gruener-faktencheck.de/energie.html</loc>
+    <loc>https://gruener-faktencheck.de/wirtschaft.html</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -25,7 +19,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gruener-faktencheck.de/wirtschaft.html</loc>
+    <loc>https://gruener-faktencheck.de/aussenpolitik.html</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -733,13 +727,13 @@
     <priority>0.78</priority>
   </url>
   <url>
-    <loc>https://gruener-faktencheck.de/category/auãÿenpolitik</loc>
+    <loc>https://gruener-faktencheck.de/category/aussenpolitik</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.79</priority>
   </url>
   <url>
-    <loc>https://gruener-faktencheck.de/category/auãÿenpolitik/articles</loc>
+    <loc>https://gruener-faktencheck.de/category/aussenpolitik/articles</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.74</priority>
