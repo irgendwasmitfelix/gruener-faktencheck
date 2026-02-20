@@ -17,6 +17,9 @@ from pathlib import Path
 import glob
 import unicodedata
 
+# Use ASCII/Punycode site domain for sitemap and ping URLs
+SITE_DOMAIN = "https://xn--grner-faktencheck-32b.de"
+
 def category_to_slug(category):
     """Create SEO slug for category paths."""
     return (
@@ -100,7 +103,7 @@ def extract_categories_and_articles_from_js():
 
     return categories
 
-def generate_sitemap(categories, static_pages, domain="https://gruener-faktencheck.de"):
+def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
     """Generate sitemap XML content with SEO optimization"""
     sitemap_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -183,7 +186,7 @@ if __name__ == "__main__":
             # Try to ping Google and Bing so they fetch the updated sitemap faster
             try:
                 import urllib.request
-                sitemap_domain = "https://gruener-faktencheck.de"
+                sitemap_domain = SITE_DOMAIN
                 google_ping = f"https://www.google.com/ping?sitemap={sitemap_domain}/sitemap.xml"
                 bing_ping = f"https://www.bing.com/webmaster/ping.aspx?siteMap={sitemap_domain}/sitemap.xml"
                 for url in (google_ping, bing_ping):
@@ -200,12 +203,12 @@ if __name__ == "__main__":
         print(f"[OK] Statische Seiten:")
         for cat, url in static_data.items():
             print(f"     - {cat}: {url}")
-        print(f"[OK] Sitemap URL: https://gruener-faktencheck.de/sitemap.xml")
+        print(f"[OK] Sitemap URL: {SITE_DOMAIN}/sitemap.xml")
         print(f"\n[INFO] NÄCHSTE SCHRITTE:")
         print(f"1. Gehen Sie zu: https://search.google.com/search-console")
         print(f"2. Registrieren Sie Ihre Domain (falls noch nicht getan)")
         print(f"3. Gehen Sie zu: Sitemaps")
-        print(f"4. Tragen Sie ein: https://gruener-faktencheck.de/sitemap.xml")
+        print(f"4. Tragen Sie ein: {SITE_DOMAIN}/sitemap.xml")
         print(f"5. Klicken Sie: 'Absenden'")
         print(f"\n[DONE] Das war's! Google wird Ihre Artikel jetzt regelmäßig crawlen.")
     except Exception as e:

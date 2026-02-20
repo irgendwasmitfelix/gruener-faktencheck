@@ -12,6 +12,42 @@ sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout, 'reconfigure') e
 from datetime import datetime
 from pathlib import Path
 
+import html as html_module
+import unicodedata
+
+_STOPWORDS = set([
+    # small set of common German + English stopwords to remove from keywords
+    'und','der','die','das','ist','in','den','von','zu','mit','auf','für','ein','eine','auf','als','an','bei','ist','sind','the','of','for','and','to','in','on','by','mit','oder'
+])
+
+def generate_keywords_from_text(title, description, max_keywords=8):
+    """Create a simple keyword list from title+description.
+    Returns comma-separated keywords (ASCII-ish, deduped).
+    """
+    text = ' '.join(filter(None, [title or '', description or '']))
+    # normalize and remove punctuation
+    text = text.lower()
+    text = re.sub(r"[\"'`.,:;!?()\[\]{}<>/\\|@#€$%&*+=~–—–]", ' ', text)
+    words = [w.strip() for w in text.split() if len(w.strip()) > 3]
+    # remove stopwords and numeric tokens
+    filtered = []
+    for w in words:
+        if w.isnumeric():
+            continue
+        if w in _STOPWORDS:
+            continue
+        # collapse diacritics to base chars for safer keywords
+        w_norm = unicodedata.normalize('NFKD', w)
+        w_norm = ''.join([c for c in w_norm if not unicodedata.combining(c)])
+        if w_norm not in filtered:
+            filtered.append(w_norm)
+        if len(filtered) >= max_keywords:
+            break
+    return ', '.join(filtered)
+
+# Use ASCII/Punycode site domain for generated canonical/og URLs
+SITE_DOMAIN = "https://xn--grner-faktencheck-32b.de"
+
 # ========== ARTIKELDATEN ==========
 # Lädt die Artikel automatisch aus articles-enhanced.js
 
@@ -57,14 +93,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <title>Grüner Faktencheck – {category}</title>
     <meta name="description" content="Grüner Faktencheck - {category} Artikel: Unabhängige Analyse und Faktenchecks zur Grünen Partei. Artikel, Quellen und kritische Bewertung von Grünen-Politik in Deutschland.">
     <meta name="keywords" content="Grüne Partei, {category}, Faktencheck, Faktenfinder, Deutschland Politik, Habeck, Baerbock">
-    <link rel="canonical" href="https://gruener-faktencheck.de/category/{category_slug}">
+    <link rel="canonical" href="{site_domain}/category/{category_slug}">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Grüner Faktencheck – {category}">
     <meta property="og:description" content="{category} Artikel - Faktencheck zur Grünen Partei Deutschland">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gruener-faktencheck.de/category/{category_slug}">
-    <meta property="og:image" content="https://gruener-faktencheck.de/og-image.jpg">
+    <meta property="og:url" content="{site_domain}/category/{category_slug}">
+    <meta property="og:image" content="{site_domain}/og-image.jpg">
     
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -72,7 +108,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Grüner Faktencheck - {category}",
-        "url": "https://gruener-faktencheck.de/category/{category_slug}",
+        "url": "{site_domain}/category/{category_slug}",
         "description": "{category} Artikel zum Grünen Faktencheck. Kritische Analyse und Faktenüberprüfung.",
         "mainEntity": {{
             "@type": "ItemList",
@@ -179,7 +215,8 @@ def generate_category_page(category, articles_list):
         category_slug=category_slug,
         articles_html=articles_html,
         items_json=items_json,
-        timestamp=datetime.now().strftime("%d.%m.%Y %H:%M")
+        timestamp=datetime.now().strftime("%d.%m.%Y %H:%M"),
+        site_domain=SITE_DOMAIN
     )
     
     return html, category_slug
@@ -211,41 +248,53 @@ def generate_article_page(category, article):
     # Pfad: static_pages/articles/<category_slug>-<article_slug>.html
     filename = f"static_pages/articles/{category_slug}-{article_slug}.html"
 
-    html = f"""<!DOCTYPE html>
+    # determine keywords: prefer explicit, otherwise generate from title+description
+    raw_keywords = (article.get('keywords') or '').strip()
+    if raw_keywords:
+        keywords_str = raw_keywords
+    else:
+        keywords_str = generate_keywords_from_text(title, description, max_keywords=8)
+
+    # escape values for safe HTML embedding
+    esc_title = html_module.escape(title)
+    esc_description = html_module.escape(description or title)
+    esc_keywords = html_module.escape(keywords_str)
+
+    html_content = f"""<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{title} — Grüner Faktencheck</title>
-    <meta name="description" content="{description or title}" />
-    <meta name="keywords" content="{article.get('keywords','')}" />
-    <link rel="canonical" href="https://gruener-faktencheck.de/{('articles/'+category_slug+'-'+article_slug+'.html')}" />
-  <meta property="og:title" content="{title}" />
-  <meta property="og:description" content="{description or title}" />
+    <title>{esc_title} — Grüner Faktencheck</title>
+        <meta name="description" content="{esc_description}" />
+        <meta name="keywords" content="{esc_keywords}" />
+        <link rel="canonical" href="{SITE_DOMAIN}/articles/{category_slug}-{article_slug}.html" />
+    <meta property="og:title" content="{esc_title}" />
+    <meta property="og:description" content="{esc_description}" />
   <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://gruener-faktencheck.de/{('articles/'+category_slug+'-'+article_slug+'.html')}" />
-  <meta property="og:image" content="https://gruener-faktencheck.de/og-image.jpg" />
+        <meta property="og:url" content="{SITE_DOMAIN}/articles/{category_slug}-{article_slug}.html" />
+    <meta property="og:image" content="{SITE_DOMAIN}/og-image.jpg" />
 </head>
 <body>
   <a href="/">← Zurück zur Startseite</a>
-  <h1>{title}</h1>
-    <p>{description}</p>
-    <p><a href="{source_url}" target="_blank" rel="noopener noreferrer">Originalquelle lesen</a></p>
+    <h1>{esc_title}</h1>
+        <p>{esc_description}</p>
+        <p><a href="{source_url}" target="_blank" rel="noopener noreferrer">Originalquelle lesen</a></p>
     <script type="application/ld+json">
     {{
         "@context": "https://schema.org",
         "@type": "NewsArticle",
-        "headline": "{title}",
-        "description": "{(description or title)}",
-        "keywords": "{article.get('keywords','')}",
-        "url": "https://gruener-faktencheck.de/{('articles/'+category_slug+'-'+article_slug+'.html')}"
+                "headline": "{esc_title}",
+                                "description": "{esc_description}",
+                                "keywords": "{esc_keywords}",
+                                "url": "{SITE_DOMAIN}/articles/{category_slug}-{article_slug}.html"
     }}
     </script>
 </body>
 </html>
 """
 
-    return filename, html
+    return filename, html_content
 
 def save_html_files(output_dir="./static_pages"):
     """Speichert alle Kategorie-Seiten als HTML-Dateien"""
