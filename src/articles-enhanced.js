@@ -1,6 +1,12 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "Mit der Macht des Reis-Korns: Grüne wollen Erbschaftssteuer erzwingen",
+      "url": "https://www.oe24.at/oesterreich/politik/parteien/mit-der-macht-des-reis-korns-gruene-wollen-erbschaftssteuer-erzwingen/670807231",
+      "description": "Die Grünen haben mit einem \"Dringlichen Antrag\" im Nationalrat eine Erbschaftssteuer gefordert.  Dazu hatte Parteichefin Gewessler Reiskörner als Argumentationshilfe dabei.",
+      "keywords": "Grüne, Erbschaftssteuer, Reiskorn, Politik, Wirtschaft"
+    },
+    {
       "title": "Vettern-Wirtschaftsministerium: Wieso sind in Habecks Haus die Beamten verwandt?",
       "url": "https://www.berliner-zeitung.de/politik-gesellschaft/compliance-im-bmwk-interessenskonflikte-vettern-wirtschaftsministerium-wieso-sind-in-robert-habecks-haus-die-beamten-verwandt-li.342934",
       "description": "Im Wirtschaftsministerium sind Staatssekretäre verschwägert. Bei Öko-Lobbyorganisationen arbeiten Verwandte und Trauzeugen. Sind Interessenkonflikte vorhanden?",
@@ -556,6 +562,12 @@ export const articles = {
     }
   ],
   "Außenpolitik": [
+    {
+      "title": "Annalena Baerbock bei Sandra Maischberger: Blamage mit Anlauf - FAZ",
+      "url": "https://www.t-online.de/nachrichten/deutschland/aussenpolitik/id_101143450/bei-maischberger-annalena-baerbock-unterlaeuft-grober-fehler.html",
+      "description": "Annalena Baerbock nennt Grönland bei \"Maischberger\" EU-Gebiet. Das ist falsch. Dass dort die EU-Außengrenze verläuft, klingt auch zweifelhaft.",
+      "keywords": "Annalena Baerbock, Sandra Maischberger, Blamage, Außenpolitik, Geopolitik"
+    },
      {
       "title": "Beschluss auf Landesparteitag Berliner Grüne wollen „Klima-Flüchtlinge“ aufnehmen",
       "url": "https://www.bz-berlin.de/berlin/neukoelln/berliner-gruene-klima-fluechtlinge",
