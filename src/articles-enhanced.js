@@ -1,5 +1,11 @@
 export const articles = {
   "Wirtschaft": [
+     {
+      "title": "Biogastarife verteuern Heizkosten um rund 25 Prozent",
+      "url": "https://www.energie-fachberater.de/news/biogastarife-verteuern-heizkosten-um-rund-25-prozent.php",
+      "description": "Wer jetzt schon eine neue Gasheizung in seinem Keller sieht, sollte einen Blick auf die künftigen Heizkosten werfen: Eine Analyse des Vergleichsportals Verivox zeigt, dass der aktuelle Durchschnittspreis dieser Gastarife schon jetzt rund 25 Prozent über dem Preis herkömmlicher Erdgastarife liegt.",
+      "keywords": "Biogastarife, Heizkosten, Energie, Wirtschaft"
+    },
     {
       "title": "Mit der Macht des Reis-Korns: Grüne wollen Erbschaftssteuer erzwingen",
       "url": "https://www.oe24.at/oesterreich/politik/parteien/mit-der-macht-des-reis-korns-gruene-wollen-erbschaftssteuer-erzwingen/670807231",
