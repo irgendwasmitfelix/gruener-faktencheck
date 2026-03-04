@@ -1,5 +1,11 @@
 export const articles = {
   "Wirtschaft": [
+      {
+      "title": "Grüne Umweltministerin missbraucht staatliche Kommunikationskanäle für plumpe Propaganda",
+      "url": "https://apollo-news.net/gruene-umweltministerin-missbraucht-staatliche-kommunikationskanaele-fuer-plumpe-propaganda/",
+      "description": "Auf X fällt das baden-württembergische Umweltministerium mit einseitigen Beiträgen zur Energiewende auf, die wichtige Fakten unterschlagen. Das ist ein offener Missbrauch staatlicher Macht durch die Grünen. Doch Beschwerden dagegen bleiben wirkungslos.",
+      "keywords": "Grüne, Umweltministerium, Propaganda, Energiewende, Wirtschaftspolitik, Standortpolitik"
+    },
      {
       "title": "Biogastarife verteuern Heizkosten um rund 25 Prozent",
       "url": "https://www.energie-fachberater.de/news/biogastarife-verteuern-heizkosten-um-rund-25-prozent.php",
@@ -200,6 +206,30 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      "title": "Antrag im Bundestag - Grüne wollen „vielfältiges muslimisches Leben in Deutschland“ fördern – und den Islam in der Bundeswehr verankern",
+      "url": "https://apollo-news.net/grne-wollen-vielfltiges-muslimisches-leben-in-deutschland-frdern-und-den-islam-in-der-bundeswehr-verankern/",
+      "description": "Die Grünen haben im Bundestag 24 Forderungen vorgelegt, die den Islam in Deutschland fördern sollen. Sie wollen mehr islamischen Religionsunterricht, weniger Kopftuchverbote und flächendeckend islamische Seelsorge – auch in der Bundeswehr.",
+      "keywords": "Grünen, Islam, Bundeswehr, Innenpolitik, Gesellschaftspolitik"
+    },
+    {
+      "title": "Nach AfD-Urteil: Grünen-Abgeordnete fordern „schnellstmöglich“ Arbeitsgruppe für AfD-Verbotsprüfung",
+      "url": "https://apollo-news.net/nach-afd-urteil-gruenen-abgeordnete-fordern-schnellstmoeglich-arbeitsgruppe-fuer-afd-verbotspruefung/",
+      "description": "Nach der Eilentscheidung, dass die AfD vorläufig nicht als „gesichert rechtsextremistisch“ eingestuft werden darf, fordern zwei Grünen-Abgeordnete „schnellstmöglich“ die Einrichtung einer Arbeitsgruppe für ein Verbotsverfahren.",
+      "keywords": "AfD, Grünen, Verbotsverfahren, Innenpolitik, Gesellschaftspolitik"
+    },
+    {
+      "title": "Kleine Anfrage - Laut Grünen „kein Rechtsbruch“: Tausende Migranten können wegen Kirchenasyl nicht abgeschoben werden",
+      "url": "https://apollo-news.net/laut-gruenen-kein-rechtsbruch-tausende-migranten-koennen-wegen-kirchenasyl-nicht-abgeschoben-werden/",
+      "description": "Tausende Asylverfahren müssen von der Bundesrepublik übernommen werden, weil die Migranten wegen des „Kirchenasyls“ nicht rechtzeitig abgeschoben wurden. Dabei ist Kirchenasyl kein rechtliches Abschiebungshindernis. Die Grünen loben das Vorgehen.",
+      "keywords": "Kirchenasyl, Grünen, Asylverfahren, Innenpolitik, Gesellschaftspolitik"
+    },
+     {
+      "title": "Bremer Grünen-Politikerin tritt nach Foto-Eklat mit Holocaust Koffer zurück",
+      "url": "https://bremen.t-online.de/region/bremen/id_101152478/bremen-gruenen-politikerin-goergue-philipp-tritt-nach-holocaust-foto-zurueck.html",
+      "description": "Der Eklat entstand durch ein inzwischen gelöschtes Instagram-Foto vom vergangenen Donnerstag. Auf dem Bild posierten Görgü-Philipp und die SPD-Abgeordnete Katharina Kähler lachend mit je einem Koffer aus einer aktuellen Holocaust-Ausstellung in der Bürgerschaft und dem Spruch 'Fertig für heute'",
+      "keywords": "Bremen, Grünen, Politikerin, Foto-Eklat,Holocaust, Koffer, SPD, Abgeordnete, Instagram, Rücktritt, Innenpolitik, Gesellschaftspolitik"
+    },
     {
       "title": "Berliner Grüne wollen Kopftuch für Polizistinnen",
       "url": "https://www.bild.de/regional/berlin/neutralitaetsgesetz-berliner-gruene-wollen-kopftuch-fuer-polizistinnen-6991c49e91e70faa33106c55?t_ref=https%3A%2F%2Fm.bild.de%2F",
