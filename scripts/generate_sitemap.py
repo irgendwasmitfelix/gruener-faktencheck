@@ -17,8 +17,8 @@ from pathlib import Path
 import glob
 import unicodedata
 
-# Use ASCII/Punycode site domain for sitemap and ping URLs
-SITE_DOMAIN = "https://xn--grner-faktencheck-32b.de"
+# Use Umlaut-Domain für Sitemap und Ping-URLs
+SITE_DOMAIN = "https://grüner-faktencheck.de"
 
 def category_to_slug(category):
     """Create SEO slug for category paths."""
