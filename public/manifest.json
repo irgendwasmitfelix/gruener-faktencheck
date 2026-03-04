@@ -2,7 +2,7 @@
   "name": "Grüner Faktencheck - Kritische Analyse der Grünen Partei",
   "short_name": "Grüner Faktencheck",
   "description": "Unabhängige Faktenchecks, Analysen und kritische Bewertung der Grünen Partei Deutschland. 100+ Artikel über Habeck, Baerbock, Energiewende, Wirtschaft und aktuelle Skandale.",
-  "start_url": "/",
+  "start_url": "https://grüner-faktencheck.de/",
   "display": "standalone",
   "scope": "/",
   "background_color": "#ffffff",

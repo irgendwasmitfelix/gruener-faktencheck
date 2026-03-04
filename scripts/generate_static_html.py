@@ -46,7 +46,7 @@ def generate_keywords_from_text(title, description, max_keywords=8):
     return ', '.join(filtered)
 
 # Use ASCII/Punycode site domain for generated canonical/og URLs
-SITE_DOMAIN = "https://xn--grner-faktencheck-32b.de"
+SITE_DOMAIN = "https://grüner-faktencheck.de"
 
 # ========== ARTIKELDATEN ==========
 # Lädt die Artikel automatisch aus articles-enhanced.js
