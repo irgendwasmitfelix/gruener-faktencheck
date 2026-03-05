@@ -1,5 +1,11 @@
 export const articles = {
   "Wirtschaft": [
+    {
+      "title": "Drittgrößter Zementhersteller der Welt: Heidelberg Materials stellt grünen Umbau infrage",
+      "url": "https://nius.de/wirtschaft/news/drittgroesster-zementhersteller-der-welt-heidelberg-materials-stellt-gruenen-umbau-infrage",
+      "description": "Das Zementwerk Heidelberg Materials (früher: Heidelberg Zement) wollte seinen Standort im nordrhein-westfälischen Geseke zum grünen Vorzeigeprojekt machen: Der drittgrößte Zementhersteller der Welt plante, den Standort mithilfe der Politik zum ersten vollständig dekarbonisierten Zementwerk in Deutschland zu machen. Jetzt sagt Konzernchef Dominik von Achten, dass unter den gegebenen Rahmenbedingungen die Hürde dafür zu hoch sei. Ob der Konzern seine Pläne umsetze, hänge von der Ausgestaltung der Klimaverträge ab. Der Wind in Berlin und Brüssel müsse sich drehen.",
+      "keywords": "Grüne, Heidelberg Materials, Zement, Dekarbonisierung, Wirtschaft, Politik, Deutschland, Wirtschaftspolitik, Standortpolitik"
+    },
       {
       "title": "Grüne Umweltministerin missbraucht staatliche Kommunikationskanäle für plumpe Propaganda",
       "url": "https://apollo-news.net/gruene-umweltministerin-missbraucht-staatliche-kommunikationskanaele-fuer-plumpe-propaganda/",
