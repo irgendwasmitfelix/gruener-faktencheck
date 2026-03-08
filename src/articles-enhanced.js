@@ -1,6 +1,12 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "15 Jahre mit grüner Regierung: Stromerzeugung in Baden-Württemberg hat sich fast halbiert",
+      "url": "https://apollo-news.net/stromerzeugung-in-baden-wurttemberg-hat-sich-fast-halbiert/",
+      "description": "2010 erzeugte Baden-Württemberg noch 66 Terawattstunden Strom, 2024 waren es nur noch 34. Seit die Grünen regieren, hat sich die Stromerzeugung im Ländle damit fast halbiert. Durch Kraftwerksabschaltungen ist der Südwesten abhängig von Frankreich.",
+      "keywords": "Grüne, Stromerzeugung, Baden-Württemberg, Energie, Wirtschaft, Politik, Deutschland, Wirtschaftspolitik, Standortpolitik"
+    },
+    {
       "title": "Drittgrößter Zementhersteller der Welt: Heidelberg Materials stellt grünen Umbau infrage",
       "url": "https://nius.de/wirtschaft/news/drittgroesster-zementhersteller-der-welt-heidelberg-materials-stellt-gruenen-umbau-infrage",
       "description": "Das Zementwerk Heidelberg Materials (früher: Heidelberg Zement) wollte seinen Standort im nordrhein-westfälischen Geseke zum grünen Vorzeigeprojekt machen: Der drittgrößte Zementhersteller der Welt plante, den Standort mithilfe der Politik zum ersten vollständig dekarbonisierten Zementwerk in Deutschland zu machen. Jetzt sagt Konzernchef Dominik von Achten, dass unter den gegebenen Rahmenbedingungen die Hürde dafür zu hoch sei. Ob der Konzern seine Pläne umsetze, hänge von der Ausgestaltung der Klimaverträge ab. Der Wind in Berlin und Brüssel müsse sich drehen.",
