@@ -219,6 +219,12 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Grüne Jugend drängte Boris Palmer auf Wahlparty von Cem Özdemir zum Gehen",
+      "url": "https://www.spiegel.de/politik/baden-wuerttemberg-gruene-jugend-draengte-boris-palmer-auf-wahlparty-von-cem-oezdemir-zum-gehen-a-7495da98-4986-4d04-b919-07bbc3e87e5e",
+      "description": "Die Grüne Jugend in Baden-Württemberg hat den Tübinger Oberbürgermeister Boris Palmer auf einer Wahlparty von Bundesaußenminister Cem Özdemir zum Gehen gedrängt. Palmer, der wegen umstrittener Äußerungen immer wieder in die Kritik geraten ist, wurde von den jungen Grünen als Störfaktor empfunden. Die Situation eskalierte, als Palmer sich weigerte, die Veranstaltung zu verlassen, was zu einem Eklat führte.",
+      "keywords": "Boris Palmer, Grüne Jugend, Cem Özdemir, Wahlparty, Baden-Württemberg, Innenpolitik, Gesellschaftspolitik"
+    },
+    {
       "title": "Antrag im Bundestag - Grüne wollen „vielfältiges muslimisches Leben in Deutschland“ fördern – und den Islam in der Bundeswehr verankern",
       "url": "https://apollo-news.net/grne-wollen-vielfltiges-muslimisches-leben-in-deutschland-frdern-und-den-islam-in-der-bundeswehr-verankern/",
       "description": "Die Grünen haben im Bundestag 24 Forderungen vorgelegt, die den Islam in Deutschland fördern sollen. Sie wollen mehr islamischen Religionsunterricht, weniger Kopftuchverbote und flächendeckend islamische Seelsorge – auch in der Bundeswehr.",
