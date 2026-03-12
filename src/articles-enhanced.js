@@ -218,6 +218,12 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+     {
+      "title": "",
+      "url": "https://www.fr.de/frankfurt/fechenheim-ort116672/stoppen-einbahnstrassen-plaene-fuer-die-jakobsbrunnenstrasse-anwohner-94190508.html",
+      "description": "„Die Straße ist eine Rennstrecke“: Anwohner protestieren gegen Grünen-Antrag für Einbahnstraße in Frankfurt-Fechenheim",
+      "keywords": "Einbahnstraße, Anwohner, Protest, Grünen-Antrag, Frankfurt-Fechenheim, Verkehr, Innenpolitik, Gesellschaftspolitik"
+    },
     {
       "title": "Grüne Jugend drängte Boris Palmer auf Wahlparty von Cem Özdemir zum Gehen",
       "url": "https://www.spiegel.de/politik/baden-wuerttemberg-gruene-jugend-draengte-boris-palmer-auf-wahlparty-von-cem-oezdemir-zum-gehen-a-7495da98-4986-4d04-b919-07bbc3e87e5e",
