@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { articles } from "./articles-enhanced";
 import { Helmet } from "react-helmet";
 import { categoryToSlug } from "./category-seo";
+import { useLocation } from "react-router-dom";
 
 function getDomain(url) {
   try {
@@ -38,6 +39,7 @@ function App() {
   });
   
   const categoryStats = getCategoryStats();
+  const location = useLocation();
 
   // SEO: Canonical Link + Mastodon Verification
   useEffect(() => {
@@ -138,6 +140,28 @@ function App() {
   };
 
   const hasResults = Object.values(filteredArticles).some(list => list.length > 0);
+
+  useEffect(() => {
+    // Prüfe, ob eine Kategorie direkt als Subpage aufgerufen wurde
+    const match = location.pathname.match(/^\/category\/(\w+)/);
+    if (match) {
+      const slug = match[1];
+      // Finde den echten Kategorienamen anhand des Slugs
+      const categoryName = Object.keys(categoryStats).find(
+        (cat) => categoryToSlug(cat) === slug
+      );
+      if (categoryName) {
+        setOpenCategories({ [categoryName]: true });
+        // Optional: Scroll zu Kategorie
+        setTimeout(() => {
+          const element = document.querySelector(`[data-category="${categoryName}"]`);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
+      }
+    }
+  }, [location.pathname]);
 
   return (
     <div className="container">

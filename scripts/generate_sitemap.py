@@ -111,7 +111,7 @@ def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
         '  <url>',
         f'    <loc>{domain}/</loc>',
         f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>',
-        '    <changefreq>weekly</changefreq>',
+        '    <changefreq>daily</changefreq>',
         '    <priority>1.0</priority>',
         '  </url>',
     ]
@@ -125,7 +125,7 @@ def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
         sitemap_lines.append('  <url>')
         sitemap_lines.append(f'    <loc>{category_url}</loc>')
         sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
-        sitemap_lines.append('    <changefreq>weekly</changefreq>')
+        sitemap_lines.append('    <changefreq>daily</changefreq>')
         sitemap_lines.append(f'    <priority>{priority}</priority>')
         sitemap_lines.append('  </url>')
     sitemap_lines.append('</urlset>')
