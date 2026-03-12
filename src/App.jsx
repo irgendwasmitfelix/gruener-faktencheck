@@ -104,18 +104,17 @@ function App() {
   ), [search]);
 
   // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird, sonst zuklappen
- // Kategorien mit Treffern automatisch öffnen, wenn gesucht wird, sonst zuklappen
   useEffect(() => {
-  if (search.trim() !== "") {
-    const open = {};
-    for (const [category, list] of Object.entries(filteredArticles)) {
-      if (list.length > 0) open[category] = true;
+    if (search.trim() !== "") {
+      const open = {};
+      for (const [category, list] of Object.entries(filteredArticles)) {
+        if (list.length > 0) open[category] = true;
+      }
+      setOpenCategories(open);
+    } else {
+      setOpenCategories({});
     }
-    setOpenCategories(open);
-  } else {
-    setOpenCategories({});
-  }
-}, [search]); // NUR search als Abhängigkeit, NICHT filteredArticles!
+  }, [search]); // NUR search als Abhängigkeit, NICHT filteredArticles!
 
   // Scroll-Button anzeigen
   useEffect(() => {
@@ -203,12 +202,20 @@ function App() {
           <h2>Faktencheck-Übersicht – Alle Kategorien</h2>
           <div className="stats-grid">
             {Object.entries(categoryStats).map(([cat, count]) => (
-              <Link key={cat} to={`/category/${categoryToSlug(cat)}`} style={{ textDecoration: "none", color: "inherit" }}>
-                <div className="stat-box" style={{ cursor: "pointer", transition: "transform 0.2s" }}>
-                  <strong>{count}</strong>
-                  <span>{cat}</span>
-                </div>
-              </Link>
+              <div
+                key={cat}
+                className="stat-box"
+                style={{ cursor: "pointer", transition: "transform 0.2s" }}
+                tabIndex={0}
+                onClick={() => toggleCategory(cat)}
+                onKeyDown={e => handleCategoryKey(e, cat)}
+                data-category={cat}
+                aria-expanded={!!openCategories[cat]}
+                role="button"
+              >
+                <strong>{count}</strong>
+                <span>{cat}</span>
+              </div>
             ))}
           </div>
         </div>

@@ -1,0 +1,6 @@
+/* Netlify _redirects file: Leitet alle Anfragen an index.html weiter, damit React Router funktioniert */
+/* Kategorie-Unterseiten, Artikel-Unterseiten, etc. funktionieren so auch als Direktlink */
+/* Syntax: <from> <to> <status> */
+
+# Catch-all für Single Page App
+/*    /index.html   200

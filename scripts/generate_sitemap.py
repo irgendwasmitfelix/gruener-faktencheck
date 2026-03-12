@@ -22,18 +22,18 @@ SITE_DOMAIN = "https://grüner-faktencheck.de"
 
 def category_to_slug(category):
     """Create SEO slug for category paths."""
-    return (
-        category.strip()
-        .replace("Ä", "Ae")
-        .replace("Ö", "Oe")
-        .replace("Ü", "Ue")
-        .replace("ä", "ae")
-        .replace("ö", "oe")
-        .replace("ü", "ue")
-        .replace("ß", "ss")
-        .lower()
-        .replace(" ", "-")
-    )
+    slug = category.strip()
+    slug = slug.replace("Ä", "Ae")
+    slug = slug.replace("Ö", "Oe")
+    slug = slug.replace("Ü", "Ue")
+    slug = slug.replace("ä", "ae")
+    slug = slug.replace("ö", "oe")
+    slug = slug.replace("ü", "ue")
+    # Sonderfall: Außenpolitik bleibt mit ß, aber Slug ist aussenpolitik
+    if slug == "Außenpolitik":
+        return "aussenpolitik"
+    slug = slug.lower().replace(" ", "-")
+    return slug
 
 def extract_static_pages():
     """Extract static HTML pages from static_pages directory"""
@@ -115,61 +115,20 @@ def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
         '    <priority>1.0</priority>',
         '  </url>',
     ]
-    
-    # Add static pages
-    for category_name, url_path in static_pages.items():
-        static_url = f"{domain}{url_path}"
-        sitemap_lines.append('  <url>')
-        sitemap_lines.append(f'    <loc>{static_url}</loc>')
-        sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
-        sitemap_lines.append('    <changefreq>weekly</changefreq>')
-        sitemap_lines.append('    <priority>0.9</priority>')
-        sitemap_lines.append('  </url>')
-
-    # Add individual article pages if they exist under static_pages/articles
-    articles_dir = Path(__file__).parent.parent / 'static_pages' / 'articles'
-    if articles_dir.exists():
-        project_root = Path(__file__).parent.parent
-        for article_file in sorted(articles_dir.glob('*.html')):
-            rel_path = article_file.relative_to(project_root).as_posix()
-            # Entferne führendes static_pages/ damit URLs wie /articles/... oder /aussenpolitik.html entstehen
-            if rel_path.startswith('static_pages/'):
-                rel_path = rel_path[len('static_pages/'):]
-            article_url = f"{domain}/{rel_path}"
-            sitemap_lines.append('  <url>')
-            sitemap_lines.append(f'    <loc>{article_url}</loc>')
-            sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
-            sitemap_lines.append('    <changefreq>monthly</changefreq>')
-            sitemap_lines.append('    <priority>0.60</priority>')
-            sitemap_lines.append('  </url>')
-    
-    # Add category pages with dynamic priority based on article count
+    # Nur Kategorie-Unterseiten aufnehmen
     max_articles = max(categories.values()) if categories else 1
-    
     for category, article_count in sorted(categories.items(), key=lambda x: x[1], reverse=True):
         category_slug = category_to_slug(category)
         category_url = f"{domain}/category/{category_slug}"
-        
         # Priority based on article count (more articles = higher priority)
         priority = round(0.7 + (article_count / max_articles) * 0.25, 2)
-        
         sitemap_lines.append('  <url>')
         sitemap_lines.append(f'    <loc>{category_url}</loc>')
         sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
         sitemap_lines.append('    <changefreq>weekly</changefreq>')
         sitemap_lines.append(f'    <priority>{priority}</priority>')
         sitemap_lines.append('  </url>')
-        # Also add the collection page URL that lists all articles for this category
-        collection_url = f"{domain}/category/{category_slug}/articles"
-        sitemap_lines.append('  <url>')
-        sitemap_lines.append(f'    <loc>{collection_url}</loc>')
-        sitemap_lines.append(f'    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>')
-        sitemap_lines.append('    <changefreq>weekly</changefreq>')
-        sitemap_lines.append(f'    <priority>{round(max(0.6, priority - 0.05), 2)}</priority>')
-        sitemap_lines.append('  </url>')
-    
     sitemap_lines.append('</urlset>')
-    
     return '\n'.join(sitemap_lines), categories, static_pages
 
 if __name__ == "__main__":
