@@ -30,23 +30,47 @@ function CategoryPage() {
   
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [search, setSearch] = useState("");
+  const [openCategories, setOpenCategories] = useState({});
   
   const categoryArticles = resolvedCategory ? articles[resolvedCategory] || [] : [];
   const year = new Date().getFullYear();
   
-  // Filter articles from ALL categories by search term
-  const filteredArticles = useMemo(() => 
-    Object.fromEntries(
-      Object.entries(articles).map(([cat, list]) => [
-        cat,
-        list.filter(article =>
-          article.title.toLowerCase().includes(search.toLowerCase())
-        ),
-      ])
-    ), [search]
-  );
+  // Toggle-Funktion mit Auto-Scroll
+  const toggleCategory = (cat) => {
+    setOpenCategories((prev) => {
+      const newState = {
+        ...prev,
+        [cat]: !prev[cat],
+      };
+      
+      // Wenn Kategorie gerade geöffnet wird, zu ihr scrollen
+      if (!prev[cat]) {
+        setTimeout(() => {
+          const element = document.querySelector(`[data-category="${cat}"]`);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 0);
+      }
+      
+      return newState;
+    });
+  };
+
+  // Tastaturbedienung für Kategorie-Reiter
+  const handleCategoryKey = (e, cat) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleCategory(cat);
+    }
+  };
   
-  const hasResults = Object.values(filteredArticles).some(list => list.length > 0);
+  // Beim Laden: Aktuelle Kategorie öffnen, alle anderen schließen
+  useEffect(() => {
+    if (resolvedCategory) {
+      setOpenCategories({ [resolvedCategory]: true });
+    }
+  }, [resolvedCategory]);
   
   // SEO: Canonical Link
   useEffect(() => {
@@ -171,12 +195,59 @@ function CategoryPage() {
         />
       </div>
 
-      {hasResults ? (
-        Object.entries(filteredArticles).map(([cat, list]) =>
-          list.length > 0 ? (
-            <div className="category-box" key={cat} style={{ marginTop: "2em" }}>
-              <h2>{cat}</h2>
-              {list.map((article, idx) => (
+      {/* Alle Kategorien als Tabs */}
+      <div style={{ marginBottom: "2em" }}>
+        <div style={{ display: "flex", gap: "0.5em", flexWrap: "wrap" }}>
+          {Object.keys(articles).map((cat) => (
+            <button
+              key={cat}
+              onClick={() => toggleCategory(cat)}
+              onKeyDown={(e) => handleCategoryKey(e, cat)}
+              data-category={cat}
+              style={{
+                padding: "0.6em 1em",
+                backgroundColor: openCategories[cat] ? "#217c3b" : "#e0e0e0",
+                color: openCategories[cat] ? "#fff" : "#000",
+                border: "none",
+                borderRadius: "6px",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                fontSize: "1em",
+                fontWeight: openCategories[cat] ? "bold" : "normal"
+              }}
+              aria-expanded={!!openCategories[cat]}
+              role="tab"
+            >
+              {cat} {openCategories[cat] ? "▲" : "▼"}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Kategorien mit Expand/Collapse */}
+      {Object.entries(articles).map(([cat, list]) => {
+        const filteredList = search.trim() 
+          ? list.filter(article =>
+              article.title.toLowerCase().includes(search.toLowerCase())
+            )
+          : list;
+
+        if (!openCategories[cat]) return null;
+
+        return (
+          <div className="category-box" key={cat} data-category={cat} style={{ marginTop: "2em" }}>
+            <h2
+              style={{ cursor: "pointer", userSelect: "none" }}
+              tabIndex={0}
+              onKeyDown={(e) => handleCategoryKey(e, cat)}
+              aria-expanded={!!openCategories[cat]}
+              role="button"
+              onClick={() => toggleCategory(cat)}
+            >
+              {cat} {openCategories[cat] ? "▲" : "▼"}
+            </h2>
+            {filteredList.length > 0 ? (
+              filteredList.map((article, idx) => (
                 <div className="article-teaser" key={`${cat}-${article.url}-${idx}`}>
                   <h3>{article.title}</h3>
                   {(article.date || article.source) && (
@@ -190,15 +261,13 @@ function CategoryPage() {
                     Weiterlesen auf {getDomain(article.url)}
                   </a>
                 </div>
-              ))}
-            </div>
-          ) : null
-        )
-      ) : search.trim() !== "" ? (
-        <div style={{ textAlign: "center", color: "#888", margin: "2em 0", fontSize: "1.1em" }}>
-          <p>Keine Treffer gefunden für „{search}"</p>
-        </div>
-      ) : null}
+              ))
+            ) : search.trim() !== "" ? (
+              <p style={{ color: "#888" }}>Keine Treffer in dieser Kategorie</p>
+            ) : null}
+          </div>
+        );
+      })}
 
       {showScrollTop && (
         <button
