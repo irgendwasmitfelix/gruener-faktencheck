@@ -2,8 +2,8 @@ name: Daily Sitemap Generation & Article Sync
 
 on:
   schedule:
-    # Läuft täglich um 00:00 UTC (01:00 MEZ)
-    - cron: '0 0 * * *'
+    # Läuft jeden Sonntag um 00:00 UTC (01:00 MEZ)
+    - cron: '0 0 * * 0'
   workflow_dispatch:  # Manuelle Ausführung möglich
 
 permissions:
