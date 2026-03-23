@@ -218,8 +218,20 @@ export const articles = {
     }
   ],
   "Innenpolitik": [
+    {
+      "title": "Neue Vorwürfe belasten Grünenpolitiker Gelbhaar",
+      "url": "https://www.spiegel.de/politik/deutschland/stefan-gelbhaar-neue-vorwuerfe-belasten-gruenen-politiker-a-0b0ca902-6505-4692-ae1a-f4af1ffee58c",
+      "description": "Vor einem Jahr wurden Belästigungsvorwürfe gegen Stefan Gelbhaar publik – die als falsch herausstellten. Nun ist ein neuer Chatverlauf aufgetaucht. Er soll Grenzüberschreitungen des Grünenpolitikers belegen.",
+      "keywords": "Stefan Gelbhaar, Vorwürfe, Grünenpolitiker, Chatverlauf, Innenpolitik, Gesellschaftspolitik"
+    },
+    {
+      "title": "Klagen sollen erleichtert werden: Grünen-Ministerin plant „Gesetz für Vielfalt und zum Schutz vor Diskriminierung“",
+      "url": "https://apollo-news.net/erleichterung-von-klagen-schleswig-holstein-plant-gesetz-fr-vielfalt-und-zum-schutz-vor-diskriminierung/",
+      "description": "Grünen-Ministerin plant ein Gesetz zur Erleichterung von Klagen und zum Schutz vor Diskriminierung",
+      "keywords": "Klagen, Grünen-Ministerin, Gesetz, Vielfalt, Diskriminierung, Innenpolitik, Gesellschaftspolitik"
+    },
      {
-      "title": "",
+      "title": "Anwohner protestieren gegen Grünen-Antrag für Einbahnstraße in Frankfurt-Fechenheim",
       "url": "https://www.fr.de/frankfurt/fechenheim-ort116672/stoppen-einbahnstrassen-plaene-fuer-die-jakobsbrunnenstrasse-anwohner-94190508.html",
       "description": "„Die Straße ist eine Rennstrecke“: Anwohner protestieren gegen Grünen-Antrag für Einbahnstraße in Frankfurt-Fechenheim",
       "keywords": "Einbahnstraße, Anwohner, Protest, Grünen-Antrag, Frankfurt-Fechenheim, Verkehr, Innenpolitik, Gesellschaftspolitik"

@@ -19,7 +19,7 @@ function ArticleDetail() {
     }
   }, [resolvedCategory]);
 
-  const canonicalUrl = `https://gruener-faktencheck.de/category/${categorySlug}/articles`;
+  const canonicalUrl = `https://grüner-faktencheck.de/category/${categorySlug}/articles`;
   
   const jsonLd = {
     "@context": "https://schema.org",
@@ -58,7 +58,7 @@ function ArticleDetail() {
         <title>{category} - Grüner Faktencheck | Unabhängige Analyse</title>
         <meta name="description" content={`Alle ${category} Artikel: Kritische Analysen zur Grünen Partei Deutschland mit Fokus auf Habeck, Baerbock und aktuelle Skandale.`} />
         <meta name="keywords" content={`${category}, Grüne Partei, Faktencheck, Kritik, Deutschland Politik 2026`} />
-        <link rel="canonical" href={canonicalUrl.replace('gr\u00fcner-faktencheck.de','gruener-faktencheck.de')} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={`${category} - Grüner Faktencheck`} />
         <meta property="og:description" content={`Faktencheck-Artikel zu Grüner ${category}`} />
         <meta property="og:url" content={canonicalUrl} />

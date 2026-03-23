@@ -61,7 +61,7 @@ def generate_rss_feed(articles_data, output_path):
 <rss version="2.0">
   <channel>
     <title>Grüner Faktencheck - RSS Feed</title>
-    <link>https://gruener-faktencheck.de/</link>
+    <link>https://grüner-faktencheck.de/</link>
     <description>Unabhängige Artikel und Links zur Grünen Partei Deutschland</description>
     <language>de-de</language>
     <lastBuildDate>{}</lastBuildDate>
