@@ -1,11 +1,8 @@
 const CACHE_VERSION = 'v1.0.0';
-const CACHE_NAME = `grüner-faktencheck-${CACHE_VERSION}`;
+const CACHE_NAME = `gruener-faktencheck-${CACHE_VERSION}`;
 const urlsToCache = [
   '/',
   '/index.html',
-  '/src/main.jsx',
-  '/src/App.jsx',
-  '/src/style.css',
   '/favicon.ico',
   '/manifest.json',
   '/robots.txt',
