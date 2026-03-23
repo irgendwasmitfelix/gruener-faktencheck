@@ -1,5 +1,5 @@
 const CACHE_VERSION = 'v1.0.0';
-const CACHE_NAME = `gruener-faktencheck-${CACHE_VERSION}`;
+const CACHE_NAME = `grüner-faktencheck-${CACHE_VERSION}`;
 const urlsToCache = [
   '/',
   '/index.html',
