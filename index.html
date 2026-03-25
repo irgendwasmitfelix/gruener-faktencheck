@@ -72,7 +72,8 @@
         gtag('js', new Date());
         gtag('config', 'G-46XGZG1CKJ');
       }
-      if (localStorage.getItem('ga_consent') === 'true') loadGtag();
+      // Lade GA automatisch - Datenschutz im Footer deklariert
+      loadGtag();
     </script>
 
     <!-- Schema.org JSON-LD - Strukturierte Daten für Google -->
