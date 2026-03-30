@@ -219,6 +219,12 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Zwei spektakuläre Gerichtsbeschlüsse: Man darf HateAid jetzt „linkswoke Faschistende“, „Linksextremistinnen“ und „Vorfeldorganisation der Grünen“ nennen",
+      "url": "https://nius.de/gesellschaft/spektakulaere-gerichtsbeschluesse-hateaid-linkswoke-faschistende-linksextremistinnen",
+      "description": "Die Geschäftsführerinnen von HateAid dürfen als „linkswoke Faschistende“ und „Linksextremistinnen“ bezeichnet werden. Das hat das Landgericht Hamburg entschieden. Auch NIUS hat eine Gerichtsentscheidung gegenüber HateAid erstritten: Wir dürfen die NGO als „Vorfeldorganisation der Grünen“ bezeichnen.",
+      "keywords": "HateAid, Gerichtsbeschlüsse, Linkswoke, Faschistende, Linksextremistinnen, Grünen, Innenpolitik, Gesellschaftspolitik"
+    },
+    {
       "title": "Neue Vorwürfe belasten Grünenpolitiker Gelbhaar",
       "url": "https://www.spiegel.de/politik/deutschland/stefan-gelbhaar-neue-vorwuerfe-belasten-gruenen-politiker-a-0b0ca902-6505-4692-ae1a-f4af1ffee58c",
       "description": "Vor einem Jahr wurden Belästigungsvorwürfe gegen Stefan Gelbhaar publik – die als falsch herausstellten. Nun ist ein neuer Chatverlauf aufgetaucht. Er soll Grenzüberschreitungen des Grünenpolitikers belegen.",
