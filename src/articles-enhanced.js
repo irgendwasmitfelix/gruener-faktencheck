@@ -219,6 +219,12 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "OPERATION COLLIEN: Die gefährlichste links-grüne Kampagne in der Geschichte der Bundesrepublik",
+      "url": "https://nius.de/kommentar/operation-collien-die-gefaehrlichste-links-gruene-kampagne-in-der-geschichte-der-bundesrepublik",
+      "description": "Das Landgericht Hamburg hat gerade geurteilt, dass man HateAid eine „Vorfeldorganisation der Grünen“ nennen darf. Mit genau diesen Zensur-Aktivisten wurde die Medienkampagne seit Monaten koordiniert. Dafür gibt es zwei Belege: ",
+      "keywords": "HateAid, Gerichtsbeschlüsse, Linkswoke, Faschistende, Linksextremistinnen, Grünen, Innenpolitik, Gesellschaftspolitik"
+    },
+    {
       "title": "Zwei spektakuläre Gerichtsbeschlüsse: Man darf HateAid jetzt „linkswoke Faschistende“, „Linksextremistinnen“ und „Vorfeldorganisation der Grünen“ nennen",
       "url": "https://nius.de/gesellschaft/spektakulaere-gerichtsbeschluesse-hateaid-linkswoke-faschistende-linksextremistinnen",
       "description": "Die Geschäftsführerinnen von HateAid dürfen als „linkswoke Faschistende“ und „Linksextremistinnen“ bezeichnet werden. Das hat das Landgericht Hamburg entschieden. Auch NIUS hat eine Gerichtsentscheidung gegenüber HateAid erstritten: Wir dürfen die NGO als „Vorfeldorganisation der Grünen“ bezeichnen.",
