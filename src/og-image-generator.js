@@ -11,8 +11,7 @@ function generateOGImageMeta(article, category) {
     title: article.title,
     description: article.description || article.title,
     image: ogImage,
-    imageAlt: article.title,
-    keywords: article.keywords || ""
+    imageAlt: article.title
   };
 }
 

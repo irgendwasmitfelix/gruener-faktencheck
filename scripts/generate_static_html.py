@@ -13,37 +13,6 @@ from datetime import datetime
 from pathlib import Path
 
 import html as html_module
-import unicodedata
-
-_STOPWORDS = set([
-    # small set of common German + English stopwords to remove from keywords
-    'und','der','die','das','ist','in','den','von','zu','mit','auf','für','ein','eine','auf','als','an','bei','ist','sind','the','of','for','and','to','in','on','by','mit','oder'
-])
-
-def generate_keywords_from_text(title, description, max_keywords=8):
-    """Create a simple keyword list from title+description.
-    Returns comma-separated keywords (ASCII-ish, deduped).
-    """
-    text = ' '.join(filter(None, [title or '', description or '']))
-    # normalize and remove punctuation
-    text = text.lower()
-    text = re.sub(r"[\"'`.,:;!?()\[\]{}<>/\\|@#€$%&*+=~–—–]", ' ', text)
-    words = [w.strip() for w in text.split() if len(w.strip()) > 3]
-    # remove stopwords and numeric tokens
-    filtered = []
-    for w in words:
-        if w.isnumeric():
-            continue
-        if w in _STOPWORDS:
-            continue
-        # collapse diacritics to base chars for safer keywords
-        w_norm = unicodedata.normalize('NFKD', w)
-        w_norm = ''.join([c for c in w_norm if not unicodedata.combining(c)])
-        if w_norm not in filtered:
-            filtered.append(w_norm)
-        if len(filtered) >= max_keywords:
-            break
-    return ', '.join(filtered)
 
 # Use ASCII/Punycode site domain for generated canonical/og URLs
 SITE_DOMAIN = "https://grüner-faktencheck.de"
@@ -92,7 +61,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grüner Faktencheck – {category}</title>
     <meta name="description" content="Grüner Faktencheck - {category} Artikel: Unabhängige Analyse und Faktenchecks zur Grünen Partei. Artikel, Quellen und kritische Bewertung von Grünen-Politik in Deutschland.">
-    <meta name="keywords" content="Grüne Partei, {category}, Faktencheck, Faktenfinder, Deutschland Politik, Habeck, Baerbock">
     <link rel="canonical" href="{site_domain}/category/{category_slug}">
     
     <!-- Open Graph -->
@@ -248,17 +216,9 @@ def generate_article_page(category, article):
     # Pfad: static_pages/articles/<category_slug>-<article_slug>.html
     filename = f"static_pages/articles/{category_slug}-{article_slug}.html"
 
-    # determine keywords: prefer explicit, otherwise generate from title+description
-    raw_keywords = (article.get('keywords') or '').strip()
-    if raw_keywords:
-        keywords_str = raw_keywords
-    else:
-        keywords_str = generate_keywords_from_text(title, description, max_keywords=8)
-
     # escape values for safe HTML embedding
     esc_title = html_module.escape(title)
     esc_description = html_module.escape(description or title)
-    esc_keywords = html_module.escape(keywords_str)
 
     html_content = f"""<!DOCTYPE html>
 <html lang="de">
@@ -267,7 +227,6 @@ def generate_article_page(category, article):
   <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{esc_title} — Grüner Faktencheck</title>
         <meta name="description" content="{esc_description}" />
-        <meta name="keywords" content="{esc_keywords}" />
         <link rel="canonical" href="{SITE_DOMAIN}/articles/{category_slug}-{article_slug}.html" />
     <meta property="og:title" content="{esc_title}" />
     <meta property="og:description" content="{esc_description}" />
@@ -286,7 +245,6 @@ def generate_article_page(category, article):
         "@type": "NewsArticle",
                 "headline": "{esc_title}",
                                 "description": "{esc_description}",
-                                "keywords": "{esc_keywords}",
                                 "url": "{SITE_DOMAIN}/articles/{category_slug}-{article_slug}.html"
     }}
     </script>

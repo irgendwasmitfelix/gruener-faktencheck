@@ -168,7 +168,6 @@ function App() {
       <Helmet>
         <title>Grüner Faktencheck – Kritische Analyse der Grünen Partei Deutschland</title>
         <meta name="description" content="Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei. Artikel, Quellen und kritische Bewertung von Grünen-Politik in Deutschland." />
-        <meta name="keywords" content="Grüne Partei, Faktencheck, Kritik Grüne, Deutschland Politik, Habeck, Baerbock, Innenpolitik, Wirtschaft, Außenpolitik" />
         <meta name="robots" content="index, follow" />
         <meta name="fediverse:creator" content="@irgendwasmitfelix@mastodon.social" />
         <link rel="canonical" href="https://grüner-faktencheck.de/" />

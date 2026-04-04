@@ -34,7 +34,6 @@ function ArticleDetail() {
         "position": idx + 1,
         "headline": article.title,
         "description": article.description || article.title,
-        "keywords": article.keywords,
         "url": article.url
       }))
     }
@@ -57,7 +56,6 @@ function ArticleDetail() {
       <Helmet>
         <title>{category} - Grüner Faktencheck | Unabhängige Analyse</title>
         <meta name="description" content={`Alle ${category} Artikel: Kritische Analysen zur Grünen Partei Deutschland mit Fokus auf Habeck, Baerbock und aktuelle Skandale.`} />
-        <meta name="keywords" content={`${category}, Grüne Partei, Faktencheck, Kritik, Deutschland Politik 2026`} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={`${category} - Grüner Faktencheck`} />
         <meta property="og:description" content={`Faktencheck-Artikel zu Grüner ${category}`} />

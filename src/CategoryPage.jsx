@@ -142,7 +142,6 @@ function CategoryPage() {
       <Helmet>
         <title>Grüner Faktencheck - {category} | Kritische Analyse der Grünen</title>
         <meta name="description" content={`${category}-Artikel zum Grüner Faktencheck: Unabhängige Analyse und Faktenchecks zur Grünen Partei mit Quellen und kritischer Bewertung.`} />
-        <meta name="keywords" content={`Grüne Partei, Faktencheck, ${category}, Kritik, Deutschland Politik, Habeck, Baerbock`} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`https://grüner-faktencheck.de/category/${categorySlug}`} />
         <meta property="og:type" content="website" />
