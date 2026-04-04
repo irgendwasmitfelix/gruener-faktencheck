@@ -1,5 +1,9 @@
 # Grüner Faktencheck
 
+[![Watch Live](https://img.shields.io/badge/▶_Watch_Live-YouTube-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@TheEfficientDev)
+[![Trading Bot](https://img.shields.io/badge/Trading_Bot-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/irgendwasmitfelix/TradingBot)
+[![Portfolio](https://img.shields.io/badge/Portfolio-irgendwasmitfelix.github.io-0a66c2?style=for-the-badge&logo=github)](https://irgendwasmitfelix.github.io)
+
 Unabhängige Artikel und Links zur Grünen Partei Deutschland.
 
 ⚠️ **Das ist kein offizielles Projekt der Grünen!**
