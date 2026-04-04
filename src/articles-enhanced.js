@@ -183,6 +183,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Antrag der Grünen im Bundestag stellen Muslima ausschließlich als Opfer dar",
+      "url": "https://archive.is/S702N",
+      "description": "Ein Antrag der Grünen im Bundestag zu „vielfältigem muslimischen Leben“ beschreibt Muslime in Deutschland fast ausschließlich als Opfer. Mit den täglichen Herausforderungen hat das wenig zu tun. Es ist ein Antrag, der die Realität nicht abbildet, sondern eine Wunschvorstellung von Muslimen in Deutschland zeichnet. Er stellt Muslime als Opfer dar, die ständig Diskriminierung und Rassismus ausgesetzt sind.",
+    },
+    {
       "title": "OPERATION COLLIEN: Die gefährlichste links-grüne Kampagne in der Geschichte der Bundesrepublik",
       "url": "https://nius.de/kommentar/operation-collien-die-gefaehrlichste-links-gruene-kampagne-in-der-geschichte-der-bundesrepublik",
       "description": "Das Landgericht Hamburg hat gerade geurteilt, dass man HateAid eine „Vorfeldorganisation der Grünen“ nennen darf. Mit genau diesen Zensur-Aktivisten wurde die Medienkampagne seit Monaten koordiniert. Dafür gibt es zwei Belege: ",
