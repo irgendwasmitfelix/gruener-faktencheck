@@ -1,6 +1,11 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "EU genehmigt Staatshilfen für erstes Atomkraftwerk in Polen",
+      "url": "https://www.spiegel.de/wirtschaft/polen-eu-genehmigt-staatshilfen-fuer-erstes-atomkraftwerk-lubiatowo-kopalino-a-013fe463-f7a2-43c3-ba9a-34fed6e4b154",
+      "description": "Deutschland steigt aus, Polen steigt ein: In Ostseenähe soll bis 2036 das erste AKW des Landes entstehen. Brüssel erlaubt nun einen Zuschuss der polnischen Regierung.",
+    },
+    {
       "title": "15 Jahre mit grüner Regierung: Stromerzeugung in Baden-Württemberg hat sich fast halbiert",
       "url": "https://apollo-news.net/stromerzeugung-in-baden-wurttemberg-hat-sich-fast-halbiert/",
       "description": "2010 erzeugte Baden-Württemberg noch 66 Terawattstunden Strom, 2024 waren es nur noch 34. Seit die Grünen regieren, hat sich die Stromerzeugung im Ländle damit fast halbiert. Durch Kraftwerksabschaltungen ist der Südwesten abhängig von Frankreich.",
