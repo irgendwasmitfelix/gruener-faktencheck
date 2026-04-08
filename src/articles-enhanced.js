@@ -201,6 +201,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Grünen-Chef fordert Tempolimit auf Zeit",
+      "url": "https://www.welt.de/politik/deutschland/article69ce620acdf80d124bb0c328/felix-banaszak-gruenen-chef-fordert-tempolimit-auf-zeit-und-die-rueckkehr-des-9-euro-tickets.html",
+      "description": "Der Grünen-Co-Vorsitzende Felix Banaszak spricht sich angesichts hoher Spritpreise für ein zeitlich befristetes Tempolimit und eine Übergewinnsteuer für Mineralölkonzerne aus. Friedrich Merz attackiert er scharf.",
+    },
+    {
       "title": "Antrag der Grünen im Bundestag stellen Muslima ausschließlich als Opfer dar",
       "url": "https://archive.is/S702N",
       "description": "Ein Antrag der Grünen im Bundestag zu „vielfältigem muslimischen Leben“ beschreibt Muslime in Deutschland fast ausschließlich als Opfer. Mit den täglichen Herausforderungen hat das wenig zu tun. Es ist ein Antrag, der die Realität nicht abbildet, sondern eine Wunschvorstellung von Muslimen in Deutschland zeichnet. Er stellt Muslime als Opfer dar, die ständig Diskriminierung und Rassismus ausgesetzt sind.",
