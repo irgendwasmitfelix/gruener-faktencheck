@@ -1,5 +1,18 @@
+/*
+    {
+      "title": "",
+      "url": "",
+      "description": "",
+    },
+    */
+
 export const articles = {
   "Wirtschaft": [
+    {
+      "title": "SPD, Grüne und Linke fordern staatlich finanziertes Seenotrettungsprogramm von der Bundesregierung",
+      "url": "https://apollo-news.net/spd-grne-und-linke-fordern-staatlich-finanziertes-seenotrettungsprogramm-von-der-bundesregierung/",
+      "description": "128 Bundestagsabgeordnete von SPD, Grünen und Linken fordern die Bundesregierung dazu auf, sich für ein staatlich finanziertes Seenotrettungsprogramm einzusetzen. Der „Osterappell“ ist ein deutliches Zeichen der Kritik am Koalitionspartner Union.",
+    },
     {
       "title": "EU genehmigt Staatshilfen für erstes Atomkraftwerk in Polen",
       "url": "https://www.spiegel.de/wirtschaft/polen-eu-genehmigt-staatshilfen-fuer-erstes-atomkraftwerk-lubiatowo-kopalino-a-013fe463-f7a2-43c3-ba9a-34fed6e4b154",
