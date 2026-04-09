@@ -201,6 +201,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Grüne für unerlaubte Habeck-Werbung zu Geldstrafe verurteilt",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/gruene-fuer-unerlaubte-habeck-werbung-zu-geldstrafe-verurteilt/",
+      "description": "Die Grünen ließen das Konterfei ihres damaligen Kanzlerkandidaten Robert Habeck ohne Genehmigung auf das Münchner Siegestor projizieren. Nun verhängt die Stadt eine Strafe von 6.948 Euro.",
+    },
+    {
       "title": "Grünen-Chef fordert Tempolimit auf Zeit",
       "url": "https://www.welt.de/politik/deutschland/article69ce620acdf80d124bb0c328/felix-banaszak-gruenen-chef-fordert-tempolimit-auf-zeit-und-die-rueckkehr-des-9-euro-tickets.html",
       "description": "Der Grünen-Co-Vorsitzende Felix Banaszak spricht sich angesichts hoher Spritpreise für ein zeitlich befristetes Tempolimit und eine Übergewinnsteuer für Mineralölkonzerne aus. Friedrich Merz attackiert er scharf.",
