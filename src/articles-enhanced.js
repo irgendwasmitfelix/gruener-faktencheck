@@ -9,6 +9,11 @@
 export const articles = {
   "Wirtschaft": [
     {
+      "title": "130.000 Euro Nachzahlung: Gehalts-Trick der Grünen fliegt auf",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/130-000-euro-nachzahlung-gehalts-trick-der-gruenen-fliegt-auf/",
+      "description": "Bei den Hamburger Grünen werden Vorstandsbezüge über Jahre als Aufwandsentschädigung verbucht. Nachdem sie erwischt werden, stuft die Rentenversicherung es als Gehalt ein und verlangt eine Nachzahlung. HAMBURG. Die Grünen haben über Jahre hinweg die Bezüge ihrer Parteiführung nicht korrekt angegeben und sind damit nun aufgeflogen. Nach einer Prüfung durch die Deutsche Rentenversicherung muss der Hamburger Landesverband 130.000 Euro an Sozialabgaben nachzahlen. Das geht aus internen Parteidokumenten hervor.",
+    },
+    {
       "title": "SPD, Grüne und Linke fordern staatlich finanziertes Seenotrettungsprogramm von der Bundesregierung",
       "url": "https://apollo-news.net/spd-grne-und-linke-fordern-staatlich-finanziertes-seenotrettungsprogramm-von-der-bundesregierung/",
       "description": "128 Bundestagsabgeordnete von SPD, Grünen und Linken fordern die Bundesregierung dazu auf, sich für ein staatlich finanziertes Seenotrettungsprogramm einzusetzen. Der „Osterappell“ ist ein deutliches Zeichen der Kritik am Koalitionspartner Union.",
