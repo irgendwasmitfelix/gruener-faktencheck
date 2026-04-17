@@ -201,6 +201,21 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Früherer Grünen-Vorsitzender Nouripour fordert Grüne Jugend zu Kurskorrektur auf – 'Fallen vor allem mit lauten Parolen auf'",
+      "url": "https://www.welt.de/politik/deutschland/article69bfe5a28f5761671715b603/frueherer-gruenen-vorsitzender-nouripour-fordert-gruene-jugend-zu-kurskorrektur-auf-fallen-vor-allem-mit-lauten-parolen-auf.html?icid=search.product.onsitesearch",
+      "description": "Der Vizepräsident des Bundestags, Omid Nouripour, lobt den erfolgreichen Wahlkampf seiner Partei in Baden-Württemberg – und rechnet mit der Parteijugend ab. Statt sich „realer Probleme“ anzunehmen, setze die Grüne Jugend auf Parolen.",
+    },
+    {
+      "title": "Grüner OB: München pflanzt Bäume für 95.000 Euro pro Stück",
+      "url": "https://www.bild.de/politik/inland/muenchen-pflanzt-trotz-hoher-schulden-baeume-fuer-95-000-euro-pro-stueck-69de51e8e0f60045a48ba972?t_ref=https%3A%2F%2Fwww.politikversagen.net%2F",
+      "description": "München – Bayerns Hauptstadt wird grün. Seit der Wahl im März ist politisch klar: Neuer Oberbürgermeister wird der Grünen-Politiker Dominik Krause (35). Doch jetzt leistet sich die Stadt gleich noch praktisches Grün. In der Innenstadt sollen 150 neue Bäume gepflanzt werden – zum Luxuspreis: Ein Baum kostet umgerechnet bis zu 95.000 Euro! Dabei hat München schon jetzt Milliarden-Schulden.",
+    },
+    {
+      "title": "Allensbach Umfrage: Grüne am intolerantesten!",
+      "url": "https://www.welt.de/politik/deutschland/article69e1ca147711c440ff1d9f7f/umfrage-gruenen-anhaenger-regen-sich-am-haeufigsten-ueber-andere-meinungen-auf.html",
+      "description": "Anhänger der Grünen sind laut einer Allensbach-Umfrage am wenigsten tolerant, wenn ihr Gegenüber eine andere Meinung hat. Nur jeder Zehnte gibt zudem an, dass in seinem Bekanntenkreis eine andere Partei bevorzugt wird, als der Befragte selbst wählen würde.",
+    },
+    {
       "title": "Grüne für unerlaubte Habeck-Werbung zu Geldstrafe verurteilt",
       "url": "https://jungefreiheit.de/politik/deutschland/2026/gruene-fuer-unerlaubte-habeck-werbung-zu-geldstrafe-verurteilt/",
       "description": "Die Grünen ließen das Konterfei ihres damaligen Kanzlerkandidaten Robert Habeck ohne Genehmigung auf das Münchner Siegestor projizieren. Nun verhängt die Stadt eine Strafe von 6.948 Euro.",
