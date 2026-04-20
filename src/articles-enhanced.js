@@ -206,6 +206,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Berliner Grüne XXL-Blamage statt XXL-Parteitag",
+      "url": "https://www.bz-berlin.de/berlin/neukoelln/xxl-blamage-statt-xxl-parteitag",
+      "description": "Neukölln – Es sollte das größte grüne Mitgliedertreffen aller Zeiten werden. Doch der XXL-Parteitag der Berliner Grünen wurde zur XXL-Blamage. Die Öko-Partei wurde von ihren eigenen Mitgliedern im Stich gelassen. Im Estrel Hotel (Neukölln) bestimmten die Grünen am Wochenende ihre Kandidaten für die Abgeordnetenhauswahl. Alle 18.000 Mitglieder des Landesverbandes waren eingeladen. Zur Beschlussfähigkeit waren 15 Prozent nötig, rund 2700 Mitglieder. Besonders brisant: Mehrere Fragen von Männern an Kandidaten waren nicht zugelassen, weil Frauen mit einer pinken Karte dagegen stimmten. Und Bewerber wurden gefragt: „Wann hast Du zuletzt an einem Workshop zu kritischer Männlichkeit teilgenommen?“",
+    },
+    {
       "title": "Früherer Grünen-Vorsitzender Nouripour fordert Grüne Jugend zu Kurskorrektur auf – 'Fallen vor allem mit lauten Parolen auf'",
       "url": "https://www.welt.de/politik/deutschland/article69bfe5a28f5761671715b603/frueherer-gruenen-vorsitzender-nouripour-fordert-gruene-jugend-zu-kurskorrektur-auf-fallen-vor-allem-mit-lauten-parolen-auf.html?icid=search.product.onsitesearch",
       "description": "Der Vizepräsident des Bundestags, Omid Nouripour, lobt den erfolgreichen Wahlkampf seiner Partei in Baden-Württemberg – und rechnet mit der Parteijugend ab. Statt sich „realer Probleme“ anzunehmen, setze die Grüne Jugend auf Parolen.",
