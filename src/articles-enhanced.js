@@ -206,6 +206,16 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Wenn ein Grünen-Parteitag 350.000 Euro kostet – und dann kaum einer kommt",
+      "url": "https://www.welt.de/politik/deutschland/plus69e3a33d769e68aeef7a6d20/berlin-wenn-ein-gruenen-parteitag-350-000-euro-kostet-und-dann-kaum-einer-kommt.html",
+      "description": "Es waren zu wenig Grüne da, um die Beschlussfähigkeit zu gewährleisten. Dennoch gab es einen Parteitag – und der kostete 350.000 Euro. Das ist ein Skandal.",
+    },
+    {
+      "title": "Gehälter jahrelang falsch gezahlt? Schwere Vorwürfe gegen Hamburger Grüne - MOPO",
+      "url": "https://www.welt.de/regionales/hamburg/article69e105e762672238fee07ef6/parteifinanzen-130-000-euro-nachzahlung-an-rentenkasse-hamburgs-gruene-haben-probleme-mit-vorstandsbezuegen.html",
+      "description": "130.000 Euro Nachzahlung an Rentenkasse – Hamburgs Grüne haben Probleme mit Vorstandsbezügen",
+    },
+    {
       "title": "Berliner Grüne XXL-Blamage statt XXL-Parteitag",
       "url": "https://www.bz-berlin.de/berlin/neukoelln/xxl-blamage-statt-xxl-parteitag",
       "description": "Neukölln – Es sollte das größte grüne Mitgliedertreffen aller Zeiten werden. Doch der XXL-Parteitag der Berliner Grünen wurde zur XXL-Blamage. Die Öko-Partei wurde von ihren eigenen Mitgliedern im Stich gelassen. Im Estrel Hotel (Neukölln) bestimmten die Grünen am Wochenende ihre Kandidaten für die Abgeordnetenhauswahl. Alle 18.000 Mitglieder des Landesverbandes waren eingeladen. Zur Beschlussfähigkeit waren 15 Prozent nötig, rund 2700 Mitglieder. Besonders brisant: Mehrere Fragen von Männern an Kandidaten waren nicht zugelassen, weil Frauen mit einer pinken Karte dagegen stimmten. Und Bewerber wurden gefragt: „Wann hast Du zuletzt an einem Workshop zu kritischer Männlichkeit teilgenommen?“",
