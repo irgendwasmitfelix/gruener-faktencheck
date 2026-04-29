@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://grüner-faktencheck.de/sitemap.xml
+Sitemap: https://gruener-faktencheck.de/sitemapue.xml
 
 # Google Specific
 User-agent: Googlebot

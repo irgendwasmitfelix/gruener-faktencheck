@@ -22,7 +22,7 @@ SITE_DOMAIN = "https://grüner-faktencheck.de"
 SITE_DOMAIN_UE = "https://gruener-faktencheck.de"
 
 def category_to_slug(category):
-    """Create SEO slug for category paths."""
+    """Create SEO slug for category paths (Umlaut-Domain)."""
     slug = category.strip()
     slug = slug.replace("Ä", "Ae")
     slug = slug.replace("Ö", "Oe")
@@ -35,6 +35,16 @@ def category_to_slug(category):
     if slug.lower() == "außenpolitik":
         return "aussenpolitik"
     slug = slug.lower().replace(" ", "-")
+    return slug
+
+def category_to_slug_ue(category):
+    """Create SEO slug for category paths (UE-Domain, garantiert ohne Umlaute/ß)."""
+    slug = category.strip().lower()
+    slug = slug.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
+    slug = slug.replace("ß", "ss")
+    slug = slug.replace(" ", "-")
+    if slug in ("außenpolitik", "aussenpolitik"):
+        return "aussenpolitik"
     return slug
 
 def extract_static_pages():
@@ -120,15 +130,8 @@ def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
     # Nur Kategorie-Unterseiten aufnehmen
     max_articles = max(categories.values()) if categories else 1
     for category, article_count in sorted(categories.items(), key=lambda x: x[1], reverse=True):
-        # Für die UE-Domain alle Umlaute und ß ersetzen
         if domain == SITE_DOMAIN_UE:
-            cat = category
-            cat = cat.replace("Ä", "Ae").replace("Ö", "Oe").replace("Ü", "Ue")
-            cat = cat.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
-            if cat.lower() == "außenpolitik":
-                category_slug = "aussenpolitik"
-            else:
-                category_slug = cat.lower().replace(" ", "-")
+            category_slug = category_to_slug_ue(category)
         else:
             category_slug = category_to_slug(category)
         category_url = f"{domain}/category/{category_slug}"
