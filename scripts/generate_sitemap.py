@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
         # Sitemap für ue-Domain
         sitemap_content_ue, _, _ = generate_sitemap(categories, static_pages, domain=SITE_DOMAIN_UE)
-        sitemap_path_ue = Path(__file__).parent.parent / "public" / "sitemapUE.xml"
+        sitemap_path_ue = Path(__file__).parent.parent / "public" / "sitemapue.xml"
         with open(sitemap_path_ue, 'w', encoding='utf-8') as f:
             f.write(sitemap_content_ue)
         print(f"[OK] Sitemap generated: {sitemap_path_ue}")
