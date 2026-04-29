@@ -30,8 +30,9 @@ def category_to_slug(category):
     slug = slug.replace("ä", "ae")
     slug = slug.replace("ö", "oe")
     slug = slug.replace("ü", "ue")
+    slug = slug.replace("ß", "ss")
     # Sonderfall: Außenpolitik bleibt mit ß, aber Slug ist aussenpolitik
-    if slug == "Außenpolitik":
+    if slug.lower() == "außenpolitik":
         return "aussenpolitik"
     slug = slug.lower().replace(" ", "-")
     return slug
@@ -119,7 +120,17 @@ def generate_sitemap(categories, static_pages, domain=SITE_DOMAIN):
     # Nur Kategorie-Unterseiten aufnehmen
     max_articles = max(categories.values()) if categories else 1
     for category, article_count in sorted(categories.items(), key=lambda x: x[1], reverse=True):
-        category_slug = category_to_slug(category)
+        # Für die UE-Domain alle Umlaute und ß ersetzen
+        if domain == SITE_DOMAIN_UE:
+            cat = category
+            cat = cat.replace("Ä", "Ae").replace("Ö", "Oe").replace("Ü", "Ue")
+            cat = cat.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+            if cat.lower() == "außenpolitik":
+                category_slug = "aussenpolitik"
+            else:
+                category_slug = cat.lower().replace(" ", "-")
+        else:
+            category_slug = category_to_slug(category)
         category_url = f"{domain}/category/{category_slug}"
         # Priority based on article count (more articles = higher priority)
         priority = round(0.7 + (article_count / max_articles) * 0.25, 2)
