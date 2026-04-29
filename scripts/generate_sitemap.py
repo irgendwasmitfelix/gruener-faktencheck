@@ -19,6 +19,7 @@ import unicodedata
 
 # Use Umlaut-Domain für Sitemap und Ping-URLs
 SITE_DOMAIN = "https://grüner-faktencheck.de"
+SITE_DOMAIN_UE = "https://gruener-faktencheck.de"
 
 def category_to_slug(category):
     """Create SEO slug for category paths."""
@@ -135,39 +136,49 @@ if __name__ == "__main__":
     try:
         categories = extract_categories_and_articles_from_js()
         static_pages = extract_static_pages()
-        sitemap_content, cat_data, static_data = generate_sitemap(categories, static_pages)
-        
+        # Sitemap für ü-Domain
+        sitemap_content, cat_data, static_data = generate_sitemap(categories, static_pages, domain=SITE_DOMAIN)
         sitemap_path = Path(__file__).parent.parent / "public" / "sitemap.xml"
         with open(sitemap_path, 'w', encoding='utf-8') as f:
             f.write(sitemap_content)
-        
-            print(f"[OK] Sitemap generated: {sitemap_path}")
-            # Try to ping Google and Bing so they fetch the updated sitemap faster
-            try:
-                import urllib.request
-                sitemap_domain = SITE_DOMAIN
-                google_ping = f"https://www.google.com/ping?sitemap={sitemap_domain}/sitemap.xml"
-                bing_ping = f"https://www.bing.com/webmaster/ping.aspx?siteMap={sitemap_domain}/sitemap.xml"
+        print(f"[OK] Sitemap generated: {sitemap_path}")
+
+        # Sitemap für ue-Domain
+        sitemap_content_ue, _, _ = generate_sitemap(categories, static_pages, domain=SITE_DOMAIN_UE)
+        sitemap_path_ue = Path(__file__).parent.parent / "public" / "sitemapUE.xml"
+        with open(sitemap_path_ue, 'w', encoding='utf-8') as f:
+            f.write(sitemap_content_ue)
+        print(f"[OK] Sitemap generated: {sitemap_path_ue}")
+
+        # Ping Google und Bing für beide Sitemaps
+        try:
+            import urllib.request
+            for domain, sitemap_file in [(SITE_DOMAIN, "sitemap.xml"), (SITE_DOMAIN_UE, "sitemapUE.xml")]:
+                google_ping = f"https://www.google.com/ping?sitemap={domain}/{sitemap_file}"
+                bing_ping = f"https://www.bing.com/webmaster/ping.aspx?siteMap={domain}/{sitemap_file}"
                 for url in (google_ping, bing_ping):
                     try:
                         resp = urllib.request.urlopen(url, timeout=10)
                         print(f"[OK] Pinged: {url} -> {resp.getcode()}")
                     except Exception as pe:
                         print(f"[WARN] Ping failed: {url} -> {pe}")
-            except Exception as e:
-                print(f"[WARN] Ping skipped: {e}")
+        except Exception as e:
+            print(f"[WARN] Ping skipped: {e}")
+
         print(f"[OK] Kategorien mit Artikel-Zahl:")
         for cat, count in sorted(cat_data.items(), key=lambda x: x[1], reverse=True):
             print(f"     - {cat}: {count} Artikel")
         print(f"[OK] Statische Seiten:")
         for cat, url in static_data.items():
             print(f"     - {cat}: {url}")
-        print(f"[OK] Sitemap URL: {SITE_DOMAIN}/sitemap.xml")
+        print(f"[OK] Sitemap URLs:")
+        print(f"  - {SITE_DOMAIN}/sitemap.xml")
+        print(f"  - {SITE_DOMAIN_UE}/sitemapUE.xml")
         print(f"\n[INFO] NÄCHSTE SCHRITTE:")
         print(f"1. Gehen Sie zu: https://search.google.com/search-console")
-        print(f"2. Registrieren Sie Ihre Domain (falls noch nicht getan)")
+        print(f"2. Registrieren Sie Ihre Domains (falls noch nicht getan)")
         print(f"3. Gehen Sie zu: Sitemaps")
-        print(f"4. Tragen Sie ein: {SITE_DOMAIN}/sitemap.xml")
+        print(f"4. Tragen Sie ein: {SITE_DOMAIN}/sitemap.xml und {SITE_DOMAIN_UE}/sitemapUE.xml")
         print(f"5. Klicken Sie: 'Absenden'")
         print(f"\n[DONE] Das war's! Google wird Ihre Artikel jetzt regelmäßig crawlen.")
     except Exception as e:
