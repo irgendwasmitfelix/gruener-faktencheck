@@ -22,29 +22,66 @@ SITE_DOMAIN = "https://grüner-faktencheck.de"
 SITE_DOMAIN_UE = "https://gruener-faktencheck.de"
 
 def category_to_slug(category):
-    """Create SEO slug for category paths (Umlaut-Domain)."""
-    slug = category.strip()
-    slug = slug.replace("Ä", "Ae")
-    slug = slug.replace("Ö", "Oe")
-    slug = slug.replace("Ü", "Ue")
-    slug = slug.replace("ä", "ae")
-    slug = slug.replace("ö", "oe")
-    slug = slug.replace("ü", "ue")
+    """Create SEO slug for category paths (Umlaut-Domain).
+
+    Robust gegen falsche Encodings (Mojibake) und normalisiert Umlaute/ß.
+    """
+    import unicodedata
+    orig = category.strip()
+    candidate = orig
+    # Versuch Mojibake-Reparatur falls Datei falsch dekodiert wurde
+    if 'Ã' in candidate or '�' in candidate:
+        try:
+            candidate = candidate.encode('latin1').decode('utf-8')
+        except Exception:
+            candidate = orig
+    slug = candidate
+    # Repariere typische Mojibake-Sequenzen explizit (z.B. 'ÃŸ' -> 'ss')
+    slug = slug.replace('ÃŸ', 'ss').replace('Ã¤', 'ae').replace('Ã¶', 'oe').replace('Ã¼', 'ue')
+    slug = slug.replace('Ã„', 'Ae').replace('Ã–', 'Oe').replace('Ãœ', 'Ue')
+    # Ersetze Groß-/Umlaute konsistent
+    slug = slug.replace("Ä", "Ae").replace("Ö", "Oe").replace("Ü", "Ue")
+    slug = slug.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
     slug = slug.replace("ß", "ss")
-    # Sonderfall: Außenpolitik bleibt mit ß, aber Slug ist aussenpolitik
-    if slug.lower() == "außenpolitik":
+    slug = unicodedata.normalize('NFKC', slug)
+    # Sonderfall: Außenpolitik sollte als aussenpolitik ausgegeben werden
+    if slug.lower() in ("außenpolitik", "aussenpolitik"):
         return "aussenpolitik"
     slug = slug.lower().replace(" ", "-")
+    # Entferne übrige nicht-ASCII-Zeichen (safety)
+    slug = slug.encode('ascii', 'ignore').decode('ascii')
     return slug
 
 def category_to_slug_ue(category):
-    """Create SEO slug for category paths (UE-Domain, garantiert ohne Umlaute/ß)."""
-    slug = category.strip().lower()
-    slug = slug.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
-    slug = slug.replace("ß", "ss")
-    slug = slug.replace(" ", "-")
-    if slug in ("außenpolitik", "aussenpolitik"):
-        return "aussenpolitik"
+    """Create SEO slug for category paths (UE-Domain, garantiert ohne Umlaute/ß und Encoding-Fehler)."""
+    import unicodedata
+    orig = category.strip()
+    # Versuch, gängige Mojibake-Fälle zu reparieren (z.B. 'ÃŸ' statt 'ß')
+    candidate = orig
+    if 'Ã' in candidate or '�' in candidate:
+        try:
+            candidate = candidate.encode('latin1').decode('utf-8')
+        except Exception:
+            candidate = orig
+
+    slug = candidate.lower()
+    slug = unicodedata.normalize('NFKC', slug)
+    # Explizite Ersetzung für Umlaute und ß zu UE-Form
+    slug = slug.replace('ä', 'ae').replace('ö', 'oe').replace('ü', 'ue')
+    slug = slug.replace('ß', 'ss')
+    slug = slug.replace(' ', '-')
+
+    # Spezielle Korrektur für kaputt kodierte Varianten von Außenpolitik
+    broken_variants = ('auÃŸenpolitik', 'auÃŸenpolitik', 'auãÿenpolitik', 'auÃ¼enpolitik', 'auÃªenpolitik')
+    if any(b in slug for b in broken_variants):
+        return 'aussenpolitik'
+
+    # Wenn nach allen Ersetzungen noch eine Variante von außenpolitik auftaucht, erzwinge sie
+    if 'aussenpolitik' in slug or 'au\u0000senpolitik' in slug or 'außenpolitik' in slug:
+        return 'aussenpolitik'
+
+    # Entferne übrige nicht-ASCII-Zeichen
+    slug = slug.encode('ascii', 'ignore').decode('ascii')
     return slug
 
 def extract_static_pages():
@@ -159,7 +196,15 @@ if __name__ == "__main__":
 
         # Sitemap für ue-Domain
         sitemap_content_ue, _, _ = generate_sitemap(categories, static_pages, domain=SITE_DOMAIN_UE)
-        sitemap_path_ue = Path(__file__).parent.parent / "public" / "sitemapue.xml"
+        sitemap_dir = Path(__file__).parent.parent / "public"
+        sitemap_path_ue = sitemap_dir / "sitemapue.xml"
+        # Auf Windows ist das Dateisystem case-preserving; entferne bestehende Datei mit anderer Schreibweise
+        try:
+            for p in sitemap_dir.iterdir():
+                if p.is_file() and p.name.lower() == 'sitemapue.xml' and p.name != 'sitemapue.xml':
+                    p.unlink()
+        except Exception:
+            pass
         with open(sitemap_path_ue, 'w', encoding='utf-8') as f:
             f.write(sitemap_content_ue)
         print(f"[OK] Sitemap generated: {sitemap_path_ue}")
@@ -167,9 +212,16 @@ if __name__ == "__main__":
         # Ping Google und Bing für beide Sitemaps
         try:
             import urllib.request
-            for domain, sitemap_file in [(SITE_DOMAIN, "sitemap.xml"), (SITE_DOMAIN_UE, "sitemapUE.xml")]:
-                google_ping = f"https://www.google.com/ping?sitemap={domain}/{sitemap_file}"
-                bing_ping = f"https://www.bing.com/webmaster/ping.aspx?siteMap={domain}/{sitemap_file}"
+            import urllib.parse
+            def idna_url(u):
+                p = urllib.parse.urlparse(u)
+                host = p.netloc.encode('idna').decode('ascii')
+                return f"{p.scheme}://{host}"
+
+            for domain, sitemap_file in [(SITE_DOMAIN, "sitemap.xml"), (SITE_DOMAIN_UE, "sitemapue.xml")]:
+                domain_for_ping = idna_url(domain)
+                google_ping = f"https://www.google.com/ping?sitemap={domain_for_ping}/{sitemap_file}"
+                bing_ping = f"https://www.bing.com/webmaster/ping.aspx?siteMap={domain_for_ping}/{sitemap_file}"
                 for url in (google_ping, bing_ping):
                     try:
                         resp = urllib.request.urlopen(url, timeout=10)
@@ -187,12 +239,12 @@ if __name__ == "__main__":
             print(f"     - {cat}: {url}")
         print(f"[OK] Sitemap URLs:")
         print(f"  - {SITE_DOMAIN}/sitemap.xml")
-        print(f"  - {SITE_DOMAIN_UE}/sitemapUE.xml")
+        print(f"  - {SITE_DOMAIN_UE}/sitemapue.xml")
         print(f"\n[INFO] NÄCHSTE SCHRITTE:")
         print(f"1. Gehen Sie zu: https://search.google.com/search-console")
         print(f"2. Registrieren Sie Ihre Domains (falls noch nicht getan)")
         print(f"3. Gehen Sie zu: Sitemaps")
-        print(f"4. Tragen Sie ein: {SITE_DOMAIN}/sitemap.xml und {SITE_DOMAIN_UE}/sitemapUE.xml")
+        print(f"4. Tragen Sie ein: {SITE_DOMAIN}/sitemap.xml und {SITE_DOMAIN_UE}/sitemapue.xml")
         print(f"5. Klicken Sie: 'Absenden'")
         print(f"\n[DONE] Das war's! Google wird Ihre Artikel jetzt regelmäßig crawlen.")
     except Exception as e:
