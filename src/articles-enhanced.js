@@ -206,6 +206,16 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Grüne warnen vor „verkürzter Debatte“ bei der Migration – PKS zeigt weiter starke Überrepräsentation Nichtdeutscher",
+      "url": "https://apollo-news.net/gruene-warnen-vor-verkuerzter-debatte-bei-der-migration-pks-zeigt-weiter-starke-ueberrepraesentation-nichtdeutscher/",
+      "description": "Noch vor der Vorstellung der Polizeilichen Kriminalstatistik (PKS) 2025 versuchen die Grünen, die erwartbare Debatte über Ausländerkriminalität zu entschärfen. Irene Mihalic sagte der Rheinischen Post, mit der Veröffentlichung beginne „jedes Jahr dieselbe verkürzte Debatte“, in der Migration vorschnell zum Hauptproblem erklärt werde.",
+    },
+    {
+      "title": "SPD, Grüne und Linke wollen „Erkundungsreisen“ für Syrer ermöglichen",
+      "url": "https://jungefreiheit.de/politik/deutschland/2026/spd-gruene-und-linke-wollen-erkundungsreisen-fuer-syrer-ermoeglichen/",
+      "description": "Unter dem Begriff „Erkundungsreisen“ werben Politiker von SPD, Grünen und Linken dafür, Syrern Heimatreisen ohne Verlust des Schutzstatus' zu erlauben. Aus Union und AfD kommt scharfe Kritik.",
+    },
+    {
       "title": "Wenn ein Grünen-Parteitag 350.000 Euro kostet – und dann kaum einer kommt",
       "url": "https://www.welt.de/politik/deutschland/plus69e3a33d769e68aeef7a6d20/berlin-wenn-ein-gruenen-parteitag-350-000-euro-kostet-und-dann-kaum-einer-kommt.html",
       "description": "Es waren zu wenig Grüne da, um die Beschlussfähigkeit zu gewährleisten. Dennoch gab es einen Parteitag – und der kostete 350.000 Euro. Das ist ein Skandal.",
