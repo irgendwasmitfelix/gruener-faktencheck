@@ -206,6 +206,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Um AfD zu verhindern: Grüne und CDU reduzieren Zahl der Landtagsvize von zwei auf einen",
+      "url": "https://apollo-news.net/um-afd-zu-verhindern-gruene-und-cdu-reduzieren-zahl-der-landtagsvize-von-zwei-auf-einen/",
+      "description": "Grüne und CDU reduzieren Zahl der Landtagsvize von zwei auf einen, um AfD zu verhindern.",
+    },
+    {
       "title": "Grüne warnen vor „verkürzter Debatte“ bei der Migration – PKS zeigt weiter starke Überrepräsentation Nichtdeutscher",
       "url": "https://apollo-news.net/gruene-warnen-vor-verkuerzter-debatte-bei-der-migration-pks-zeigt-weiter-starke-ueberrepraesentation-nichtdeutscher/",
       "description": "Noch vor der Vorstellung der Polizeilichen Kriminalstatistik (PKS) 2025 versuchen die Grünen, die erwartbare Debatte über Ausländerkriminalität zu entschärfen. Irene Mihalic sagte der Rheinischen Post, mit der Veröffentlichung beginne „jedes Jahr dieselbe verkürzte Debatte“, in der Migration vorschnell zum Hauptproblem erklärt werde.",
