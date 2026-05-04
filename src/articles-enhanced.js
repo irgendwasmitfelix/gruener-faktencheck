@@ -206,6 +206,11 @@ export const articles = {
   ],
   "Innenpolitik": [
     {
+      "title": "Stuttgarter Grünen-Stadträtin forderte die Tampons auf dem Herren-Klo",
+      "url": "https://www.bild.de/regional/stuttgart/stuttgart-aktuell/stuttgarter-gruenen-stadtraetin-forderte-die-tampons-auf-dem-herren-klo-81682386.bild.html",
+      "description": "Jitka Sklenarova (Grüne) hat das Tampon für Männer verlangt – und bekommen",
+    },
+    {
       "title": "Um AfD zu verhindern: Grüne und CDU reduzieren Zahl der Landtagsvize von zwei auf einen",
       "url": "https://apollo-news.net/um-afd-zu-verhindern-gruene-und-cdu-reduzieren-zahl-der-landtagsvize-von-zwei-auf-einen/",
       "description": "Grüne und CDU reduzieren Zahl der Landtagsvize von zwei auf einen, um AfD zu verhindern.",
